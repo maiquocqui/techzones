@@ -1,0 +1,78 @@
+.container
+	section.cart-step.clearfix
+		.step.finish
+			.number <i class="material-icons">shopping_cart</i>
+			.name Giỏ hàng
+		.step.finish
+			.number <i class="material-icons">person</i>
+			.name Đăng nhập
+		.step.finish
+			.number <i class="material-icons">local_shipping</i>
+			.name Thông tin giao hàng
+		.step.finish
+			.number <i class="material-icons">credit_card</i>
+			.name Hình thức thanh toán
+	section.cart-page.clearfix
+		.row.flex.flex-wrap
+			.col-12.col-lg-5.col-xl-4
+				.thankyou.text-xs-center.clearfix
+					img(src="img/cart/finish.bak2.png", alt="")
+			.col-12.col-lg-7.col-xl-8
+				.payment-success.clearfix
+					h1.notice
+						<i class="fa fa-check-circle" aria-hidden="true"></i> 
+						span ĐƠN HÀNG CỦA BẠN ĐÃ ĐƯỢC HOÀN TẤT!
+					.letter 
+						p Xin cảm ơn quý khách đã mua hang tại website 
+							a(href="http://Techzones.vn") techzones.vn
+							|. Thông tin chi tiết đơn hàng đã được gửi đến hộp mail của quý khách. Mọi thắc mắc xin vui lòng liên hệ:
+						ul 
+							li Hotline: 
+								a(href="tel:1800 6063") 1800 6063
+							li Email: 
+								a(href="mailto:info@techzones.vn") info@techzones.vn
+					.cart-info
+						.info-overview
+							.info-col Đơn hàng: 
+								strong #354599438
+							.info-col Ngày đặt: 
+								strong 05/08/2017
+							.info-col Tình trạng: 
+								strong Đang xử lý
+						table.cart-finish-table
+							tr 
+								th Mã sản phẩm
+								th Tên sản phẩm
+								th Đơn giá
+								th Số lượng
+							tr 
+								td #315406
+								td UPLITE SPL 71cm Spinner
+								td 10.000.000 đ
+								td x 1
+							tr 
+								td #315407
+								td COSMOLITE 3 75cm Spinner
+								td 12.000.000 đ
+								td x 1
+						.total-overview
+							.overview-col Tổng số tiền: 
+								strong 22.000.000đ
+							.overview-col Đã thanh toán: 
+								strong 10.000.000đ
+							.overview-col Còn lại: 
+								strong 12.000.000đ
+					.cart-address.clearfix
+						//- h3.cart-title <i class="material-icons">location_on</i> Địa chỉ nhận hàng
+						//- a.btn-edit(href="cart.html") <i class="material-icons">border_color</i>Thay đổi
+						.address-info
+							h3.name Nguyễn Văn A
+							a.phone(href="tel:0981540288") 0981540288
+							.address Quy Nhơn - 1036 Trần Hưng Đạo
+				.cart-btnwrap.clearfix
+					//- .total-amount 
+						.label Thành tiền: 
+						.value 11.200.000đ
+							span.des Giá đã bao gồm VAT
+					a.btn-backstep(href="#!") Tiếp tục mua hàng
+					a.btn-nextstep(href="cart1.html") Quản lý đơn hàng

@@ -1,0 +1,61 @@
+// CART HEADER
+
+.cartheader
+	background: $white
+	border-bottom: 3px solid $blue
+	margin-bottom: 30px
+	.sitelogo
+		margin: 20px 0
+		float: left
+		+media-breakpoint-down(md)
+			padding: 10px 0
+			margin: 0
+		a 
+			display: block
+			img 
+				height: 40px
+				+media-breakpoint-down(xs)
+					height: 30px
+	.hotline
+		float: right
+		padding: 5px
+		// +bor-rad(50px)
+		// border: 2px solid color-rgba($white,0.5)
+		margin: 10px 0
+		+bor-rad(5px)
+		background: color-rgba($white,0.2)
+		+media-breakpoint-down(xs)
+			display: none
+		.fa
+			display: block
+			width: 40px
+			height: 40px
+			line-height: 40px
+			text-align: center
+			+fs(24rem)
+			+bor-rad(50px)
+			float: left
+			background: $white
+			color: $blue
+		.text
+			float: left
+			padding: 0 10px
+			line-height: 1.3
+			color: color-rgba($white,0.7)
+			a 
+				display: block
+				font-weight: bold
+				color: $white
+				&:hover
+					color: $blue
+	.cartdes
+		float: right
+		clear: right
+		+fs(14rem)
+		color: darken($white,40%)
+		+media-breakpoint-down(xs)
+			display: none
+		a 
+			color: $white
+			&:hover
+				color: $blue

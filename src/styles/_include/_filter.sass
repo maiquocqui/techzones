@@ -1,0 +1,508 @@
+.product-sort
+	+flexbox
+	flex-wrap: wrap
+	background: $white
+	padding-bottom: 10px
+	+ .productlist
+		// margin-top: 10px
+	&:after
+		width: 100%
+	+media-breakpoint-up(md)
+		justify-content: space-between
+		align-items: center
+		align-content: center
+	+media-breakpoint-up(lg)
+		padding-bottom: 15px
+		+ .productlist
+			// margin-top: 15px
+	.click-sort
+		+flexbox
+		height: 32px
+		align-items: center
+		align-content: center
+		+media-breakpoint-down(sm)
+			display: none
+		a
+			display: block
+			padding-left: 20px
+			+pos(rel,null)
+			+fs(13rem)
+			color: darken($white,60%)
+			+ a
+				margin-left: 20px
+			&:before
+				content: ''
+				display: block
+				width: 14px
+				height: 14px
+				+bor-rad(50px)
+				border: 1px solid darken($white,20%)
+				+pos(abs, 2px null null 0)
+			&:after
+				content: ''
+				display: block
+				width: 8px
+				height: 8px
+				+bor-rad(50px)
+				background: $lred
+				+pos(abs, 5px null null 3px)
+				opacity: 0
+			&:hover
+				color: $black
+			&.active
+				&:after
+					opacity: 1
+	.sort-type
+		width: calc(100% - 114px)
+		line-height: 30px
+		+flexbox
+		align-items: center
+		align-content: center
+		+bor-rad(5px)
+		padding: 0px 10px
+		color: darken($white,40%)
+		border: 1px solid darken($white,5%)
+		+pos(rel,null)
+		+media-breakpoint-up(md)
+			display: none
+		&:after
+			content: '\f107'
+			+pos(abs, 7px 10px null null)
+			line-height: 1
+		label
+			+fs(14rem)
+			font-weight: 300
+			margin-right: 10px
+		select
+			width: calc(100% - 34px)
+			min-width: unset
+			border: none
+			background: none
+			appearance: none
+			-ms-appearance: none
+			-moz-appearance: none
+			-webkit-appearance: none
+			+fs(14rem)
+			color: darken($white,40%)
+			// &:after
+			// 	content: ''
+			// 	+pos(abs, 0 null 0 0)
+			// 	right: 0
+			// font-weight: 500
+	.btn-compare
+		display: block
+		line-height: 32px
+		+bor-rad(5px)
+		color: $white
+		background: linear-gradient(to right, $lred, $dred)
+		// border: 1px solid darken($white,5%)
+		padding: 0px 10px
+		margin-left: 10px
+		+fs(14rem)
+		cursor: pointer
+		+transition(all,0.5s)
+		+transition(font-size 0s)
+		&.fly-compare
+			+media-breakpoint-up(xl)
+				+pos(fix, null 30px 160px null)
+				z-index: 5
+				width: 40px
+				height: 40px
+				+bor-rad(50px)
+				+mainbutton($lred,$dred)
+				+flexbox
+				justify-content: center
+				align-items: center
+				align-content: center
+				color: $white
+				// display: none
+				+fs(0)
+				+transition(font-size 0s)
+				.material-icons
+					+fs(24rem)
+		&:hover
+			filter: brightness(110%)
+		.material-icons
+		&.active
+			background: linear-gradient(to right, $lpurple, $dpurple)
+			box-shadow: 0px 10px 20px -10px $lpurple
+.btn-filterwrap
+	+flexbox
+	+pos(fix , null 0 0 0)
+	z-index: 100
+	background: $white
+	box-shadow: 0 -3px 20px -10px color-rgba($black,0.5)
+	text-align: center
+	.btn-showcate
+		width: calc((100% - 40px) / 2)
+		height: 40px
+		line-height: 40px
+		padding: 0px 10px
+		color: darken($white,50%)
+		+fs(14rem)
+		border-left: 1px solid darken($white,5%)
+		.material-icons
+			margin-right: 5px
+			// +fs(18rem)
+	.btn-showfilter
+		width: calc((100% - 40px) / 2)
+		height: 40px
+		line-height: 40px
+		padding: 0px 10px
+		color: darken($white,50%)
+		+fs(14rem)
+		border-left: 1px solid darken($white,5%)
+		.material-icons
+			margin-right: 5px
+			// +fs(18rem)
+	.btn-changeview
+		width: 40px
+		height: 40px
+		line-height: 40px
+		+fs(18rem)
+		text-align: center
+		// border-left: 1px solid darken($white,10%)
+		color: darken($white,50%)
+		+transition(all,0.3s)
+		&:before
+			content: '\f00b'
+			+media-breakpoint-down(sm)
+				content: '\f00a'
+		&.list
+			&:before
+				content: '\f00a'
+				+media-breakpoint-down(sm)
+					content: '\f00b'
+
+.filter-wrap
+	+pos(fix, 0 null 0 0)
+	right: 0
+	background: $white
+	z-index: 1500
+	+transform(translateX(100%))
+	+transition(all,0.3s)
+	+media-breakpoint-up(lg)
+		+pos(rel,unset null unset unset)
+		right: unset
+		z-index: 50
+		background: darken($white,3%)
+		+transform(translateX(0))
+		+bor-rad(5px)
+		padding: 0px 15px
+		margin-bottom: 15px
+	&.open
+		+transform(translateX(0))
+	&.category-group
+		+media-breakpoint-up(lg)
+			display: none
+	&.option-group
+	&.filter-bottom
+		margin: -30px 0px 15px
+	.filter-header
+		+media-breakpoint-up(lg)
+			display: none
+		.btn-closefilter
+			padding: 10px 0
+			line-height: 30px
+			text-align: center
+			color: $black
+			margin-right: 15px
+			float: left
+		.filter-title
+			+flexbox
+			float: left
+			height: 50px
+			justify-content: center
+			align-items: center
+			align-content: center
+			font-weight: 500
+	.filter-category
+		overflow: hidden
+		+media-breakpoint-up(lg)
+		> ul
+			> li
+				+pos(rel,null)
+				> a
+					display: block
+					padding: 10px 0
+					+fs(13rem)
+					text-transform: uppercase
+					color: $black
+					font-weight: 500
+					// border-bottom: 1px solid darken($white,10%)
+					+pos(rel,null)
+					&:hover
+						color: $dblue
+						&:after
+							+transform(rotateZ(90deg))
+				.btn-showsubfilter
+					.fa
+						+fs(18rem)
+						line-height: 1
+						margin-left: 10px
+						display: inline-block
+						+transition(all,0.3s)
+						+pos(abs, 10px 0 null null)
+					&.active
+						.fa
+							+transform(rotateZ(90deg))
+				.subfilter
+					display: none
+					max-height: 300px
+					overflow: auto
+					+bor-rad(5px)
+					padding: 0 10px
+					border: 1px solid darken($white,5%)
+					+disablescroll
+					ul
+						li
+							a
+								display: block
+								+pos(rel,null)
+								color: darken($white,40%)
+								+fs(12rem)
+								font-weight: 500
+								padding: 10px 0
+								padding-left: 20px
+								span
+									color: darken($white,40%)
+									margin-left: 5px
+								&:before
+									content: ''
+									display: block
+									width: 12px
+									height: 12px
+									+bor-rad(50px)
+									border: 1px solid darken($white,40%)
+									+pos(abs, 12px null null 0)
+									z-index: 1
+									+transition(all,0.3s)
+								&:after
+									content: ''
+									display: block
+									width: 8px
+									height: 8px
+									+bor-rad(50px)
+									background: linear-gradient(to right,$lred,$dred)
+									+pos(abs, 14px null null 2px)
+									z-index: 2
+									opacity: 0
+									+transition(all,0.3s)
+							&.active
+								a
+									color: $black
+									&:before
+										border-color: $lred
+									&:after
+										opacity: 1
+
+				&.active
+					> a
+						color: $dblue
+					.btn-showsubfilter
+						.fa
+							+transform(rotateZ(90deg))
+						&.active
+							.fa
+								+transform(rotateZ(0deg))
+					.subfilter
+						display: block
+	.filter-content
+		height: calc(100vh - 250px)
+		overflow: auto
+		padding: 0 15px
+		+media-breakpoint-up(lg)
+			height: unset
+			overflow: unset
+			padding: 0
+			+flexbox
+			flex-wrap: wrap
+			margin: 0px -15px
+		.filter-group
+			// +bor-rad(5px)
+			// margin-bottom: 5px
+			// box-shadow: 0px 5px 10px -5px color-rgba($black,0.05)
+			+media-breakpoint-up(lg)
+				padding: 0px 15px
+				+pos(rel,null)
+			.filter-name
+				padding: 10px 0
+				+fs(13rem)
+				text-transform: uppercase
+				color: $black
+				font-weight: 500
+				// border-bottom: 1px solid darken($white,10%)
+				+pos(rel,null)
+				+media-breakpoint-up(lg)
+					padding-right: 15px
+					+fs(13rem)
+					font-weight: normal
+					text-transform: none
+					cursor: pointer
+					color: darken($white,60%)
+				&.active
+					color: $dblue
+					&:after
+						+transform(rotateZ(90deg))
+						+media-breakpoint-up(lg)
+							+transform(scaleY(-1))
+				&:after
+					content: '\f105'
+					+fs(18rem)
+					line-height: 1
+					margin-left: 10px
+					display: inline-block
+					+transition(all,0.3s)
+					+pos(abs, 10px 0 null null)
+					+media-breakpoint-up(lg)
+						content: '\f107'
+				.filter-tags
+					+pos(abs,10px 15px null null)
+					+media-breakpoint-up(lg)
+						display: none
+			.filter-option
+				display: none
+				max-height: 300px
+				overflow: auto
+				+bor-rad(5px)
+				border: 1px solid darken($white,5%)
+				+disablescroll
+				+media-breakpoint-up(lg)
+					+pos(abs, 100% null null 0)
+					z-index: 10
+					min-width: 250px
+					max-height: 250px
+					// display: block
+					background: $white
+					border: 1px solid darken($white,10%)
+					box-shadow: 0 10px 20px -5px color-rgba($black,0.3)
+				.filter-brand, .filter-properties, .filter-price
+					// border-top: none
+					padding: 0 10px
+					a
+						display: block
+						+pos(rel,null)
+						color: darken($white,40%)
+						+fs(12rem)
+						font-weight: 500
+						padding: 10px 0
+						padding-left: 20px
+						span
+							color: darken($white,40%)
+							margin-left: 5px
+						&:before
+							content: ''
+							display: block
+							width: 12px
+							height: 12px
+							+bor-rad(50px)
+							border: 1px solid darken($white,40%)
+							+pos(abs, 12px null null 0)
+							z-index: 1
+							+transition(all,0.3s)
+						&:after
+							content: ''
+							display: block
+							width: 8px
+							height: 8px
+							+bor-rad(50px)
+							background: linear-gradient(to right,$lred,$dred)
+							+pos(abs, 14px null null 2px)
+							z-index: 2
+							opacity: 0
+							+transition(all,0.3s)
+						&.active
+							color: $black
+							&:before
+								border-color: $lred
+							&:after
+								opacity: 1
+				.filter-color
+					padding: 10px 10px 0
+					+flexbox
+					flex-wrap: wrap
+					justify-content: flex-start
+					a
+						+flexbox
+						justify-content: center
+						flex: 0 0 12.5%
+						.color-img
+							width: 24px
+							height: 24px
+							+bor-rad(50px)
+							border: 1px solid darken($white,5%)
+							box-sizing: content-box
+							+pos(rel,null)
+							margin-bottom: 10px
+							&:before
+								content: ''
+								+pos(abs, 0px null 0px 0px)
+								right: 0px
+								+bor-rad(50px)
+								border: 3px solid $white
+								box-sizing: border-box
+						&.active
+							.color-img
+								border-color: $lred
+								&:before
+									border-color: lighten($lred,40%)
+				.filter-properties
+				.filter-price
+	.filter-tags
+		+media-breakpoint-down(md)
+			padding: 0 15px
+		> a
+			color: darken($white,40%)
+			+fs(13rem)
+			margin-left: 10px
+			&:hover
+				color: $lred
+		.filter-tag
+			display: inline-block
+			margin-bottom: 10px
+			+bor-rad(50px)
+			background: linear-gradient(to right, $lred, $dred)
+			color: $white
+			+fs(11rem)
+			line-height: 1
+			cursor: pointer
+			padding: 3px 3px 3px 5px
+			.btn-removetag
+				display: inline-block
+				// vertical-align: middle
+				+bor-rad(50px)
+				width: 14px
+				height: 14px
+				font-weight: bold
+				line-height: 15px
+				text-align: center
+				+bor-rad(50px)
+				color: $lred
+				background: $white
+				margin-left: 5px
+				a
+					color: $lred
+					margin-left: 0
+				.material-icons
+					+fs(12rem)
+	.filter-button
+		padding: 10px 15px
+		+flexbox
+		+fs(14rem)
+		+media-breakpoint-up(lg)
+			display: none
+		.btn-resetall
+			display: block
+			width: 40%
+			+bor-rad(50px)
+			color: darken($white,40%)
+			border: 1px solid darken($white,40%)
+			text-align: center
+			line-height: 38px
+			a
+				color: darken($white,40%)
+		.btn-closefilter
+			display: block
+			width: 60%
+			margin-left: 10px
+			+mainbutton($lblue,$dblue)

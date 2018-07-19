@@ -1,0 +1,152 @@
+section.breadcrumb-wrap.clearfix
+	.container
+		ol.breadcrumb(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books')
+					span(itemprop='name') Trang chủ
+				meta(itemprop='position', content='1')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Tài khoản
+				meta(itemprop='position', content='2')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Admin
+				meta(itemprop='position', content='3')
+.container
+	.row.flex.flex-wrap
+		.col-12.col-lg-3
+			section.user-sidebar.clearfix
+				.userinfo.clearfix
+					figure
+						a.user-img(href="#")
+							img(src="img/user.png", alt="")
+						figcaption
+							.title Tài khoản của
+							.user-name Admin
+							.user-rank <i class="fa fa-trophy" aria-hidden="true"></i> Thành viên vàng
+			nav.user-sidelink.clearfix
+				ul 
+					li.hvr-sweep-to-right
+						a(href="userpanel1.html") Chính sách thành viên
+					li.hvr-sweep-to-right
+						a(href="userpanel.html") Thông tin chung
+					li.hvr-sweep-to-right
+						a(href="userpanel1.html") Thông tin tài khoản
+					li.hvr-sweep-to-right
+						a(href="userpanel2.html") Số địa chỉ
+					//- li.hvr-sweep-to-right
+					//- 	a(href="#") Thông báo của tôi
+					li.hvr-sweep-to-right.active
+						a(href="userpanel3.html") Đơn hàng của tôi
+					li.hvr-sweep-to-right
+						a(href="userpanel4.html") Danh sách yêu thích
+					li.hvr-sweep-to-right
+						a(href="userpanel5.html") Quản lý điểm thưởng
+		.col-12.col-lg-9
+			section.user-page.clearfix
+				h1.postname Đơn hàng #47561832
+				.shipping-step.clearfix
+					.step.active
+						.icon
+							img(src="img/icon/s1.png", alt="")
+						.name Đang xử lý
+					.step.active
+						.icon
+							img(src="img/icon/s2.png", alt="")
+						.name Đang chuyển hàng
+					.step
+						.icon
+							img(src="img/icon/s3.png", alt="")
+						.name Đơn hàng thành công
+				//- .shipping-progress
+					.step.active
+						.icon <i class="fa fa-file-text-o" aria-hidden="true"></i>
+						.status Đã nhận đơn hàng
+					.step.active
+						.icon <i class="fa fa-cubes" aria-hidden="true"></i>
+						.status Đã xuất kho
+					.step.active
+						.icon <i class="fa fa-truck" aria-hidden="true"></i>
+						.status Dự kiến giao hàng lần 1
+					.step
+						.icon <i class="fa fa-truck" aria-hidden="true"></i>
+						.status Dự kiến giao hàng lần 2
+					.step
+						.icon <i class="fa fa-check" aria-hidden="true"></i>
+						.status Giao hàng thành công
+				.cart-history.clearfix
+					.row.flex.flex-wrap
+						article.col-12.col-md-6
+							section.cart-info.clearfix
+								.title Thông tin đơn hàng
+								.cart-detail
+									.form-group
+										.label Website: 
+										.value House Of Luggage
+									.form-group
+										.label Thời gian đặt hàng: 
+										.value 14/02/2017 12:59
+									.form-group
+										.label Trạng thái đơn hàng: 
+										.value Dự kiến giao hàng lần 1
+									.form-group
+										.label Hình thức thanh toán: 
+										.value Onepage
+									.form-group
+										.label Tình trạng đơn hàng:
+										.value 
+											.alert-info Đang chuyển hàng
+						article.col-12.col-md-6
+							section.cart-info.clearfix
+								.title Thông tin đơn hàng
+								.cart-detail
+									.form-group
+										.label Tên người nhận: 
+										.value Mai Quốc Qui
+									.form-group
+										.label Số điện thoại: 
+										.value 0987 123 123
+									.form-group
+										.label Địa chỉ nhận hàng: 
+										.value 156 Nguyễn Văn Thủ, p.Đakao, q.1, tp.Hồ Chí Minh
+									.form-group
+										.label Ghi chú: 
+										.value Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe consequuntur distinctio necessitatibus voluptatem, consectetur esse vel voluptas maiores molestias impedit.
+					.table-responsive
+						table.table
+							thead
+								tr 
+									th Tên sản phẩm
+									th SKU
+									th Giá
+									th Số lượng
+									th Giảm giá
+									th Tổng cộng
+							tbody
+								tr 
+									td 
+										a(href="#") AP0446 - 897 | Size: 37
+									td 980918240
+									td 450.000 đ
+									td 1
+									td 0 đ
+									td 450.000 đ
+								tr 
+									td 
+										a(href="#") AP0446 - 897 | Size: 37
+									td 980918240
+									td 450.000 đ
+									td 1
+									td 0 đ
+									td 450.000 đ
+					.total-amount.clearfix
+						.label Tổng chưa giảm
+						.value 450.000 đ
+						.label Giảm giá
+						.value 0 đ
+						.label Chi phí vận chuyển
+						.value 12.000 đ
+						.label Tổng cộng
+						.value 450.000 đ
+					a.btn-back(href="#") Quay về đơn hàng của tôi

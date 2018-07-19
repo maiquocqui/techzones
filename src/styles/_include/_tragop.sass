@@ -1,0 +1,195 @@
+.product.tragop
+	margin-bottom: 20px
+	figure
+		+flexbox
+		flex-wrap: wrap
+		.product-img
+			display: block
+			width: 100px
+			+bor-rad(5px)
+			border: 1px solid darken($white,10%)
+			overflow: hidden
+		figcaption
+			width: calc(100% - 100px)
+			padding: 10px 15px
+			.product-name
+				+fs(16rem)
+				font-weight: 500
+				margin-bottom: 10px
+				a
+					color: $black
+			.product-price
+				.new
+					font-weight: 600
+					color: $red
+					+fs(14rem)
+				.old
+					+fs(12rem)
+					color: darken($white,40%)
+					text-decoration: line-through
+					line-height: 1
+
+table.tragop-table
+	+media-breakpoint-down(sm)
+		+bor-rad(5px)
+		border: 1px solid darken($white,10%)
+		margin-bottom: 15px
+		&.tragop-tindung
+			tr
+				td
+					&:first-child
+						max-width: 25%
+						min-width: 25%	
+					&:nth-child(2), &:nth-child(3)
+						min-width: 37.5%
+						max-width: 37.5%
+				&:nth-child(1)
+					> td:nth-child(2), td:nth-child(3)
+						min-width: 37.5%
+						max-width: 37.5%
+						background: darken($white, 5%)
+						color: $main
+		tr
+			+flexbox
+			flex-wrap: wrap
+			&.btn-tableWrap
+				display: block
+				td:first-child
+					width: 100%
+					max-width: 100%
+					min-width: 100%
+					background: $white
+					display: block
+			td
+				width: 100%
+				padding: 10px
+				text-align: center
+				background: none
+				border: 1px solid $white
+				&:first-child
+					width: 100%					
+					text-align: center
+					background: darken($white, 5%)
+					color: $main
+					text-transform: uppercase
+				.col-head, .col-body
+					font-weight: 600
+				.des
+					// +fs(12rem)
+				.btn-buy
+					+mainbutton($lblue,$dblue)
+					display: block
+					+fs(14rem)
+					padding: 0px 40px
+					line-height: 40px
+	+media-breakpoint-up(md)
+		width: calc(100% + 20px)
+		margin: 0px -10px 20px
+		td
+			&:first-child
+				width: 250px
+		.col-head, .col-body
+			margin: 0px 10px
+			min-height: 52px
+			+flexbox
+			flex-wrap: wrap
+			justify-content: center
+			align-items: center
+			align-content: center
+			padding: 10px
+			+fs(14rem)
+			min-height: 4rem
+		.col-head
+			background: darken($white,5%)
+			border: 1px solid darken($white,10%)
+			+bor-rad(5px 5px 0 0)
+			padding: 10px
+			text-align: center
+			+fs(16rem)
+			font-weight: 500
+			color: $black
+			height: 64px
+			.des
+				+fs(12rem)
+				font-weight: normal
+				text-align: center
+				width: 100%
+				color: darken($white,40%)
+				line-height: 1
+		.col-body
+			border: 1px solid darken($white,10%)
+			border-top: none
+			&.money
+				height: 60px
+			&.btn-wrap
+				height: 60px
+			.amount
+				+fs(18rem)
+				font-weight: 500
+				text-align: center
+				line-height: 1
+				color: $red
+				display: block
+				width: 100%
+			.btn-buy
+				+mainbutton($lblue,$dblue)
+				display: block
+				padding: 0px 30px
+		tr
+			&:last-child
+				.col-body
+					+bor-rad(0 0 5px 5px)
+.find-tragop
+	margin: 20px 0
+	+bor-rad(5px)
+	background: darken($white,3%)
+	// border: 1px dashed darken($white,20%)
+	// box-shadow: 0 10px 20px -10px color-rgba($black,0.1)
+	padding: 15px
+	.title
+		+fs(15rem)
+		font-weight: 500
+		color: $black
+	.des
+		color: darken($white,40%)
+		+fs(13rem)
+		margin-bottom: 10px
+	.row
+		margin: 0px -10px
+	.col-12
+		padding: 0px 10px
+	.form-group
+		margin-bottom: 0
+		+media-breakpoint-down(md)
+			margin-bottom: 10px
+		select
+			width: 100%
+			+bor-rad(5px)
+			border: 1px solid darken($white,10%)
+			padding: 8px 15px
+	.btn-searchtragop
+		+mainbutton($lred,$dred)
+		padding: 0px 30px
+		+fs(14rem)
+		display: inline-block
+		line-height: 36px
+.tragop-faq
+	+bor-rad(5px)
+	border: 1px solid darken($white,10%)
+	padding: 15px
+	.faq
+		margin-bottom: 10px
+		.faqtitle
+			+fs(14rem)
+			font-weight: 500
+			color: $black
+			&:before
+				content: '\f059'
+				margin-right: 5px
+		.faqcontent
+			+fs(14rem)
+			color: darken($white,60%)
+.cart-btnwrap
+	&.cart-installment
+		.btn-nextstep
+			width: 200px

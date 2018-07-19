@@ -1,0 +1,82 @@
+/*CAROUSEL*/
+.slider
+	background-color: transparent
+	+media-breakpoint-up(lg)
+		margin: 0
+	.owl-carousel
+		margin: 0
+		.owl-nav
+			margin: 0
+			text-align: center
+			> div
+				+border-radius(0)
+				background: none
+				color: $main
+				position: relative
+				z-index: 100
+				display: inline-block
+				text-align: center
+				+transition(all 0.4s)
+				i
+					+fs(18rem)
+					font-weight: 500
+					vertical-align: middle
+					color: $white
+					background: $blue
+					width: 30px
+					height: 30px
+					line-height: 28px
+					text-align: center
+					+bor-rad(50%)
+				&:hover
+					background: none
+					color: $red
+			.owl-prev
+				margin-right: 5px
+				+media-breakpoint-up(lg)
+					+pos(abs, 45% null null -40px)
+					+transform(translate(0, -45%))
+					float: left
+					margin-left: 0
+					margin-right: 0
+					padding: 0
+					z-index: 400
+			.owl-next
+				+media-breakpoint-up(lg)
+					+pos(abs, 45% -40px null null)
+					+transform(translate(0, -45%))
+					float: right
+					margin-right: 0
+					padding: 0
+					z-index: 400
+		&:hover
+			.owl-nav
+				+opacity(1)
+/* ////// owlCarousel ////////////////////////////////////////////////////////////////////////////////////////// */
+.owl-carousel
+	.owl-dots
+		text-align: center
+		margin: 15px 0 0
+		.owl-dot
+			display: inline-block
+			zoom: 1
+			*display: inline
+			span
+				width: 10px
+				height: 10px
+				margin: 5px
+				background: #d6d6d6
+				display: block
+				-webkit-backface-visibility: visible
+				-webkit-transition: opacity 200ms ease
+				-moz-transition: opacity 200ms ease
+				-ms-transition: opacity 200ms ease
+				-o-transition: opacity 200ms ease
+				transition: opacity 200ms ease
+				-webkit-border-radius: 30px
+				-moz-border-radius: 30px
+				border-radius: 30px
+			&.active,
+			&:hover
+				span
+					background: $red

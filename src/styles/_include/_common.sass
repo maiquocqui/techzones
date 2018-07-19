@@ -1,0 +1,323 @@
+//Common
+/*Edit Manager*/
+
+.ActionMenu
+	z-index: 99999 !important
+	.ActionMenuTag
+		line-height: 1.5
+		.fa
+			color: #1B4D79!important
+			width: auto!important
+			height: auto!important
+			border: none!important
+			font-size: 11px!important
+			display: inline-block!important
+			float: left!important
+			border-radius: 0!important
+			line-height: 1.1rem!important
+			margin-right: 4px!important
+	.ActionMenuBody
+		z-index: 99999 !important
+		> dl dd > a
+			color: #1B4D79!important
+			width: auto!important
+			height: auto!important
+			background: transparent
+			.fa
+				color: #1B4D79!important
+				width: auto!important
+				height: auto!important
+				border: none!important
+				font-size: 11px!important
+				display: inline-block!important
+				float: left!important
+				border-radius: 0!important
+				line-height: 1.1rem!important
+				margin-right: 4px!important
+		> h4
+			color: #333!important
+.cmsadminpanel
+	z-index: 16000009
+	left: 0
+	right: inherit
+
+/*Register Form*/
+
+.subscribefrm
+	position: relative
+	.fa.fa-exclamation-triangle
+		color: red
+		+fs(15rem)
+		display: block
+		position: absolute
+		top: 10px
+		right: 15px
+		text-indent: -9999px
+		width: 15px
+		height: 15px
+		line-height: 15px
+		text-align: center
+		&:after
+			content: '\f071'
+			font-size: 12px
+			color: red
+			text-indent: 0
+			float: left
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+		@media only screen and (min-width: 1024px)
+			right: 15px
+			top: 6px
+	.fa-exclamation-triangle:before, .fa-warning:before
+		margin-right: 5px
+
+.form-group
+	position: relative
+	.fa.fa-exclamation-triangle
+		// position: absolute
+		// top: 13px
+		// right: 15px
+		// color: transparent
+		// width: 15px
+		// height: 15px
+		color: $red
+		+fs(14rem)
+		text-align: left
+		&:before
+			content: ''
+			display: block
+			margin-top: 5px
+		&:after
+			content: ''
+			display: block
+			+pos(abs, 38px 0 null 0)
+			height: 2px
+			width: 100%
+			background: $red
+			z-index: 1
+	.fa-exclamation-triangle:before, .fa-warning:before
+		margin-right: 5px
+
+.hidden
+	display: none
+
+.share
+	text-align: left
+	clear: both
+	margin-bottom: 15px
+	&.sc-right
+		text-align: right
+	> div
+		display: inline-block!important
+		margin-bottom: 5px
+		margin-right: 5px
+		vertical-align: middle
+	.addthis_toolbox
+		margin-top: 2.5px
+	/* .google, .tweet
+		margin-top: 3px
+		width: 60px */
+
+// **********SEARCH-PAGE**********
+.searchresults
+	.pagination
+		text-align: left
+	.home-banner, .block-newsSpecialList
+		display: none
+.search-page
+	.searchresultsummary, .searchcontrols
+		display: none
+	.pagination
+		margin: 30px 0
+		text-align: left
+		width: 100%
+		li 
+			display: inline-block
+			+ li 
+				margin-left: 5px
+			a, span 
+				background: darken($white,4%)
+				display: block
+				width: 34px
+				height: 34px
+				line-height: 34px
+				+bor-rad(3px)
+				color: $main
+				text-align: center
+				+transition(all 0.3s)
+				&:hover
+					background: $blue
+					color: $white
+			&.active
+				a, span 
+					background: $blue
+					color: $white
+	.page-header
+		margin-top: 50px
+		h1
+			+fs(24rem)
+			font-weight: 600
+			line-height: 1.4
+			margin: 0 0 20px
+			text-align: left
+	.searchcontrols 
+		margin-bottom: 30px
+		.form-control
+			+bor-rad(0)
+			&:active, &:hover, &:focus
+				border-color: $main
+		input[type="submit"]
+			background: $main
+			color: $white
+			+transition(all 0.3s)
+			margin-left: -5px
+			+bor-rad(0)
+			&:hover
+				background: lighten($main,10%)
+	.searchresults
+		h3
+			margin: 0 0 5px
+			a
+				color: $main
+				font-size: 14px
+				font-weight: 600
+				+transition(all 0.3s)
+				&:hover
+					color: $blue
+//Pagination
+.searchresults
+	.pagination
+		> li
+			list-style: none
+			display: inline-block
+			text-align: center
+			> a,
+			span
+				font-size: 0.875rem
+				font-weight: 400
+				margin-left: 10px
+				width: 30px
+				height: 30px
+				line-height: 30px
+				display: block
+				text-align: center
+				text-decoration: none
+				color: darken($white, 60%)
+				background-color: darken($white, 5%)
+				border: none
+				@include border-radius(3px)
+				@include transition(all 0.4s ease)
+				&:hover,
+				&:focus
+					background-color: $smartwatch
+					color: $white
+			&.active
+				>a,
+				span
+					background-color: $smartwatch
+					color: $white
+			&:first-child
+				a,
+				span
+					margin-left: 0
+.pages
+	@extend .searchresults
+	text-align: center
+
+// **********CAPTCHA**********
+
+.RadCaptcha
+	span
+		+fs(13rem)
+		color: $red
+		margin-bottom: 5px
+	p
+		margin-top: 0.875rem
+	img
+		display: inline-block!important
+		margin-right: 0.9375rem
+		vertical-align: middle
+	input
+		width: 250px
+	.rcRefreshImage
+		display: inline-block!important
+		vertical-align: middle
+		position: relative
+		color: transparent
+		width: 30px
+		height: 30px
+		&:after
+			content: '\f021'
+			font-family: "FontAwesome"
+			font-size: 18px
+			color: $black
+			position: absolute
+			top: 50%
+			right: 0
+			left: 0
+			+transform(translate(0, -50%))
+
+// COMPONENTS
+.radio
+	input
+		display: none
+		+ label
+			padding-left: 25px
+			+pos(rel,null)
+			+fs(14rem)
+			color: darken($white,60%)
+			&:before
+				content: ''
+				display: block
+				width: 14px
+				height: 14px
+				+bor-rad(50px)
+				border: 1px solid darken($white,20%)
+				+pos(abs, 2px null null 0)
+			&:after
+				content: ''
+				display: block
+				width: 8px
+				height: 8px
+				+bor-rad(50px)
+				background: $lred
+				+pos(abs, 5px null null 3px)
+				opacity: 0
+		&:checked
+			+ label
+				&:after
+					opacity: 1
+.checkbox
+	input
+		display: none
+		+ label
+			padding-left: 25px
+			+pos(rel,null)
+			+fs(14rem)
+			color: darken($white,60%)
+			&:before
+				content: ''
+				display: block
+				width: 14px
+				height: 14px
+				+bor-rad(50px)
+				border: 1px solid darken($white,20%)
+				+pos(abs, 2px null null 0)
+			&:after
+				content: '\f00c'
+				display: block
+				width: 14px
+				height: 14px
+				line-height: 12px
+				text-align: center
+				color: $lred
+				+fs(18rem)
+				+pos(abs, 2px null null -1px)
+				opacity: 0
+		&:checked
+			+ label
+				&:after
+					opacity: 1

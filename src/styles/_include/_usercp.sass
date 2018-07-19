@@ -1,0 +1,800 @@
+// USER SIDEBAR
+
+.userpage
+	// .row
+	// 	margin: 0px -5px
+	// .col-xs-12
+	// 	padding: 0px 5px
+.user-sidebar
+	+pos(rel,null)
+	margin-top: 0
+	margin-bottom: 30px
+	+media-breakpoint-down(md)
+		&:after
+			content: '\f107'
+			font-family: 'fontawesome'
+			+pos(abs, 50% 15px null null)
+			+transform(translateY(-50%))
+			color: $gray
+			+fs(24rem)
+	.userinfo
+		// border: 1px solid darken($white,10%)
+		background: $gray
+		+bor-rad(0)
+		overflow: hidden
+		figure
+			&:after
+				content: ''
+				display: table
+				width: 100%
+				clear: both
+			+flexbox
+			flex-wrap: wrap
+			.user-img
+				// display: none
+				width: 80px
+				float: left
+				padding: 15px
+				+media-breakpoint-down(lg)
+					width: 60px
+			figcaption
+				width: calc(100% - 80px)
+				+flexbox
+				flex-wrap: wrap
+				align-items: center
+				align-content: center
+				+media-breakpoint-down(lg)
+					padding: 7px 15px
+				.title
+					color: $white
+					opacity: 0.8
+					font-weight: 600
+					+fs(13rem)
+					width: 100%
+				.user-name
+					text-transform: uppercase
+					font-weight: 700
+					// +fs(16rem)
+					+fs(14rem)
+					color: $white
+					width: 100%
+				.user-rank
+					+fs(13rem)
+					font-weight: bold
+					color: color-rgba($white,0.8)
+					.fa 
+						color: $amber
+						// margin-right: 5px
+						+fs(16rem)
+		.btn-muasi
+			margin: 0px 15px 15px
+			display: block
+			background: darken($white,10%)
+			text-align: center
+			text-transform: uppercase
+			color: $gray
+			font-weight: 700
+			+bor-rad(0)
+			padding: 5px 0
+			box-shadow: 0 3px 10px color-rgba($black,0.3)
+.user-sidelink
+	margin-bottom: 30px
+	ul 
+		border-right: 1px solid darken($white,10%)
+		li 
+			display: block
+			&:before
+				display: none
+			a 
+				display: block
+				line-height: 36px
+				font-weight: 700
+				color: darken($white,40%)
+				text-transform: uppercase
+				+pos(rel,null)
+				+fs(14rem)
+				+media-breakpoint-down(md)
+					+fs(13rem)
+				&:after
+					content: ''
+					display: block
+					width: 2px
+					+pos(abs, 0 -1px 100% null)
+					background: $main
+					+transition(all,0.5s)
+			&:hover
+				a 
+					color: darken($white,60%)
+					&:after
+						bottom: 0
+			&.active
+				a 
+					color: $gray
+					&:after
+						bottom: 0
+
+// USER PANEL
+
+.user-page
+	// margin-top: 40px
+	margin-top: 0
+	// padding: 15px
+	background: $white
+	+pos(rel,null)
+	margin-bottom: 40px
+	+media-breakpoint-down(md)
+		margin-top: 0
+	.postname
+		+fs(18rem)
+		text-transform: uppercase
+		font-weight: 700
+		margin-bottom: 30px
+		border-left: 3px solid $gray
+		padding-left: 10px
+	.posttitle
+		+fs(16rem)
+		line-height: 1.5
+		margin: 0 0 10px
+		min-height: 27px
+		font-weight: 700
+		// border-left: 0
+		// padding-left: 0
+		// &:before
+		// 	content: '//'
+		// 	color: darken($gray,5%)
+		// 	margin-right: 10px
+	.link
+		+fs(13rem)
+		color: $dblue
+		background: lighten($dblue,45%)
+		border: 1px solid lighten($dblue,30%)
+		padding: 3px 10px
+		font-weight: 600
+		+bor-rad(0)
+		+pos(abs, 3px 0 null null)
+		&:after
+			content: '\f105'
+			font-family: 'fontawesome'
+			margin-left: 10px
+		&:hover
+			color: $white
+			background: $dred
+			border-color: $dred
+	.btn-addaddr
+		+fs(13rem)
+		color: $dblue
+		background: lighten($dblue,45%)
+		border: 1px solid lighten($dblue,30%)
+		padding: 3px 10px
+		font-weight: 600
+		+bor-rad(0)
+		+pos(abs, 3px 0 null null)
+		&:after
+			content: '\f044'
+			font-family: 'fontawesome'
+			margin-left: 10px
+			font-weight: normal
+		&:hover
+			color: $white
+			background: $dred
+			border-color: $dred
+	.table
+		+fs(14rem)
+		background: $white
+		margin-bottom: 0
+		border: 1px solid darken($white,10%)
+		+bor-rad(0)
+		overflow: hidden
+		color: darken($white,60%)
+		a 
+			color: $main
+			font-weight: 500
+			// &:before
+			// 	content: '\f00e'
+			// 	font-family: 'fontawesome'
+			// 	margin-right: 5px
+			&:hover
+				color: $gray
+		.point
+			font-weight: 700
+			color: $gray
+		.link-detail
+			color: $gray
+			font-weight: normal
+			margin-left: 10px
+			&:hover
+				text-decoration: underline
+		th 
+			border: none
+			background: darken($white,5%)
+			color: $main
+			white-space: nowrap
+			border-bottom: 1px solid darken($white,10%)
+		td 
+			border: none
+			+fs(13rem)
+			vertical-align: middle
+			.alert-success, .alert-warning, .alert-primary, .alert-info
+				background: none
+				font-weight: 500
+				filter: brightness(150%)
+		th, td 
+			white-space: nowrap
+			padding: 7px 15px
+			&:nth-child(3)
+				white-space: normal
+				+media-breakpoint-down(sm)
+					white-space: nowrap
+		tr 
+			&:nth-child(even)
+				background: darken($white,3%)
+.shipping-progress
+	+flexbox
+	margin-bottom: 30px
+	.step
+		width: 20%
+		text-align: center
+		padding: 0px 20px
+		+pos(rel,null)
+		.icon
+			width: 60px
+			height: 60px
+			+bor-rad(50px)
+			line-height: 54px
+			margin: 0px auto 30px
+			+fs(24rem)
+			color: darken($white,40%)
+			border: 2px solid darken($white,20%)
+			&:after
+				content: ''
+				display: block
+				width: 100%
+				height: 4px
+				background: darken($white,20%)
+				margin-top: 20px
+				+pos(abs, null 0 null 0)
+				// +transform(translateX(-50%))
+		.status
+			font-weight: bold
+			+fs(13rem)
+			color: $gray
+			line-height: 1.3
+		&:first-child
+			.icon
+				// &:after
+					// display: none
+		&.active
+			.icon
+				color: $white
+				background: $gray
+				border-color: $gray
+				&:after
+					background: $gray
+.account-info
+	+pos(rel,null)
+	margin-bottom: 15px
+	// +media-breakpoint-down(md)
+	// 	margin-bottom: 20px
+	.info-detail
+		border: 1px solid darken($white,10%)
+		background: darken($white,3%)
+		+bor-rad(0)
+		padding: 15px 20px
+		+fs(14rem)
+		line-height: 1
+		.group
+			margin-bottom: 10px
+			+flexbox
+			flex-wrap: wrap
+			&:last-child
+				+media-breakpoint-up(lg)
+					margin-bottom: 0
+			.label
+				width: 150px
+				cursor: pointer
+				+media-breakpoint-down(xs)
+					width: 100%
+					color: darken($white,40%)
+			.detail
+				width: calc(100% - 150px)
+				font-weight: 700
+				+media-breakpoint-down(xs)
+					width: 100%
+					font-weight: bold
+				&.point
+					color: $gray
+					font-weight: bold
+			&.money
+				.label
+					width: auto
+					float: left
+					margin-right: 10px
+				.detail
+					width: auto
+					float: left
+.account-form
+	width: 50%
+	+media-breakpoint-down(lg)
+		width: 60%
+	+media-breakpoint-down(md)
+		width: 70%
+	+media-breakpoint-down(xs)
+		width: 100%
+	.form-group
+		margin-bottom: 15px
+		label
+			text-transform: uppercase
+			+fs(13rem)
+			color: darken($white,60%)
+			margin-bottom: 5px
+		input, select
+			width: 100%
+			border: 1px solid darken($white,15%)
+			padding: 10px 15px
+			font-size: 0.875rem
+			-webkit-transition: all, 0.3s
+			+transition(all, 0.3s)
+			+bor-rad(0)
+			&:hover, &:active, &:focus
+				border-color: darken($white,40%)
+	.gender-select
+		margin-bottom: 0
+		ul 
+			padding: 10px 0 0
+			&:after
+				display: table
+				content: ''
+				width: 100%
+				clear: both
+			li 
+				width: 50%
+				float: left
+		input[type="radio"]
+			+ label 
+				// font-weight: 600
+				color: $main
+				text-transform: none
+				+fs(14rem)
+				+pos(rel,null)
+				+transition(all,0.5s)
+				&:hover
+					color: $black
+	.birthday
+		ul 
+			margin: 0 -10px
+			li 
+				width: 33.33%
+				float: left
+				padding: 0 10px
+				+media-breakpoint-down(xs)
+					select
+						+fs(14rem)
+						padding: 10px 10px
+	.check-group
+		margin-bottom: 15px
+	.changepw-form
+		display: none
+	input[type='submit']
+		color: $white
+		background: $gray
+		padding: 0 20px
+		border: none
+		+fs(14rem)
+		line-height: 36px
+		text-transform: uppercase
+		margin: 5px 0 0px
+		+transition(all,0.3s)
+		+bor-rad(0)
+		&:hover
+			background: lighten($gray,10%)
+
+.coin-info
+	@extend .account-info
+	height: 100%
+	margin-bottom: 30px
+	+pos(rel,null)
+	padding-top: 47px
+	+media-breakpoint-down(md)
+		padding-top: 0
+	.info-detail
+		.detail
+			+media-breakpoint-up(md)
+				line-height: 38px
+			strong 
+				color: $gray
+
+.coin-page
+	.notification
+		color: $gray
+		margin-bottom: 10px
+	.coin-amount
+		border: 1px solid darken($white,10%)
+		+bor-rad(0)
+		padding: 10px 15px
+		margin-bottom: 10px
+		strong
+			color: $gray
+	.coin-history
+		padding-top: 20px
+		margin-bottom: 20px
+
+.cart-history
+	margin-bottom: 10px
+	+pos(rel,null)
+	article
+		margin-bottom: 15px
+	.module-title
+		margin-bottom: 20px
+	.content
+		margin-bottom: 20px
+		p
+			margin-bottom: 5px
+	.product-select
+		margin-bottom: 15px
+		select 
+			+bor-rad(0)
+			padding: 10px 15px
+			border: 1px solid darken($white,10%)
+	.table-responsive
+		margin-bottom: 20px
+	.total
+		font-weight: 700
+		color: $gray
+	.totalmoney
+		padding-top: 20px
+		strong
+			color: $gray
+			+fs(24rem)
+		.payment-des
+			+fs(14rem)
+			font-style: italic
+			color: darken($white,40%)
+	.total-amount
+		float: right
+		width: 300px
+		margin-bottom: 20px
+		.label
+			width: 150px
+			float: left
+			text-align: right
+			padding-right: 10px
+		.value
+			width: 150px
+			float: left
+			text-align: left
+			font-weight: 600
+			padding-left: 10px
+			color: lighten($gray,0%)
+	.btn-back
+		clear: both
+		margin-bottom: 0px
+		&:hover
+			background: $lblack
+			color: $white
+
+.address-info
+	+pos(rel,null)
+	.address-list
+		margin: 0 -10px
+		display: flex
+		flex-wrap: wrap
+	.address-col
+		width: 50%
+		padding: 0 10px
+		margin-bottom: 10px
+		+media-breakpoint-down(sm)
+			width: 100%
+		.address
+			border: 1px solid darken($white,10%)
+			padding: 15px
+			background: $white
+			+bor-rad(0)
+			+pos(rel,null)
+			height: 100%
+			&.default
+				border: 1px dashed lighten($gray,30%)
+				background: lighten($gray,65%)
+			.type
+				+pos(abs, 5px 10px null null)
+				text-transform: uppercase
+				+fs(13rem)
+				color: $gray
+				font-weight: 700
+			.name
+				+fs(15rem)
+				// font-family: 'open sans condensed'
+				font-weight: 700
+				text-transform: uppercase
+				// margin-bottom: 5px
+			.addr-detail
+				+fs(13rem)
+				color: darken($white,60%)
+				margin-bottom: 10px
+			.btn-editaddr
+				display: inline-block
+				background: $gray
+				color: $white
+				padding: 7px 20px
+				+fs(13rem)
+				+bor-rad(0)
+				&:after
+					content: '\f040'
+					font-family: 'fontawesome'
+					margin-left: 5px
+				&:hover
+					color: $white
+					background: lighten($gray,10%)
+	.address-form
+		width: 50%
+		+media-breakpoint-down(lg)
+			width: 60%
+		+media-breakpoint-down(md)
+			width: 70%
+		+media-breakpoint-down(xs)
+			width: 100%
+		.form-group
+			margin-bottom: 15px
+			label
+				text-transform: uppercase
+				+fs(13rem)
+				color: darken($white,60%)
+				margin-bottom: 5px
+			input, select, textarea
+				width: 100%
+				border: 1px solid darken($white,15%)
+				padding: 10px 15px
+				+bor-rad(0)
+				font-size: 0.875rem
+				-webkit-transition: all, 0.3s
+				transition: all, 0.3s
+				&:hover, &:active, &:focus
+					border-color: darken($white,40%)
+		input[type="submit"]
+			color: $white
+			background: $gray
+			padding: 0 20px
+			border: none
+			+fs(14rem)
+			line-height: 36px
+			text-transform: uppercase
+			margin: 5px 0 40px
+			+bor-rad(0)
+			+transition(all,0.5s)
+			&:hover
+				background: darken($gray,10%)
+		// .check-group
+		// 	input[type='checkbox']
+		// 		display: none
+		// 		+ label
+		// 			color: darken($white,60%)
+		// 			font-weight: 300
+		// 			padding-left: 30px
+		// 			+fs(14rem)
+		// 			+pos(rel,null)
+		// 			+transition(all,0.5s)
+		// 			text-transform: none
+		// 			&:hover
+		// 				color: $black
+		// 			&:before
+		// 				content: ''
+		// 				display: block
+		// 				width: 16px
+		// 				height: 16px
+		// 				border: 1px solid darken($white,40%)
+		// 				opacity: 0.5
+		// 				+pos(abs, 1px null null 0)
+		// 				+transition(all,0.5s)
+		// 			&:after
+		// 				content: '\f00c'
+		// 				font-family: 'fontawesome'
+		// 				display: block
+		// 				line-height: 14px
+		// 				+fs(16rem)
+		// 				color: $gray
+		// 				opacity: 0
+		// 				+pos(abs, 2px null null 1px)
+		// 				+transition(all,0.5s)
+		// 		&:checked
+		// 			+ label
+		// 				&:before, &:after
+		// 					opacity: 1
+
+.wishlist
+	.product-list
+		border-top: 1px solid darken($white,10%)
+		border-left: 1px solid darken($white,10%)
+		.row
+			margin: 0px 0px
+		.col-6
+			padding: 0px 0px
+		.product-col
+			border-right: 1px solid darken($white,10%)
+			border-bottom: 1px solid darken($white,10%)
+	// .wishlist-product
+	// 	margin-bottom: 20px
+	// 	.product
+	// 		padding: 20px 0
+	// 		border-bottom: 1px solid darken($white,10%)
+	// 		figure
+	// 			.product-img
+	// 				display: block
+	// 				width: 130px
+	// 				height: 130px
+	// 				padding: 10px
+	// 				text-align: center
+	// 				border: 1px solid darken($white,20%)
+	// 				float: left
+	// 				+media-breakpoint-down(xs)
+	// 					width: 100%
+	// 					height: auto
+	// 					margin-bottom: 15px
+	// 			figcaption
+	// 				display: block
+	// 				width: calc(100% - 130px)
+	// 				float: left
+	// 				padding: 15px 0px 15px 20px
+	// 				+media-breakpoint-down(sm)
+	// 					padding: 0 0 0 20px
+	// 				+media-breakpoint-down(xs)
+	// 					padding-left: 0
+	// 					width: 100%
+	// 				.product-info
+	// 					float: left
+	// 					+media-breakpoint-down(sm)
+	// 						width: 100%
+	// 						float: none
+	// 				.product-name
+	// 					display: inline-block
+	// 					+fs(13rem)
+	// 					text-transform: uppercase
+	// 					// border-left: 3px solid $gray
+	// 					// padding-left: 10px
+	// 					margin-bottom: 5px
+	// 					+media-breakpoint-down(xs)
+	// 						display: block
+	// 					a 
+	// 						color: $gray
+	// 						+fs(20rem)
+	// 						font-weight: bold
+	// 				.size
+	// 					color: darken($white,60%)
+	// 					+media-breakpoint-down(xs)
+	// 						display: block
+	// 					&:before
+	// 						content: '|'
+	// 						margin: 0 10px
+	// 						+media-breakpoint-down(xs)
+	// 							display: none
+	// 				.product-category
+	// 					+fs(13rem)
+	// 					text-transform: uppercase
+	// 					color: darken($white,40%)
+	// 					margin-bottom: 17px
+	// 					// width: 100%
+	// 					+media-breakpoint-down(sm)
+	// 						margin-bottom: 5px
+	// 				.product-price
+	// 					margin-bottom: 5px
+	// 					+media-breakpoint-down(xs)
+	// 						margin-bottom: 15px
+	// 					.old
+	// 						display: inline-block
+	// 						+fs(14rem)
+	// 						color: darken($white,40%)
+	// 						text-decoration: line-through
+	// 						font-style: italic
+	// 					.new
+	// 						display: inline-block
+	// 						+fs(18rem)
+	// 						font-weight: 700
+	// 						margin-left: 5px
+	// 						color: $gray
+	// 						+media-breakpoint-down(sm)
+	// 							// +fs(24rem)
+	// 				.button
+	// 					float: right
+	// 					+media-breakpoint-down(sm)
+	// 						width: 100%
+	// 						float: none
+	// 				.btn-addtocart
+	// 					display: inline-block
+	// 					padding: 7px 20px
+	// 					color: $white
+	// 					+fs(13rem)
+	// 					background: $gray
+	// 					text-transform: uppercase
+	// 					+transition(all,0.5s)
+	// 					+media-breakpoint-down(xs)
+	// 						width: calc(100% - 42px)
+	// 					&:before
+	// 						content: '\f07a'
+	// 						font-family: 'fontawesome'
+	// 						margin-right: 5px
+	// 					&:hover
+	// 						background: darken($gray,10%)
+	// 				.btn-removecart
+	// 					display: inline-block
+	// 					margin-left: 5px
+	// 					width: 33px
+	// 					height: 33px
+	// 					background: darken($white,10%)
+	// 					+transition(all,0.5s)
+	// 					&:hover
+	// 						background: darken($white,20%)
+	// 						color: $gray
+.cart-info
+	border: 1px solid darken($white,20%)
+	+bor-rad(0)
+	height: 100%
+	.title
+		font-weight: bold
+		text-transform: uppercase
+		color: $gray
+		padding: 10px
+		border-bottom: 1px solid darken($white,10%)
+	.cart-detail
+		padding: 10px
+		.form-group
+			+flexbox
+			flex-wrap: wrap
+			+fs(13rem)
+			&:last-child
+				margin-bottom: 0
+			.label
+				width: 150px
+				font-weight: bold
+			.value
+				width: calc(100% - 150px)
+	.alert-success, .alert-warning, .alert-primary, .alert-info
+		background: none
+		font-weight: 600
+		filter: brightness(150%)
+		// text-transform: uppercase
+
+.shipping-step
+	+flexbox
+	margin-bottom: 20px
+	.step
+		width: 33.33%
+		+pos(rel,null)
+		+flexbox
+		flex-wrap: wrap
+		justify-content: center
+		&:before
+			content: ''
+			display: block
+			width: 100%
+			height: 3px
+			background: darken($white,20%)
+			+pos(abs, 40px 50% null null)
+			+transform(translateY(-1px))
+		&:first-child
+			&:before
+				display: none
+		.icon
+			+flexbox
+			width: 80px
+			height: 80px
+			+bor-rad(50%)
+			justify-content: center
+			align-items: center
+			border: 3px solid darken($white,20%)
+			+pos(rel,null)
+			z-index: 1
+			background: $white
+			img
+				max-width: 60%
+				max-height: 60%
+		.name
+			width: 100%
+			text-align: center
+			padding: 10px 0
+			font-weight: 500
+			color: darken($white,60%)
+		&.active
+			&:before
+				background: $dblue
+			.icon
+				border-color: $dblue
+			.name
+				color: $dblue

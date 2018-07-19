@@ -1,0 +1,249 @@
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese')
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:200,300,400,500,600,700&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese')
+
+// MATERIAL COLOR
+$red: #F44336
+$pink: #E91E63
+$purple: #9C27B0
+$deeppurple: #673AB7
+$indigo: #3F51B5
+$blue: #2196F3
+$lightblue: #03A9F4
+$cyan: #00BCD4
+$teal: #009688
+$green: #6e953b
+$lightgreen: #8dc63f
+$lime: #CDDC39
+$yellow: #FFEB3B
+$amber: #FFC107
+$orange: #FF9800
+$deeporange: #FF5722
+$brown: #946b3a
+$lbrown: #d69b28
+$dbrown: #7b2e00
+$grey: #212121
+$bluegrey: #263238
+
+// CUSTOM COLOR
+$white: #fff
+$black: #000
+$lblack: #222
+$main: #333
+$blue: #0094b9
+$lblue: #51decb
+$headerline: #dddddd
+// GRADIENT COLOR
+$lred: #ff856a
+$dred: #fe67a2
+$lgreen: #b2e055
+$dgreen: #5ac1c0
+$lpink: #fab17a
+$dpink: #ef7f97
+$lblue: #59e1cb
+$dblue: #32b8e6
+$lpurple: #dc8dff
+$dpurple: #7866f8
+
+$smartwatch: #f31349
+$hitech: #35b09b
+$healthcare: #0059a7
+$sound: #5c6dbd
+$computer: #009893
+$gear: #15c1d7
+$memory: #55c932
+$camera: #a9b900
+$phone: #f3b516
+$product2nd: #e3521b
+$facebook: #3b5998
+$googleplus: #dd4c3b
+$youtube: #ff0018
+$new: #0059a7
+$sale: #0094b9
+
+// MATERIAL VARIABLE
+=clearfix
+	content: ''
+	display: table
+	width: 100%
+	clear: both
+=flatbutton
+	display: inline-block
+	+fs(14rem)
+	text-transform: uppercase
+	font-weight: 500
+	font-family: 'Roboto'
+	padding: 0 16px
+	line-height: 36px
+	+bor-rad(2px)
+	&:hover
+		background: color-rgba(lighten($black,62%),0.2)
+	&:active
+		background: color-rgba(lighten($black,62%),0.4)
+	&:focus
+		background: color-rgba($black,0.12)
+=material-card
+	+bor-rad(2px)
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12)
+=header-sd
+	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28)
+=disablescroll
+	-webkit-overflow-scrolling: touch
+	&::-webkit-scrollbar-track
+		width: 0
+		height: 0
+	&::-webkit-scrollbar
+		width: 0
+		height: 0
+	&::-webkit-scrollbar-thumb
+		border: none
+		width: 0
+		height: 0
+=mainbutton($color1,$color2)
+	line-height: 40px
+	+bor-rad(50px)
+	text-align: center
+	color: $white
+	background: linear-gradient(to right, $color1, $color2)
+	box-shadow: 0px 10px 20px -10px color-rgba($color1,1)
+	&:hover
+		filter: brightness(105%)
+		box-shadow: 0px 10px 20px -5px color-rgba($color1,1)
+=btnlinear($color1,$color2)
+	color: $white
+	+transition(all 0.5s)
+	background: linear-gradient(to right, $color1, $color2)
+	box-shadow: 0px 10px 20px -10px color-rgba($color1,1)
+	&:hover
+		filter: brightness(105%)
+		box-shadow: 0px 10px 20px -5px color-rgba($color1,1)
+=fs($size)
+	font-size: ($size / 16)
+body
+	margin: 0
+	padding: 0
+	+fs(15rem)
+	font-family: 'Montserrat', sans-serif;
+	color: $main
+	line-height: 1.5
+	// background: $grey
+	overflow: hidden
+	+media-breakpoint-down(lg)
+		+fs(14rem)
+	+media-breakpoint-down(sm)
+		+fs(13rem)
+
+html
+	overflow: auto
+.fullpage
+	// overflow: hidden
+	// max-width: 1600px
+	// margin: 0 auto
+a 
+	+transition(all,0.5s)
+a, a:hover
+	&:focus, &:active, &:hover
+		outline: none
+		text-decoration: none
+input,button, select, textarea
+	+transition(all,0.3s)
+	&:hover, &:active, &:focus
+		outline: none
+button 
+	border: none
+	background: none
+	margin: 0
+	padding: 0
+	+transition(all,0.3s)
+img, iframe
+	vertical-align: middle
+main
+	clear: both
+	&:before, &:after
+		content: ''
+		display: table
+		width: 100%
+		clear: both
+
+strong 
+	span 
+		font-weight: bold
+.container
+	+pos(static,null)
+	+media-breakpoint-up(xl)
+		max-width: 1230px
+		width: 100%
+	+media-breakpoint-down(lg)
+		max-width: 100%
+		width: 100%
+	&.fullwidth
+		+media-breakpoint-up(xl)
+			max-width: 1600px
+			padding: 0px 30px
+
+.content
+	line-height: 1.5
+	+fs(14rem)
+	+ .share
+		margin: 15px 0
+	+media-breakpoint-down(md)
+		+fs(13rem)
+		line-height: 1.8
+	+media-breakpoint-down(xs)
+		+fs(12rem)
+	ul, ol, p, h1, h2, h3, h4, h5, h6, img, figure
+		margin-bottom: 15px
+		&:last-child
+			margin-bottom: 0
+		+media-breakpoint-down(xs)
+			margin-bottom: 10px
+	figure
+		margin: 0 auto 15px
+		text-align: center
+		+media-breakpoint-down(xs)
+			margin-bottom: 10px
+		img
+			margin-bottom: 5px
+		figcaption
+			// background: darken($white,5%)
+			padding: 5px 0
+			text-align: center
+			+fs(13rem)
+			font-style: italic
+			color: darken($white,60%)
+	ul 
+		padding-left: 15px
+		li 
+			+pos(rel,null)
+			&:before
+				content: ''
+				display: block
+				width: 6px
+				height: 6px
+				+bor-rad(50px)
+				background: darken($white,60%)
+				+pos(abs, 7px null null -15px)
+
+.row
+	+media-breakpoint-down(lg)
+		// margin: 0px -5px
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl
+	// +transition(all,0.3s)
+	+pos(static,null)
+	+media-breakpoint-down(lg)
+		// padding: 0px 5px
+.col-12
+	width: 100%
+.nopadding
+	padding: 0
+*
+	&:hover, &:active, &:focus
+		outline: none
+	&:before, &:after
+		font-family: 'fontawesome'
+.lnr
+	font-family: 'linearicons-free'
+	&:before, &:after
+		font-family: 'linearicons-free'
+.material-icons
+	vertical-align: middle
+	margin-top: -3px

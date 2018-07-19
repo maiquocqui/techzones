@@ -1,0 +1,107 @@
+body.dialogpage
+	padding: 25px 0
+.update-password
+	+media-breakpoint-down(sm)
+		padding: 0 15px
+	h3
+		+fs(16rem)
+		font-weight: 700
+		line-height: 1.4
+		margin: 0 0 20px
+		padding: 0 15px
+	.form-group
+		clear: both
+		zoom: 1
+		&:before,
+		&:after
+			content: ''
+			display: table
+		&:after
+			clear: both
+		> div
+			+pos(rel,null)
+			.fa.fa-exclamation-triangle:after
+				left: 15px
+				width: calc(100% - 30px)
+		label
+			+fs(14rem)
+			font-weight: 500
+			line-height: 1.4
+			margin: 5px 0
+			vertical-align: middle
+			text-align: left
+			flex: 0 0 100%
+			max-width: 100%
+		input[type="text"],
+		input[type="password"]
+			height: 40px
+			line-height: 40px
+			+fs(14rem)
+			line-height: 1.4
+			color: $main
+			padding: 0 15px
+			vertical-align: middle
+			width: 100%
+			@include border-radius(0)
+		input[type="submit"]
+			border: none
+			display: block
+			width: 100%
+			padding: 0
+			width: 200px
+			margin: 0 auto
+			// text-transform: uppercase
+			+mainbutton($lblue,$dblue)
+			line-height: 40px
+			height: 40px
+			+fs(16rem)
+			font-weight: 500
+			@include transition(all 0.3s ease)
+			&:hover,
+			&:focus
+				+mainbutton($dblue,$lblue)
+				height: 40px
+				padding: 0
+				width: 200px
+				margin: 0 auto
+				text-align: center
+				line-height: 40px				
+		.checkout-radio
+			vertical-align: middle
+			input
+				margin-right: 5px
+				vertical-align: middle
+.warranty-wrap
+	padding: 40px 0
+	.title
+		+fs(24rem)
+		color: $main
+		font-weight: 700
+		margin-bottom: 20px
+		line-height: 1.5
+	.table
+		border: 1px solid darken($white, 10%)
+		border-collapse: collapse
+		tr
+			th:nth-child(1)
+				width: 200px
+				+media-breakpoint-down(xs)
+					min-width: 150px
+			th,td
+				+fs(15rem)
+				font-weight: 500
+				line-height: 1.4
+				text-align: center
+				border: 1px solid darken($white, 10%)
+			th
+				font-weight: 700
+				background-color: $blue
+				color: $white
+				border: 1px solid $white
+	.info-warranty
+		.item
+			+fs(15rem)
+			font-weight: 500
+			line-height: 1.4
+			a
+				color: $blue

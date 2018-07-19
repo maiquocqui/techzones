@@ -1,0 +1,167 @@
+section.breadcrumb-wrap.clearfix
+	.container
+		ol.breadcrumb(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books')
+					span(itemprop='name') Trang chủ
+				meta(itemprop='position', content='1')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Tài khoản
+				meta(itemprop='position', content='2')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Admin
+				meta(itemprop='position', content='3')
+.container
+	.row.flex.flex-wrap
+		.col-12.col-lg-3
+			section.user-sidebar.clearfix
+				.userinfo.clearfix
+					figure
+						a.user-img(href="#")
+							img(src="img/user.png", alt="")
+						figcaption
+							.title Tài khoản của
+							.user-name Admin
+							.user-rank <i class="fa fa-trophy" aria-hidden="true"></i> Thành viên vàng
+			nav.user-sidelink.clearfix
+				ul 
+					li.hvr-sweep-to-right
+						a(href="userpanel1.html") Chính sách thành viên
+					li.hvr-sweep-to-right.active
+						a(href="userpanel.html") Thông tin chung
+					li.hvr-sweep-to-right
+						a(href="userpanel1.html") Thông tin tài khoản
+					li.hvr-sweep-to-right
+						a(href="userpanel2.html") Số địa chỉ
+					//- li.hvr-sweep-to-right
+						//- a(href="#") Thông báo của tôi
+					li.hvr-sweep-to-right
+						a(href="userpanel3.html") Đơn hàng của tôi
+					li.hvr-sweep-to-right
+						a(href="userpanel4.html") Danh sách yêu thích
+					li.hvr-sweep-to-right
+						a(href="userpanel5.html") Quản lý điểm thưởng
+		.col-12.col-lg-9
+			section.user-page.clearfix
+				h1.postname Thông tin chung
+				.row.flex.flex-wrap
+					.col-12
+						section.account-info.clearfix
+							h2.posttitle Thông tin tài khoản
+							a.link(href="userpanel1.html") Chỉnh sửa
+							.info-detail
+								.row.flex.flex-wrap
+									.col-12.col-md-6
+										.group
+											.label(for="#") Họ và Tên:
+											.detail Admin
+										.group
+											.label(for="") Email:
+											.detail admin@cp.com.vn
+									.col-12.col-md-6
+										.group
+											.label(for="") Điểm thưởng:
+											.detail.point 5700 điểm
+										.group
+											.label(for="") Cấp bậc thành viên:
+											.detail.point Thành viên vàng
+										//- .group
+											.label(for="") Tiền thưởng:
+											.detail.point 5700 xu
+					//- .col-12.col-md-6
+						section.coin-info.clearfix
+							.info-detail
+								.detail Bạn có 
+									strong 5700 
+									|điểm thưởng.
+								.detail Bạn có 
+									strong 5700 
+									|tiền thưởng.
+					.col-12
+						section.cart-history.clearfix
+							h2.posttitle Các đơn hàng vừa đặt
+							a.link(href="userpanel3.html") Xem tất cả
+							.table-responsive
+								table.table
+									thead
+										tr 
+											th Mã đơn hàng
+											th Ngày mua
+											th Sản phẩm
+											th Tổng tiền
+											th Trạng thái đơn hàng
+									tbody
+										tr 
+											td 
+												a(href="userpanel31.html") 46692740
+											td 07/12/2016
+											td 
+												a(href="#") American Tourister Handy Spinner 78cm TSA
+												a.link-detail(href="#") Chi tiết
+											td 400.200đ
+											td 
+												.alert-success Đơn hàng thành công
+										tr 
+											td 
+												a(href="userpanel31.html") 12345678
+											td 07/12/2016
+											td 
+												a(href="#") American Tourister Handy Spinner 78cm TSA
+												a.link-detail(href="#") Chi tiết
+											td 628.000đ
+											td 
+												.alert-warning Đang xử lý
+										tr 
+											td 
+												a(href="userpanel31.html") 46692740
+											td 07/12/2016
+											td 
+												a(href="#") American Tourister Handy Spinner 78cm TSA
+												a.link-detail(href="#") Chi tiết
+											td 50.000đ
+											td 
+												.alert-success Đơn hàng thành công
+										tr 
+											td 
+												a(href="userpanel31.html") 46692740
+											td 07/12/2016
+											td 
+												a(href="#") American Tourister Handy Spinner 78cm TSA
+												a.link-detail(href="#") Chi tiết
+											td 750.000đ
+											td 
+												.alert-info Đang chuyển hàng
+										tr 
+											td 
+												a(href="userpanel31.html") 46692740
+											td 07/12/2016
+											td 
+												a(href="#") American Tourister Handy Spinner 78cm TSA
+												a.link-detail(href="#") Chi tiết
+											td 454.850đ
+											td
+												.alert-info Đang chuyển hàng
+					.col-12
+						section.address-info.clearfix
+							h2.posttitle Sổ địa chỉ
+							a.link(href="userpanel2.html") Xem tất cả
+							.address-list.flex.flex-wrap.clearfix
+								.address-col
+									.address.default.clearfix
+										.type default
+										.name Admin
+										.addr-detail
+											ul 
+												li Địa chỉ: 156 Nguyễn Văn Thủ, p.Dakao, Q.1, Phường Đa kao, Quận 1, Hồ Chí Minh, Việt Nam.
+												li Điện thoại: 0981540288
+										a.btn-editaddr(href="userpanel21.html") Sửa
+								.address-col
+									.address.clearfix
+										.name Admin
+										.addr-detail
+											ul 
+												li Địa chỉ: 156 Nguyễn Văn Thủ, p.Dakao, Q.1, Phường Đa kao, Quận 1, Hồ Chí Minh, Việt Nam.
+												li Điện thoại: 0981540288
+										a.btn-editaddr(href="userpanel21.html") Sửa

@@ -1,0 +1,142 @@
+header
+	section.header-top.clearfix
+		.container
+			.hotline
+				<i class="material-icons">phone</i> Hotline: 
+				a(href="tel:0934307799") 093.430.7799
+			.colright.clearfix
+				.check-tool
+					.dropdown
+						a.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') <i class="material-icons">assignment</i> Kiểm tra đơn hàng
+						.dropdown-menu.check-form(aria-labelledby='dropdownMenuLink')
+							.form-group
+								label Mã đơn hàng
+								input(type="text")
+							.frm-btn
+								input(type="submit", value="Xác nhận")
+				.check-tool
+					.dropdown
+						a.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') <i class="material-icons">event_available</i> Kiểm tra bảo hành
+						.dropdown-menu.check-form(aria-labelledby='dropdownMenuLink')
+							.form-group
+								label Mã IMEI
+								input(type="text")
+							.frm-btn
+								input(type="submit", value="Xác nhận")
+	section.header-main.clearfix
+		.container
+			.sitelogo
+				a(href="#")
+					img(src="img/logo.png", alt="")
+			.search
+				.searchwrap
+					.searchbox
+						input(type="text" placeholder="Nhập từ khóa tìm kiếm...")
+						.searchbutton <i class="material-icons">search</i>
+			.colright.clearfix
+				.sitefeature
+					.feature
+						figure
+							.icon
+								img(src="img/icon/f1.png", alt="")
+							figcaption
+								.des Trả góp lãi xuất 0%
+					.feature
+						figure
+							.icon
+								img(src="img/icon/f2.png", alt="")
+							figcaption
+								.des Miễn phí vận chuyển
+					.feature
+						figure
+							.icon
+								img(src="img/icon/f3.png", alt="")
+							figcaption
+								.des Đổi trả trong 15 ngày
+				.login
+					ul
+						li
+							a(href="#!") Đăng ký
+						//- <i class="material-icons">person</i>
+						li
+							a(href="#!") Đăng nhập
+				.notification
+					.notification-toggle.active <i class="material-icons">notifications</i>
+					.notification-popup
+				.cart
+					.cart-toggle
+						i.material-icons shopping_cart
+						.cart-amount
+							a(href='#')
+								| Giỏ hàng 
+								span.amount 0
+					.popup-addtocart
+						.addtocart-success <i class="material-icons">check_circle</i>Thêm vào giỏ hàng thành công
+						.btn-hidepopup <i class="material-icons">close</i> Đóng
+						.product
+							figure
+								a.product-img(href="#")
+									img(src="img/product/1.jpg", alt="")
+								figcaption
+									h3.product-name
+										a(href="#") Fossil Q Marshal
+									.product-option size: <strong>lớn</strong>, màu: <strong>bạc</strong>
+									.product-amount số lượng: <strong>1</strong>
+									.product-price 5.600.000 đ
+						.popup-btnwrap
+							a.btn-gotocart(href="#") Xem giỏ hàng
+	section.header-menu.clearfix
+		.container
+			nav.menu.clearfix
+				ul.menulink
+					li.active
+						a(href="#")
+							.icon
+								img(src="img/icon/cateic1.png", alt="")
+							.text Thiết bị đeo tay
+					li
+						a(href="#")
+							.icon
+								img(src="img/icon/cateic2.png", alt="")
+							.text Home theater
+					li
+						a(href="#")
+							.icon
+								img(src="img/icon/cateic4.png", alt="")
+							.text Âm thanh
+					li
+						a(href="#")
+							.icon
+								img(src="img/icon/cateic5.png", alt="")
+							.text Máy tính
+					li
+						a(href="#")
+							.icon
+								img(src="img/icon/cateic6.png", alt="")
+							.text Gaming gear
+					li
+						a(href="#")
+							.icon
+								img(src="img/icon/cateic8.png", alt="")
+							.text Camera
+					li
+						a(href="#")
+							.icon
+								img(src="img/icon/cateic9.png", alt="")
+							.text Phụ kiện
+					li
+						a(href="#")
+							.icon
+								img(src="img/icon/cateic10.png", alt="")
+							.text Hàng 2nd
+					li.news
+						a(href="#")
+							.icon
+								<i class="material-icons">rss_feed</i>
+							.text Tin tức
+					li.brand
+						a(href="#")
+							.icon
+								<i class="material-icons">local_offer</i>
+							.text Thương hiệu
+			

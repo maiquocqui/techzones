@@ -1,0 +1,70 @@
+section.breadcrumb-wrap.clearfix
+	.container
+		ol.breadcrumb(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books')
+					span(itemprop='name') Trang chủ
+				meta(itemprop='position', content='1')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Tài khoản
+				meta(itemprop='position', content='2')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Admin
+				meta(itemprop='position', content='3')
+.container
+	.row.flex.flex-wrap
+		.col-12.col-lg-3
+			section.user-sidebar.clearfix
+				.userinfo.clearfix
+					figure
+						a.user-img(href="#")
+							img(src="img/user.png", alt="")
+						figcaption
+							.title Tài khoản của
+							.user-name Admin
+							.user-rank <i class="fa fa-trophy" aria-hidden="true"></i> Thành viên vàng
+			nav.user-sidelink.clearfix
+				ul 
+					li.hvr-sweep-to-right
+						a(href="userpanel1.html") Chính sách thành viên
+					li.hvr-sweep-to-right
+						a(href="userpanel.html") Thông tin chung
+					li.hvr-sweep-to-right
+						a(href="userpanel1.html") Thông tin tài khoản
+					li.hvr-sweep-to-right.active
+						a(href="userpanel2.html") Số địa chỉ
+					//- li.hvr-sweep-to-right
+					//- 	a(href="#") Thông báo của tôi
+					li.hvr-sweep-to-right
+						a(href="userpanel3.html") Đơn hàng của tôi
+					li.hvr-sweep-to-right
+						a(href="userpanel4.html") Danh sách yêu thích
+					li.hvr-sweep-to-right
+						a(href="userpanel5.html") Quản lý điểm thưởng
+		.col-12.col-lg-9
+			section.user-page.clearfix
+				h1.postname Sổ địa chỉ
+				a.btn-addaddr(href="userpanel22.html") Thêm địa chỉ
+				.row.flex.flex-wrap
+					.col-12
+						section.address-info.clearfix
+							.address-list.flex.flex-wrap.clearfix
+								.address-col
+									.address.default.clearfix
+										.type default
+										.name Admin
+										.addr-detail
+											ul 
+												li Địa chỉ: 156 Nguyễn Văn Thủ, p.Dakao, Q.1, Phường Đa kao, Quận 1, Hồ Chí Minh, Việt Nam.
+												li Điện thoại: 0981540288
+										a.btn-editaddr(href="userpanel21.html") Sửa
+								//- .address-col
+								//- 	.address.clearfix
+								//- 		.name Admin
+								//- 		.addr-detail
+								//- 			ul 
+								//- 				li Địa chỉ: 156 Nguyễn Văn Thủ, p.Dakao, Q.1, Phường Đa kao, Quận 1, Hồ Chí Minh, Việt Nam.
+								//- 				li Điện thoại: 0981540288
+								//- 		a.btn-editaddr(href="#") Sửa

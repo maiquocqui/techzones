@@ -1,0 +1,724 @@
+.page-title
+	+fs(28rem)
+	font-weight: 600
+	margin-bottom: 20px
+.hot-news
+	// padding: 30px 0 0
+	margin-bottom: 20px
+	font-family: 'Helvetica', Arial, sans-serif
+	.page-title
+		text-transform: uppercase
+	.title-wrap
+		+clearfix
+		.small-title
+			+fs(20rem)
+			font-weight: 600
+			margin-bottom: 20px
+			float: left
+		.btn-viewmore
+			+fs(14rem)
+			float: right
+			color: $blue
+			margin-top: 2px
+			&:after
+				content: '\f105'
+				margin-left: 5px
+	.hotnews-list
+		.row
+			margin: 0px -10px
+		.col-12
+			padding: 0px 10px
+	.news-col
+		margin-bottom: 20px	
+		font-family: 'Helvetica', Arial, sans-serif
+		figure
+			+pos(rel,null)
+			+bor-rad(5px)
+			overflow: hidden
+			box-shadow: 0px 20px 70px color-rgba($black,0.3)
+			.news-img
+				display: block
+				+bor-rad(5px)
+				overflow: hidden
+				+pos(rel,null)
+				&:before
+					content: ''
+					+pos(abs, 0 null 0 0)
+					right: 0
+					background: linear-gradient(135deg, color-rgba($black,0.2),color-rgba($black,0.5))
+				img
+					width: 100%
+					height: 180px
+					object-fit: cover
+			figcaption
+				+pos(abs, null 10px 10px 10px)
+				z-index: 10
+				text-shadow: 0 1px 3px color-rgba($black,0.1)
+				.news-name
+					+fs(14rem)
+					font-family: 'Helvetica', Arial, sans-serif
+					font-weight: 500
+					line-height: 1.3
+					display: -webkit-box
+					max-height: 0.875rem*1.3*2
+					-webkit-line-clamp: 2
+					-webkit-box-orient: vertical
+					overflow: hidden
+					text-overflow: ellipsis
+					a
+						color: $white
+				time
+					+fs(11rem)
+					color: $white
+					opacity: 0.6
+		&.big
+			figure
+				.news-img
+					img
+						height: 380px
+				figcaption
+					.news-name
+						+fs(20rem)
+						font-family: 'Helvetica', Arial, sans-serif
+						display: -webkit-box
+						max-height: 1.25rem*1.3*2
+						-webkit-line-clamp: 2
+						-webkit-box-orient: vertical
+						overflow: hidden
+						text-overflow: ellipsis
+.lastest-news
+	margin-bottom: 20px
+	.title-wrap
+		+clearfix
+		.small-title
+			+fs(20rem)
+			font-weight: 600
+			margin-bottom: 20px
+			float: left
+		.btn-viewmore
+			+fs(14rem)
+			float: right
+			color: $blue
+			margin-top: 2px
+			&:after
+				content: '\f105'
+				margin-left: 5px
+	.news-list
+		.row
+			+media-breakpoint-down(md)
+				display: block
+				overflow: auto
+				white-space: nowrap
+				+disablescroll
+				padding: 0px 15px
+				.item
+					display: inline-block
+					width: 250px
+					padding: 0
+					+ .item
+						margin-left: 10px
+	.news-col
+		margin-bottom: 15px
+		figure
+			.news-img
+				display: block
+				+bor-rad(5px)
+				overflow: hidden
+				picture
+					+bor-rad(5px)
+					overflow: hidden
+					+flexbox
+					justify-content: center
+					align-items: center
+					align-content: center
+					height: 180px
+					img 
+						min-width: 100%
+						min-height: 100%
+				> img
+					width: 100%
+					height: 180px
+					object-fit: cover
+			figcaption
+				padding: 5px 0
+				.news-name
+					font-family: 'Helvetica', Arial, sans-serif
+					a
+						display: block
+						font-weight: 600
+						color: $black
+						white-space: nowrap
+						text-overflow: ellipsis
+						overflow: hidden
+				time
+					+fs(12rem)
+					color: darken($white,40%)
+					font-weight: 500
+.news-page
+	margin-bottom: 20px
+	font-family: 'Helvetica', Arial, sans-serif
+	.page-title
+		+fs(28rem)
+		font-weight: 600
+		margin-bottom: 20px
+		font-family: 'Helvetica', Arial, sans-serif
+	.title-wrap
+		+clearfix
+		.small-title
+			+fs(20rem)
+			font-weight: 600
+			margin-bottom: 20px
+			float: left
+			font-family: 'Helvetica', Arial, sans-serif
+		.btn-viewmore
+			+fs(14rem)
+			float: right
+			color: $blue
+			margin-top: 2px
+			&:after
+				content: '\f105'
+				margin-left: 5px
+	.hot-news
+		margin-bottom: 15px
+		.news-col
+			figure
+				.news-img
+					display: block
+					+bor-rad(5px)
+					overflow: hidden
+					img 
+						width: 100%
+				figcaption
+					white-space: normal
+					padding: 5px 0
+					time
+						color: $lred
+						+fs(12rem)
+						font-weight: 500
+						display: block
+						margin-bottom: 5px
+					.news-name
+						+fs(14rem)
+						font-weight: 600
+						line-height: 1.5
+						font-family: 'Helvetica', Arial, sans-serif
+						text-transform: uppercase
+						// margin-bottom: 15px
+						a
+							color: $black
+	.recent-news
+		white-space: nowrap
+		overflow: auto
+		+disablescroll
+		.news-col
+			display: inline-block
+			vertical-align: top
+			width: 150px
+			+ .news-col
+				margin-left: 5px
+			figure
+				.news-img
+					display: block
+					+bor-rad(5px)
+					overflow: hidden
+					img 
+						width: 100%
+				figcaption
+					padding: 5px 0
+					.news-name
+						font-family: 'Helvetica', Arial, sans-serif
+						a
+							display: block
+							color: $black
+							text-overflow: ellipsis
+							overflow: hidden
+							font-weight: 600
+					time
+						font-weight: 500
+						+fs(12rem)
+						color: darken($white,40%)
+	.news-list
+		margin-bottom: 10px
+		.row
+			+media-breakpoint-down(md)
+				display: block
+				overflow: auto
+				white-space: nowrap
+				+disablescroll
+				padding: 0px 15px
+				article
+					display: inline-block
+					width: 250px
+					padding: 0
+					+ article
+						margin-left: 10px
+		.news-col
+			margin-bottom: 15px
+			figure
+				.news-img
+					display: block
+					+bor-rad(5px)
+					overflow: hidden
+					picture
+						+bor-rad(5px)
+						overflow: hidden
+						+flexbox
+						justify-content: center
+						align-items: center
+						align-content: center
+						height: 100px
+						+media-breakpoint-up(md)
+							height: 200px
+						+media-breakpoint-up(lg)
+							height: 250px
+						img 
+							min-width: 100%
+							min-height: 100%
+							object-fit: cover
+				figcaption
+					padding: 5px 0
+					.news-name
+						font-family: 'Helvetica', Arial, sans-serif
+						a
+							display: block
+							font-weight: 600
+							color: $black
+							white-space: nowrap
+							text-overflow: ellipsis
+							overflow: hidden
+					time
+						+fs(12rem)
+						color: darken($white,40%)
+						font-weight: 500
+	.post-list
+		margin-bottom: 30px
+		border-top: 1px dashed darken($white,10%)
+		.post
+			padding: 10px 0
+			border-bottom: 1px dashed darken($white,10%)
+			figure
+				+flexbox
+				.post-img
+					width: 60px
+					text-align: center
+				figcaption
+					width: calc(100% - 60px)
+					padding-left: 10px
+					.post-name
+						a
+							display: block
+							+fs(13rem)
+							// font-weight: 500
+							color: $main
+							line-height: 1.3
+	.news-detail
+		// border-bottom: 1px solid darken($white,10%)
+		margin-bottom: 15px
+		font-family: 'Helvetica', Arial, sans-serif
+		.news-name
+			+fs(28rem)
+			font-weight: 600
+			margin-bottom: 10px
+			&:after
+				content: ''
+				display: block
+				width: 70px
+				height: 5px
+				background: $dblue
+				margin-top: 10px
+		time
+			display: block
+			+fs(12rem)
+			font-weight: 500
+			color: $lred
+			margin-bottom: 10px
+		.content
+			font-family: 'Helvetica', Arial, sans-serif
+	.content
+		margin-bottom: 0px
+		+ .share
+			margin-bottom: 30px
+		.post-title
+			+pos(rel,null)
+			padding-left: 15px
+			font-weight: 600
+			+fs(15rem)
+			line-height: 1.5
+			text-transform: uppercase
+			margin: 15px 0
+			&:before
+				content: ''
+				display: block
+				width: 5px
+				height: 16px
+				// +bor-rad(50px)
+				background: $dblue
+				+pos(abs, 2px null null 0)
+		.post-title2
+			display: inline-block
+			background: $black
+			color: $white
+			text-transform: uppercase
+			line-height: 1.5
+			padding: 5px 10px
+			margin: 15px 0
+			font-weight: 500
+			border-left: 5px solid $dblue
+		figure
+			+pos(rel,null)
+			figcaption
+				+pos(abs, null -5px 20px null)
+				max-width: 80%
+				background: $black
+				border-left: 5px solid $dblue
+				padding: 0
+				line-height: 1.5
+				color: $white
+				padding: 5px 10px
+				font-family: 'Helvetica', Arial, sans-serif
+		ul.special
+			+pos(rel,null)
+			padding: 0
+			&:before
+				content: ''
+				display: block
+				width: 0px
+				+pos(abs, 0 null 0 3px)
+				border-left: 1px dashed darken($white,20%)
+			li
+				color: darken($white,60%)
+				padding-left: 15px
+				&:before
+					width: 8px
+					height: 8px
+					+bor-rad(5px)
+					background: $dblue
+					left: 0px
+	.newspage-list
+		+media-breakpoint-down(sm)
+			margin-top: 15px
+			margin-left: -10px
+			margin-right: -10px
+			.row
+				margin-right: -10px
+				margin-left: -10px
+				& > [class^="col-"],
+				& > [class*=" col-"]
+					padding-right: 10px
+					padding-left: 10px
+		.news-col
+			+bor-rad(5px)
+			overflow: hidden
+			background: darken($white,5%)
+			margin-bottom: 15px
+			+media-breakpoint-down(sm)
+				background: none
+				padding-bottom: 20px
+				margin-bottom: 20px
+				border-bottom: 1px solid darken($white, 10%)
+			figure
+				.news-img
+					picture
+						+flexbox
+						align-items: center
+						justify-content: center
+						object-fit: cover
+						max-height: 135px
+						+media-breakpoint-up(md)
+							max-height: 230px
+						img
+							width: 100%
+							min-height: 135px
+							max-height: 135px
+							object-fit: cover
+							+media-breakpoint-up(md)
+								min-height: 230px
+								max-height: 230px
+				figcaption
+					padding: 10px 15px
+					+pos(rel,null)
+					+media-breakpoint-down(sm)
+						padding: 15px 15px 0 15px
+					.news-name
+						margin: 0
+						line-height: 1.4
+						font-family: 'Helvetica', Arial, sans-serif
+						+media-breakpoint-up(md)
+							min-height: 3rem
+						+media-breakpoint-down(sm)
+							margin: 0 0 15px
+						a
+							+media-breakpoint-up(md)
+								color: $black
+								display: block
+								max-height: 0.875rem*1.4*2
+								+fs(14rem)
+								font-weight: 600
+								line-height: 1.4
+								-webkit-line-clamp: 2
+								-webkit-box-orient: vertical
+								overflow: hidden
+								text-overflow: ellipsis								
+							+media-breakpoint-down(sm)
+								+fs(24rem)
+								font-weight: 600
+								line-height: 1.4
+								color: #475b6f
+					time 
+						display: block
+						line-height: 1.4
+						+fs(12rem)
+						font-weight: 400
+						color: darken($white,40%)
+						margin-bottom: 5px
+						+media-breakpoint-down(sm)
+							display: none
+					.news-des
+						+fs(16rem)
+						line-height: 1.4
+						font-weight: 500
+						color: $main
+						p, span
+							line-height: 1.4				
+						+media-breakpoint-up(md)
+							display: none
+
+.news-category
+	margin-bottom: 30px
+	ul
+		margin-top: -10px
+		// border-top: 1px solid darken($white,20%)
+		li
+			border-bottom: 1px solid darken($white,10%)
+			a
+				display: block
+				color: $lred
+				+fs(14rem)
+				// font-weight: 500
+				padding: 10px 0
+.news-video
+	margin-bottom: 30px
+	.title-wrap
+		+clearfix
+		.small-title
+			// +fs(20rem)
+			font-weight: 600
+			margin-bottom: 20px
+			float: left
+		.btn-viewmore
+			+fs(14rem)
+			float: right
+			color: $blue
+			margin-top: 2px
+			&:after
+				content: '\f105'
+				margin-left: 5px
+	.video-list
+		white-space: nowrap
+		overflow: auto
+		+disablescroll
+		+media-breakpoint-up(lg)
+		.video-col
+			display: inline-block
+			vertical-align: top
+			width: 150px
+			box-shadow: 0 10px 20px -10px color-rgba($black,0.1)
+			+media-breakpoint-up(md)
+				width: 250px
+			+media-breakpoint-up(lg)
+				display: block
+				width: 100%
+				box-shadow: none
+				padding: 10px 0
+				border-bottom: 1px dashed darken($white,10%)
+			+ .video-col
+				margin-left: 10px
+				+media-breakpoint-up(lg)
+					margin-left: 0
+			&.big
+				+media-breakpoint-up(lg)
+					padding: 0
+					figure
+						+pos(rel,null)
+						.video-img
+							width: 100%
+							&:before
+								+fs(36rem)
+						figcaption
+							padding: 0
+							+pos(abs, null 15px 15px 15px)
+							a
+								display: block
+								color: $white
+								+fs(16rem)
+			figure
+				+media-breakpoint-up(lg)
+					+flexbox
+				.video-img
+					display: block
+					+pos(rel,null)
+					+bor-rad(5px)
+					overflow: hidden
+					+media-breakpoint-up(lg)
+						width: 70px
+					&:before
+						content: '\f04b'
+						+pos(abs, 0 null 0 0)
+						right: 0
+						+flexbox
+						justify-content: center
+						align-items: center
+						+fs(28rem)
+						color: $white
+						background: color-rgba($black,0.5)
+						+media-breakpoint-up(lg)
+							+fs(16rem)
+				figcaption
+					padding: 10px 0
+					white-space: nowmal
+					+fs(13rem)
+					font-weight: 500
+					+media-breakpoint-up(lg)
+						width: calc(100% - 70px)
+						padding: 0
+						padding-left: 15px
+					a
+						color: $black
+.top-review
+	+media-breakpoint-up(md)
+		padding: 30px 0
+		background: darken($white,10%)
+	.title-wrap
+		+clearfix
+		.small-title
+			+fs(20rem)
+			font-weight: 600
+			margin-bottom: 20px
+			float: left
+		.btn-viewmore
+			+fs(14rem)
+			float: right
+			color: $blue
+			margin-top: 2px
+			&:after
+				content: '\f105'
+				margin-left: 5px
+	.post-list
+		+media-breakpoint-down(lg)
+			display: block
+			white-space: nowrap
+			overflow: auto
+			+disablescroll
+			margin: 0px -15px
+			padding: 0px 15px
+			.item
+				width: 250px
+				display: inline-block
+				max-width: 250px
+				+ .item
+					margin-left: 10px
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			+fs(0)
+			z-index: 5
+			&:before
+				content: ''
+				+fs(28rem)
+		.slick-next
+			right: -30px
+			&:before
+				content: '\f105'
+		.slick-prev
+			left: -30px
+			&:before
+				content: '\f104'
+		.slick-list
+			+bor-rad(5px)
+			overflow: hidden
+	.post
+		figure
+			+pos(rel,null)
+		.post-img
+			+pos(rel,null)
+			+flexbox
+			align-items: center
+			justify-content: center
+			object-fit: cover
+			max-height: 150px
+			+media-breakpoint-up(md)
+				max-height: 220px
+			img
+				width: 100%
+				min-height: 150px
+				max-height: 150px
+				object-fit: cover
+				+media-breakpoint-up(md)
+					min-height: 220px
+					max-height: 220px
+			&:before
+				content: ''
+				+pos(abs, 0 null 0 0)
+				right: 0
+				z-index: 1
+				background: linear-gradient(135deg , color-rgba($black,0),color-rgba($black,0.5))
+		.post-name
+			+pos(abs, null 15px 15px 15px)
+			+fs(16rem)
+			font-weight: 500
+			z-index: 5
+			white-space: normal
+			+media-breakpoint-down(lg)
+				+fs(15rem)
+				line-height: 1.4
+				min-height: 5.5rem
+			a
+				color: $white
+.newsct-category
+	background: $black
+	// margin-bottom: 15px
+	+pos(rel,null)
+	// &:before
+	// 	content: ''
+	// 	+pos(abs, 0 null 0 0)
+	// 	width: 15px
+	// 	z-index: 5
+	// 	background: linear-gradient(to right, color-rgba($black,1),color-rgba($black,0))
+	// &:after
+	// 	content: ''
+	// 	+pos(abs, 0 0 0 null)
+	// 	width: 15px
+	// 	z-index: 5
+	// 	background: linear-gradient(to left, color-rgba($black,1),color-rgba($black,0))
+	ul
+		white-space: nowrap
+		overflow: auto
+		+disablescroll
+		li
+			display: inline-block
+			a
+				display: block
+				color: $white
+				// text-transform: uppercase
+				line-height: 50px
+				padding: 0px 20px
+				+pos(rel,null)
+				opacity: 0.5
+				+fs(14rem)
+				&:after
+					content: ''
+					height: 5px
+					background: linear-gradient(to right, $lblue, $dblue)
+					+pos(abs, null 0 0 0)
+					opacity: 0
+			&.active
+				a
+					opacity: 1
+					&:after
+						opacity: 1
+.pages.newspager
+	margin-bottom: 30px
+.temp-newspage
+	main
+		+media-breakpoint-down(sm)
+			background: darken($white, 4%)

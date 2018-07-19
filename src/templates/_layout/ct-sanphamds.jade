@@ -1,0 +1,531 @@
+section.news-breadcrumb.clearfix
+	.container
+		ol.breadcrumb
+			li
+				a(href="#")
+					span Trang chủ
+			li
+				a(href="#")
+					span Sản phẩm
+			li
+				a(href="#")
+					span Smartwatch
+.container
+	section.product-subcate.clearfix.d-none.d-lg-block
+		ul
+			li.active
+				a.subcate(href="#")
+					.icon
+						<i class="fa fa-th" aria-hidden="true"></i>
+					.name Nổi bật
+			li
+				a.subcate(href="#")
+					.icon
+						img(src="img/icon/cateic1.png", alt="")
+					.name Smartwatch
+			li
+				a.subcate(href="#")
+					.icon
+						img(src="img/icon/cateic2.png", alt="")
+					.name Tay cầm
+			li
+				a.subcate(href="#")
+					.icon
+						img(src="img/icon/cateic4.png", alt="")
+					.name Âm thanh
+			li
+				a.subcate(href="#")
+					.icon
+						img(src="img/icon/cateic5.png", alt="")
+					.name Máy tính
+			li
+				a.subcate(href="#")
+					.icon
+						img(src="img/icon/cateic6.png", alt="")
+					.name Gaming Gear
+			li
+				a.subcate(href="#")
+					.icon
+						img(src="img/icon/cateic8.png", alt="")
+					.name Camera
+	include filter
+	section.btn-filterwrap.d-lg-none
+		.btn-changeview
+		.btn-showfilter <i class="material-icons">tune</i> Bộ lọc
+		.btn-showcate <i class="material-icons">view_list</i> Danh mục
+	section.product-page.clearfix
+		.product-sort
+			.click-sort.d-xs-none.d-lg-flex
+				a.active(href="#") Giá thấp - cao
+				a(href="#") Giá cao - thấp
+				a(href="#") Giảm giá nhiều nhất
+				a(href="#") Hàng mới về
+			.sort-type.d-xs-block.d-xl-none
+				label(for="") <i class="material-icons">swap_vert</i>
+				select
+					option(value="#") Giá thấp - cao
+					option(value="#") Giá cao - thấp
+					option(value="#") Giảm giá nhiều nhất
+			.btn-compare <i class="material-icons">compare_arrows</i> So sánh
+		.productlist
+			.row.no-gutters
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/1.jpg", alt="")
+							figcaption
+								h2.product-name iPhone 7 Plus Red
+								.product-price
+									.new 23.490.000 ₫
+									//- .old 25.000.000 ₫
+								.product-des
+									p Khuyến mãi
+									ul
+										li Giảm thêm 800.000đ khi thanh toán trực tuyến bằng MasterCard
+								.popup-info
+									.name iPhone 7 Plus Red
+									.des
+										ul
+											li Màn hình: 5.5", Retina HD
+											li HĐH: iOS 10
+											li CPU: Apple A10 Fusion 4 nhân
+											li RAM: 3GB, ROM: 128GB
+											li Camera: 2x 12 MP, Selfie: 7 MP
+											li PIN: 2900 mAh, SIM: 1 SIM
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/2.jpg", alt="")
+							figcaption
+								h2.product-name Samsung Galaxy Note 8
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+								.product-des
+									p Khuyến mãi
+									ul
+										li Cơ hội trúng Xe Honda SH 150i (áp dụng 1 số tỉnh phía Bắc)
+										li Đặt hàng, nhận hàng giữa tháng 10
+								.popup-info
+									.name Samsung Galaxy Note 8
+									.des
+										ul
+											li Màn hình: 6.3", Quad HD (2K)
+											li HĐH: Android 7.1
+											li CPU: Exynos 8895 8 nhân
+											li RAM: 6GB, ROM: 64GB
+											li Camera: 2 camera 12 MP, Selfie: 8 MP
+											li PIN: 3300 mAh, SIM: 2 SIM
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/3.jpg", alt="")
+							figcaption
+								h2.product-name Samsung Galaxy S8
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/4.jpg", alt="")
+							figcaption
+								h2.product-name Sony Xperia XZ Premium
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/5.jpg", alt="")
+							figcaption
+								h2.product-name iPhone 6s 128GB
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/6.jpg", alt="")
+							figcaption
+								h2.product-name HTC U Ultra Sapphire
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/7.jpg", alt="")
+							figcaption
+								h2.product-name Sony Xperia XZ Premium Pink Gold
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/8.jpg", alt="")
+							figcaption
+								h2.product-name iPhone 6s Plus 64GB
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/9.jpg", alt="")
+							figcaption
+								h2.product-name iPhone 6s 32GB
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/10.jpg", alt="")
+							figcaption
+								h2.product-name Sony Xperia XZs
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				
+				
+				article.col-12.col-sm-8.col-md-6.col-lg-4.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/b1.png", alt="")
+							figcaption
+								h2.product-name Samsung Galaxy Book 10.6 inch
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/20.jpg", alt="")
+							figcaption
+								h2.product-name iPad Pro 10.5 inch Wifi Cellular 64GB (2017)
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/21.jpg", alt="")
+							figcaption
+								h2.product-name iPad Pro 10.5 inch Wifi 64GB (2017)
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/22.jpg", alt="")
+							figcaption
+								h2.product-name Samsung Galaxy Tab S3
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/23.jpg", alt="")
+							figcaption
+								h2.product-name iPad Wifi 128GB (2017)
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-12.col-sm-8.col-md-6.col-lg-4.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/b2.png", alt="")
+							figcaption
+								h2.product-name iPad Pro 9.7 inch Wifi 32GB
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-12.col-sm-8.col-md-6.col-lg-4.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/b3.png", alt="")
+							figcaption
+								h2.product-name iPad Pro 9.7 inch Wifi 32GB
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/24.jpg", alt="")
+							figcaption
+								h2.product-name iPad Wifi 128GB (2017)
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/25.jpg", alt="")
+							figcaption
+								h2.product-name iPad Wifi 128GB (2017)
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/26.jpg", alt="")
+							figcaption
+								h2.product-name iPad Wifi 128GB (2017)
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/27.jpg", alt="")
+							figcaption
+								h2.product-name Samsung Galaxy Tab A6 10.1 Spen
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-12.col-sm-8.col-md-6.col-lg-4.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/b4.png", alt="")
+							figcaption
+								h2.product-name Samsung Galaxy Tab A 8.0 (2017)
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/28.jpg", alt="")
+							figcaption
+								h2.product-name Huawei MediaPad M3 8.0 (2017)
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-6.col-sm-4.col-md-3.col-lg-2.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/29.jpg", alt="")
+							figcaption
+								h2.product-name Huawei MediaPad T3 8.0 (2017)
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+				article.col-12.col-sm-8.col-md-6.col-lg-4.col-custom
+					a.product-col(href="#!")
+						figure
+							.product-img
+								img(src="img/product/b5.png", alt="")
+							figcaption
+								h2.product-name Samsung Galaxy Note8
+								.product-price
+									.new 23.490.000 ₫
+									.old 25.000.000 ₫
+		.btn-wrap
+			a.btn-loadmore(href="#!") Xem thêm 135 sản phẩm
+	.filter-wrap.option-group.clearfix.filter-bottom.d-xs-none.d-lg-block
+		section.filter-header.clearfix
+			.container
+				.btn-closefilter <i class="material-icons">arrow_back</i>
+				.filter-title Bộ lọc sản phẩm
+		section.filter-content.clearfix
+			.filter-group
+				.filter-name Thương hiệu
+					.filter-tags
+						.filter-tag Apple
+							.btn-removetag <i class="material-icons">close</i>
+				.filter-option
+					.filter-brand
+						a.active(href="#") Apple
+							span (8)
+						a(href="#") Asus
+							span (5)
+						a(href="#") Fitbit
+							span (10)
+						a(href="#") Fossil
+							span (1)
+						a(href="#") Garmin
+							span (1)
+						a(href="#") Huawei
+							span (1)
+						a(href="#") Jawbone
+							span (1)
+						a(href="#") LG
+							span (1)
+						a(href="#") Michael Kors
+							span (1)
+						a(href="#") Misfit
+							span (1)
+						a(href="#") Moov
+							span (1)
+						a(href="#") Movado
+							span (1)
+						a(href="#") Samsung
+							span (1)
+						a(href="#") Tichwatch
+							span (1)
+						a(href="#") Withings
+							span (1)
+			.filter-group
+				.filter-name Màu sắc
+				.filter-option
+					.filter-color
+						a.ajaxlink.active(rel='nofollow', data-toggle='tooltip', data-placement='right', href='/thiet-bi-deo-tay?f1=2', title='', data-original-title='Tím')
+							.color-img(style='background-color:#990099')
+						a.ajaxlink.active(rel='nofollow', data-toggle='tooltip', data-placement='right', href='/thiet-bi-deo-tay?f1=3', title='', data-original-title='Xanh dương')
+							.color-img(style='background-color:#0000CC')
+						a.ajaxlink(rel='nofollow', data-toggle='tooltip', data-placement='right', href='/thiet-bi-deo-tay?f1=4', title='', data-original-title='Xám')
+							.color-img(style='background-color:#8B8994')
+						a.ajaxlink.active(rel='nofollow', data-toggle='tooltip', data-placement='right', href='/thiet-bi-deo-tay?f1=5', title='', data-original-title='Đỏ')
+							.color-img(style='background-color:#CC0033')
+						a.ajaxlink(rel='nofollow', data-toggle='tooltip', data-placement='right', href='/thiet-bi-deo-tay?f1=7', title='', data-original-title='Gold')
+							.color-img(style='background-color:#D3CEBB')
+						a.ajaxlink.active(rel='nofollow', data-toggle='tooltip', data-placement='right', href='/thiet-bi-deo-tay?f1=8', title='', data-original-title='Xanh bạc hà')
+							.color-img(style='background-color:#A3E3D3')
+						a.ajaxlink(rel='nofollow', data-toggle='tooltip', data-placement='right', href='/thiet-bi-deo-tay?f1=9', title='', data-original-title='Trắng')
+							.color-img(style='background-color:#FFFFFF')
+						a.ajaxlink(rel='nofollow', data-toggle='tooltip', data-placement='right', href='/thiet-bi-deo-tay?f1=10', title='', data-original-title='Xám đậm')
+							.color-img(style='background-color:#5A5653')
+						a.ajaxlink(rel='nofollow', data-toggle='tooltip', data-placement='right', href='/thiet-bi-deo-tay?f1=11', title='', data-original-title='Bạc')
+							.color-img(style='background-color:#D2D0D1')
+						a.ajaxlink(rel='nofollow', data-toggle='tooltip', data-placement='right', href='/thiet-bi-deo-tay?f1=13', title='', data-original-title='Đen')
+							.color-img(style='background-color:#000000')
+			.filter-group
+				.filter-name Thuộc tính
+				.filter-option
+					.filter-properties
+						a.active(href="#") Chạy bộ
+							span (3)
+						a.active(href="#") Chạy bộ
+							span (3)
+						a(href="#") Đo sức khỏe
+							span (10)
+						a.active(href="#") Kháng nước IP68
+							span (5)
+						a(href="#") Đo nhịp tim
+							span (5)
+						a(href="#") Bơi lội
+							span (5)
+			.filter-group
+				.filter-name Khoảng giá
+				.filter-option
+					.filter-price
+						a(href="#") 0 đ - 10.000.000 đ
+							span (140)
+						a.active(href="#") 10.000.000 đ - 20.000.000 đ
+							span (30)
+						a(href="#") 20.000.000 đ - 30.000.000 đ
+							span (20)
+		.filter-tags.d-xs-none.d-lg-block
+			.filter-tag Apple
+				.btn-removetag <i class="material-icons">close</i>
+			.filter-tag Màu bạc
+				.btn-removetag <i class="material-icons">close</i>
+			.filter-tag Từ 10 - 20 triệu
+				.btn-removetag <i class="material-icons">close</i>
+		.filter-button
+			.btn-resetall Đặt lại
+			.btn-closefilter Hoàn tất
+	section.product-subcate.clearfix.d-none.d-lg-block
+		ul
+			li.active
+				a.subcate(href="#")
+					.icon
+						<i class="fa fa-th" aria-hidden="true"></i>
+					.name Nổi bật
+			li
+				a.subcate(href="#")
+					.icon
+						img(src="img/icon/cateic1.png", alt="")
+					.name Smartwatch
+			li
+				a.subcate(href="#")
+					.icon
+						img(src="img/icon/cateic2.png", alt="")
+					.name Tay cầm
+			li
+				a.subcate(href="#")
+					.icon
+						img(src="img/icon/cateic4.png", alt="")
+					.name Âm thanh
+			li
+				a.subcate(href="#")
+					.icon
+						img(src="img/icon/cateic5.png", alt="")
+					.name Máy tính
+			li
+				a.subcate(href="#")
+					.icon
+						img(src="img/icon/cateic6.png", alt="")
+					.name Gaming Gear
+			li
+				a.subcate(href="#")
+					.icon
+						img(src="img/icon/cateic8.png", alt="")
+					.name Camera
+	.compare-panel.clearfix
+		.container
+			.compare-toggle
+				.btn-minimize Thu nhỏ <i class="material-icons">arrow_drop_down</i>
+				.btn-closecompare Đóng so sánh <i class="material-icons">close</i>
+			.row.no-gutters
+				.col-12.col-lg-9.col-xl-9
+					.compare-list.clearfix
+						.product
+							figure
+								a.product-img(href="#")
+									img(src="img/product/1.jpg", alt="")
+								figcaption
+									h2.product-name
+										a(href="#") iPhone 7 Plus Red
+									.product-price
+										.new 23.490.000 ₫
+										//- .old 25.000.000 ₫
+						.product
+							figure
+								a.product-img(href="#")
+									img(src="img/product/2.jpg", alt="")
+								figcaption
+									h2.product-name
+										a(href="#") Samsung Galaxy Note 8
+									.product-price
+										.new 23.490.000 ₫
+										.old 25.000.000 ₫
+						.product
+							.search
+								.searchbox
+									input(type="text" placeholder="Tìm sản phẩm so sánh...")
+									.searchbutton <i class="material-icons">search</i>
+				.col-12.col-lg-3.col-xl-3
+					.btn-wrap
+						a.btn-compare(href="#") So sánh chi tiết
+						.des So sánh tối đa 3 sản phẩm

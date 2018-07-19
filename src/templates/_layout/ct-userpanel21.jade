@@ -1,0 +1,77 @@
+section.breadcrumb-wrap.clearfix
+	.container
+		ol.breadcrumb(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books')
+					span(itemprop='name') Trang chủ
+				meta(itemprop='position', content='1')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Tài khoản
+				meta(itemprop='position', content='2')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Admin
+				meta(itemprop='position', content='3')
+.container
+	.row.flex.flex-wrap
+		.col-12.col-lg-3
+			section.user-sidebar.clearfix
+				.userinfo.clearfix
+					figure
+						a.user-img(href="#")
+							img(src="img/user.png", alt="")
+						figcaption
+							.title Tài khoản của
+							.user-name Admin
+							.user-rank <i class="fa fa-trophy" aria-hidden="true"></i> Thành viên vàng
+			nav.user-sidelink.clearfix
+				ul 
+					li.hvr-sweep-to-right
+						a(href="userpanel1.html") Chính sách thành viên
+					li.hvr-sweep-to-right
+						a(href="userpanel.html") Thông tin chung
+					li.hvr-sweep-to-right
+						a(href="userpanel1.html") Thông tin tài khoản
+					li.hvr-sweep-to-right.active
+						a(href="userpanel2.html") Số địa chỉ
+					//- li.hvr-sweep-to-right
+					//- 	a(href="#") Thông báo của tôi
+					li.hvr-sweep-to-right
+						a(href="userpanel3.html") Đơn hàng của tôi
+					li.hvr-sweep-to-right
+						a(href="userpanel4.html") Danh sách yêu thích
+					li.hvr-sweep-to-right
+						a(href="userpanel5.html") Quản lý điểm thưởng
+		.col-12.col-lg-9
+			section.user-page.clearfix
+				h1.postname Chỉnh sửa địa chỉ
+				.row.flex.flex-wrap
+					.col-12
+						section.address-info.clearfix
+							.address-form.clearfix
+								.form-group.clearfix
+									label(for="name") Họ tên:
+									input#name(type="text" value="Admin")
+								.form-group.clearfix
+									label(for="name") Công ty:
+									input#name(type="text")
+								.form-group.clearfix
+									label(for="name") Số điện thoại:
+									input#name(type="text" value="0981540288")
+								.form-group.clearfix
+									label(for="name") Tỉnh/Thành phố:
+									select
+										option(value="#") Hồ Chí Minh
+								.form-group.clearfix
+									label(for="name") Quận huyện:
+									select
+										option(value="#") Quận 1
+								.form-group.clearfix
+									label(for="name") Phường xã:
+									select
+										option(value="#") Phường Đakao
+								.form-group.clearfix
+									label(for="name") Địa chỉ:
+									textarea(name="", cols="30", rows="5")
+								input(type="submit", value="Cập nhật")

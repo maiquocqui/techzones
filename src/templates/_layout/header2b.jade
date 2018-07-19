@@ -1,0 +1,36 @@
+mixin mobileheader(pagename)
+	header.mobile-header.black.clearfix
+		.container
+			a.btn-backpage(href="tintuc.html") <i class="material-icons">arrow_back</i>
+			.overlay.hidden
+			.overlay-popup.hidden
+			h1.master-page-name #{pagename}
+			//- .sitelogo
+				a(href="#")
+					img(src="img/logo2.png", alt="")
+			.colright.clearfix
+				.hotline
+					a(href="tel:0934307799") <i class="material-icons">phone</i>
+				.searchtoggle <i class="material-icons">search</i>
+				.cart
+					.cart-toggle
+						i.material-icons shopping_cart
+						.cart-amount
+							a(href='#')
+								| Giỏ hàng 
+								span.amount 0
+				.minimenu.dropdown
+					a.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') <i class="material-icons">more_vert</i>
+					.dropdown-menu.dropdown-menu-righ(aria-labelledby='dropdownMenuLink')
+						ul.menulink
+							li
+								a(href="index.html") <i class="material-icons">home</i> Trang chủ
+							li
+								a(href="nganhhang2.html") <i class="material-icons">view_list</i> Danh sách ngành hàng
+							li
+								a(href="taikhoan.html") <i class="material-icons">account_circle</i> Quản lý tài khoản
+							li
+								a(href="hotro.html") <i class="material-icons">help</i> Trung tâm hỗ trợ
+							li
+								a(href="tel:0934307799") <i class="material-icons">phone</i> Hotline: 093 430 7799
+			include search

@@ -1,0 +1,446 @@
+.compare-panel
+	+pos(fix, null 0 0 0)
+	z-index: 100
+	+transition(all,0.3s)
+	background: $white
+	border-top: 1px solid darken($white,10%)
+	// display: none
+	box-shadow: 0 -10px 20px -10px color-rgba($black,0.1)
+	+transform(translateY(140%))
+	+transition(all,0.3s)
+	&.active
+		+transform(translateY(0))
+	&.hide
+		+transform(translateY(100%))
+	.compare-toggle
+		+pos(abs, null 0 100% null)
+		background: darken($white,10%)
+		+bor-rad(5px 0px 0 0)
+		+flexbox
+		+fs(13rem)
+		padding: 10px
+		border-top: 1px solid darken($white,10%)
+		border-left: 1px solid darken($white,10%)
+		.btn-minimize
+			color: $dblue
+			padding: 0px 10px
+			cursor: pointer
+			+transition(all,0.3s)
+			&.active
+				.material-icons
+					+transform(scaleY(-1))
+			&:hover
+				color: $blue
+		.btn-closecompare
+			border-left: 1px solid darken($white,(10%))
+			padding-left: 10px
+			color: $lred
+			cursor: pointer
+			+transition(all,0.3s)
+			&:hover
+				color: $red
+		.material-icons
+			+fs(16rem)
+			
+	.compare-list
+		+flexbox
+		flex-wrap: wrap
+		+media-breakpoint-down(sm)
+			// flex-wrap: nowrap
+			// border-left: 1px solid darken($white,10%)
+			// border-right: 1px solid darken($white,10%)
+			overflow: auto
+		.product
+			padding: 15px
+			+pos(rel,null)
+			+media-breakpoint-down(sm)
+				width: 33.33%
+				// + .product
+				// 	border-left: 1px solid darken($white,10%)
+				border-left: 1px solid darken($white,10%)
+				&:nth-child(3)
+					border-right: 1px solid darken($white,10%)
+			+media-breakpoint-up(md)
+				width: 33.33%
+			.remove-cpr
+				+pos(abs,10px 10px null null)
+				cursor: pointer
+				display: block
+				width: 20px
+				height: 20px
+				line-height: 18px
+				text-align: center
+				+bor-rad(50px)
+				&:hover
+					color: $red
+					background: lighten($red,30%)
+			figure
+				+flexbox
+				flex-wrap: wrap
+				.product-img
+					width: 80px
+					height: 80px
+					picture
+						width: 100%
+						height: 100%
+						+flexbox
+						justify-content: center
+						align-items: center
+					img
+						max-width: 90%
+						max-height: 90%
+				figcaption
+					width: calc(100% - 80px)
+					padding: 10px
+					+media-breakpoint-down(sm)
+						display: none
+					.product-name
+						+fs(14rem)
+						+media-breakpoint-down(lg)
+							+fs(12rem)
+						+media-breakpoint-down(sm)
+							margin-top: 10px
+						a
+							color: $black
+					.product-price
+						.new
+							color: $red
+							font-weight: 600
+							+fs(13rem)
+						.old
+							+fs(11rem)
+							color: darken($white,40%)
+							text-decoration: line-through
+			.search
+				+flexbox
+				justify-content: center
+				align-items: center
+				align-content: center
+				width: 100%
+				height: 100%
+				.searchbox
+					+bor-rad(5px)
+					border: 1px solid darken($white,10%)
+					+flexbox
+					width: 100%
+					input
+						width: calc(100% - 40px)
+						background: none
+						border: none
+						line-height: 32px
+						padding: 0px 10px
+						+fs(14rem)
+					.searchbutton
+						width: 40px
+						line-height: 32px
+						text-align: center
+	.btn-wrap
+		height: 100%
+		border-left: 1px solid darken($white,10%)
+		border-right: 1px solid darken($white,10%)
+		+flexbox
+		flex-wrap: wrap
+		justify-content: center
+		align-content: center
+		align-items: center
+		padding: 0px 15px
+		.btn-compare, .btn_compare_b
+			display: block
+			width: 100%
+			+mainbutton($lblue,$dblue)
+			line-height: 36px
+			+fs(14rem)
+			margin-bottom: 10px
+		.des
+			color: darken($white,60%)
+			+fs(12rem)
+
+.compare-page
+	padding: 40px 0
+	.page-title
+		+fs(18rem)
+		margin-bottom: 15px
+	.compare-product-table
+		width: 100%
+		border: 1px solid darken($white,10%)
+		th, td
+			border-bottom: 1px solid darken($white,10%)
+			padding: 10px
+			background: none
+			+fs(13rem)
+			text-align: left
+			vertical-align: middle
+			&:first-child
+				font-weight: 500
+				+media-breakpoint-down(md)
+					width: 100%
+			&:nth-child(2)
+				+media-breakpoint-down(md)
+					border-left: none
+			strong
+				font-weight: 500
+				a
+					display: block
+					color: $dblue
+				.fa
+					font-weight: normal
+			.fa-check-circle
+				+fs(18rem)
+				color: $lgreen
+			+ th, + td
+				border-left: 1px solid darken($white,10%)
+				width: 40%
+				+media-breakpoint-down(md)
+					width: 50%
+		tr
+			+media-breakpoint-down(md)
+				+flexbox
+				flex-wrap: wrap
+			&:last-child
+				th, td
+					border-bottom: none
+			&.title
+				text-transform: uppercase
+				a
+					font-weight: 500
+					color: $dblue
+					&:hover
+						color: $lred
+			&.specs-match				
+				background: lighten($dblue,40%)
+		.toggle-diff
+			+mainbutton($lblue,$dblue)
+			display: block
+			line-height: 40px
+			+fs(14rem)
+			font-weight: normal
+		.product-header
+			+media-breakpoint-down(md)
+				th, td
+					+ th, + td
+						padding: 0
+			.product-col
+				figure
+					.product-img
+						+flexbox
+						justify-content: center
+						align-items: center
+						height: 200px
+						img
+							max-height: 100%
+							max-width: 100%
+							width: auto
+
+// COMPARE DETAIL
+
+.compare-products
+	padding: 40px 15px
+	+media-breakpoint-down(lg)
+		padding: 15px
+	.body-wrap
+		.clear-list
+			display: block
+			margin: -10px 0 20px
+			color: darken($white,60%)
+			+fs(14rem)
+			&:before
+				content: '\f057'
+				margin-right: 5px
+				color: lighten($red,20%)
+	.compare-products-table
+		border: 1px solid darken($white,10%)
+		+bor-rad(5px)
+		overflow: hidden
+		.btn-primary
+			margin: 0
+			padding: 0
+			background: none
+			border: none
+			+mainbutton($lblue,$dblue)
+			line-height: 36px
+			+fs(14rem)
+			// text-transform: uppercase
+			display: inline-block
+			padding: 0px 20px
+			// margin-top: 40px
+		tr
+			&.specs-match
+				background: lighten($dblue,40%)
+			&.specs-group
+				td
+					background: darken($white, 5%)!important
+				a
+					+fs(17rem)
+					font-weight: 600
+					line-height: 1.4
+					color: $main
+					.fa
+						+fs(15rem)
+						color: $main
+		th, td
+			border-left: 1px solid darken($white,10%)
+			border-bottom: 1px solid darken($white,10%)
+			+pos(rel,null)
+			+fs(14rem)
+			padding: 10px
+			color: darken($white,60%)
+			.fa
+				color: darken($lightgreen, 10%)
+			@media (max-width: 414px)
+				max-width: 128px
+				min-width: 128px
+				&.odd
+					max-width: 191px
+					min-width: 191px
+			@media (max-width: 380px)
+				&.odd
+					max-width: 171px
+					min-width: 171px
+			@media (max-width: 375px)
+				max-width: 115px
+				min-width: 115px
+			&:first-child
+				border-left: none
+				font-weight: 600
+				color: $black
+		.product-header
+			background: $white
+			td
+				background: $white
+				padding: 0
+				text-align: center
+				+media-breakpoint-up(lg)
+					&:first-child
+						vertical-align: middle
+			&.scroll-to-fixed-fixed
+				td
+					+media-breakpoint-down(xs)
+						display: block
+						float: left
+					@media (max-width: 414px)
+						width: 128px!important
+						&.odd
+							width: 191px!important
+					@media (max-width: 375px)
+						width: 115px!important
+					+media-breakpoint-up(xl)
+						min-width: 298px
+				td:nth-child(1)
+					+media-breakpoint-up(xl)
+						min-width: 301px
+				.product-item
+					.title
+						+media-breakpoint-down(xs)
+							display: none
+			.product-item
+				+pos(rel,null)
+				padding: 20px 0
+				+media-breakpoint-up(md)
+					+flexbox
+					align-items: flex-start
+					align-content: flex-start
+				.remove-button
+					+pos(abs,10px 10px null null)
+					+fs(12rem)
+					color: darken($white,40%)
+					background: none
+					border: none
+					&:hover
+						color: $red
+				.image
+					width: 80px
+					+media-breakpoint-down(sm)
+						display: block
+						margin: 0 auto
+						width: 50px
+					.product-image
+						display: block
+						width: 50px
+						height: 50px
+						+media-breakpoint-up(md)
+							+flexbox
+							width: 80px
+							height: 80px
+							justify-content: center
+							align-items: center
+						img
+							max-width: 90%
+							max-height: 90%
+							+media-breakpoint-down(sm)
+								max-height: 45px
+								min-height: 45px
+								object-fit: cover
+				.title
+					text-align: left
+					padding: 10px
+					// +media-breakpoint-down(sm)
+					// 	display: none
+					+media-breakpoint-up(md)
+						width: calc(100% - 80px)
+					.product-name
+						+media-breakpoint-down(sm)
+							//min-height: 3rem
+							white-space: nowrap
+							overflow: hidden
+							text-overflow: ellipsis
+						a
+							color: $black
+							+fs(14rem)
+							+media-breakpoint-down(lg)
+								+fs(12rem)
+					.old-price
+						color: $red
+						font-weight: 600
+						+fs(12rem)
+					.new-price
+						color: $red
+						font-weight: 600
+						+fs(12rem)
+		.title
+			a
+				+fs(17rem)
+				font-weight: 600
+				color: $main
+				line-height: 1.4
+				.fa
+					+fs(15rem)
+					color: $main
+		.fa-check-circle
+			color: $dgreen
+			+fs(18rem)
+	.back-link
+		.toggle-diff
+			+mainbutton($lblue,$dblue)
+			display: inline-block
+			height: 36px
+			line-height: 36px
+			+fs(14rem)
+			border: none
+			width: 230px
+			text-align: center
+			font-weight: normal
+			padding: 0 10px
+			+media-breakpoint-down(md)
+				+pos(fixed, null 0 10px 0)
+				z-index: 1
+				margin: 0 auto
+		+media-breakpoint-down(md)
+			&:after
+				content: ''
+				display: block
+				background: $white
+				+pos(fixed, null 0 0 0)
+				height: 62px
+				z-index: 0
+		.clear-list
+			display: inline-block
+			margin: 30px 0
+			+mainbutton($lpurple, $dpurple)
+			+fs(14rem)
+			line-height: 36px
+			padding: 0px 30px
+			+bor-rad(50px)
+			&:before
+				content: '\f104'
+				color: $white
+				margin-right: 10px

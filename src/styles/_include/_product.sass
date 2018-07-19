@@ -1,0 +1,1721 @@
+.col-left
+	width: 280px
+	padding: 0px 15px
+	margin-bottom: 30px
+	+media-breakpoint-down(md)
+		width: 100%
+		margin-bottom: 0
+.col-main
+	width: calc(100% - 280px)
+	padding: 0px 15px
+	margin-bottom: 30px
+	+media-breakpoint-down(md)
+		width: 100%
+		margin-bottom: 0
+.mobile-cate
+	padding-top: 15px
+	.cate-col
+		padding: 0px 5px
+		margin-bottom: 10px
+		+media-breakpoint-up(sm)
+			width: 50%
+		+media-breakpoint-up(lg)
+			width: 33.33%
+		=catecolor($color)
+			figure
+				.cate-img
+					&:before
+						background: linear-gradient(to right, $color 0%,color-rgba($black,0) 75%)
+		&:nth-child(2)
+			+catecolor($lred)
+		&:nth-child(3)
+			+catecolor($lgreen)
+		&:nth-child(4)
+			+catecolor($lpurple)
+		&:nth-child(5)
+			+catecolor($lpink)
+		&:nth-child(6)
+			+catecolor($lblue)
+		&:nth-child(7)
+			+catecolor($lred)
+		figure
+			.cate-img
+				+bor-rad(5px)
+				overflow: hidden
+				+pos(rel,null)
+				display: block
+				&:before
+					content: ''
+					display: block
+					+pos(abs, 0 null 0 0)
+					right: 0
+					background: linear-gradient(to right, $lblue 0%,color-rgba($black,0) 75%)
+				img
+					width: 100%
+					+bor-rad(5px)
+				.icon
+					width: 42px
+					height: 42px
+					+pos(abs, 50% null null 30px)
+					+transform(translateY(-50%))
+					+flexbox
+					justify-content: center
+					align-items: center
+					img 
+						width: 64px
+						height: 64px
+						object-fit: contain
+						filter: invert(100%)
+			figcaption
+				padding: 10px 0
+				.cate-name
+					font-weight: 500
+					line-height: 1.3
+					+fs(16rem)
+					a
+						color: $black
+				.cate-des
+					+fs(13rem)
+					color: darken($white,40%)
+.mobile-cate2
+	padding: 15px 0
+	.row
+		margin: 0 -15px
+		+media-breakpoint-up(lg)
+			margin: 0 -5px
+	.cate-col
+		padding: 0px 15px
+		margin-bottom: 10px
+		+media-breakpoint-up(sm)
+			width: 50%
+		+media-breakpoint-up(lg)
+			width: 33.33%
+			padding: 0px 5px
+		// =catecolor($color)
+		// 	figure
+		// 		.cate-img
+		// 			&:before						
+		// 				background: linear-gradient(to right, $color 0%,color-rgba($black,0) 75%)
+		// 				// opacity: 0.5
+		// &:nth-child(2)
+		// 	+catecolor($lred)
+		// &:nth-child(3)
+		// 	+catecolor($lgreen)
+		// &:nth-child(4)
+		// 	+catecolor($lpurple)
+		// &:nth-child(5)
+		// 	+catecolor($lpink)
+		// &:nth-child(6)
+		// 	+catecolor($lblue)
+		// &:nth-child(7)
+		// 	+catecolor($lred)
+		figure
+			+pos(rel,null)
+			.cate-img
+				+bor-rad(5px)
+				overflow: hidden
+				+pos(rel,null)
+				display: block
+				// &:before
+				// 	content: ''
+				// 	display: block
+				// 	+pos(abs, 0 null 0 0)
+				// 	right: 0
+				// 	background: linear-gradient(to right, $lblue 0%,color-rgba($black,0) 75%)
+					// opacity: 0.5
+				img
+					width: 100%
+					+bor-rad(5px)
+			figcaption
+				.cate-name
+					+pos(abs, null 15px 15px 15px)
+					a
+						display: block
+						color: $white
+						&:after
+							content: ''
+							display: table
+							width: 100%
+							clear: both
+						.icon
+							width: 42px
+							height: 42px
+							+flexbox
+							justify-content: center
+							align-items: center
+							float: left
+							img 
+								max-width: 80%
+								max-height: 80%
+								//filter: invert(100%)
+						.name
+							width: calc(100% - 42px)
+							float: left
+							line-height: 1.3
+							font-weight: 500
+							+fs(16rem)
+							margin-top: 5px
+							padding-left: 10px
+						.cate-des
+							width: calc(100% - 42px)
+							float: left
+							+fs(12rem)
+							line-height: 1.3
+							opacity: 0.8
+							padding-left: 10px
+.mobile-subcate
+	padding: 15px 0
+	=subcatecol($color1,$color2)
+		.subcate-col
+			// box-shadow: 0 10px 20px -10px color-rgba($color1,1)
+			figure
+				.subcate-img
+					&:before
+						background: linear-gradient(color-rgba($color1,0) 30%,color-rgba($color2,1))
+
+	.subcate-list
+		article
+			&:nth-child(2)
+				+subcatecol($lred,$dred)
+			&:nth-child(2)
+				+subcatecol($lred,$dred)
+	.subcate-col
+		figure
+			+pos(rel,null)
+			overflow: hidden
+			+bor-rad(5px)
+			.subcate-img
+				display: block
+				+pos(rel,null)
+				+bor-rad(5px)
+				overflow: hidden
+				&:before
+					content: ''
+					display: block
+					+pos(abs, 0 null 0 0)
+					right: 0
+					+bor-rad(5px)
+					background: linear-gradient(color-rgba($lblue,0)30%,color-rgba($dblue,1))
+				img
+					width: 100%
+			figcaption
+				+pos(abs, null 0 0 0)
+				padding: 10px 15px
+				// background: linear-gradient(color-rgba($lblue,0),color-rgba($dblue,1) 70%)
+				.subcate-name
+					a
+						color: $white
+						font-weight: 500
+						+fs(14rem)
+.product-subcate
+	margin-bottom: 30px
+	ul
+		white-space: nowrap
+		overflow: auto
+		+disablescroll
+		li
+			display: inline-block
+			vertical-align: top
+			+ li
+				margin-left: 15px
+			.subcate
+				display: block
+				width: 80px
+				.icon
+					+flexbox
+					justify-content: center
+					align-items: center
+					width: 80px
+					height: 80px
+					margin: 0px auto 10px
+					+bor-rad(50px)
+					overflow: hidden
+					background: darken($white,3%)
+					color: darken($white,60%)
+					box-shadow: 0px 10px 20px -10px color-rgba($black,0.1)
+					img
+						max-height: 32px
+						max-width: 32px
+					.fa
+						+fs(24rem)
+				.name
+					+fs(12rem)
+					color: $main
+					text-align: center
+					white-space: normal
+			&:hover, &.active
+				.subcate
+					.icon
+						background: linear-gradient(to right,$lblue,$dblue)
+						box-shadow: 0px 10px 20px -10px $lblue
+						.fa
+							color: $white
+						img
+							filter: invert(100%)
+					.name
+						color: $blue
+.product-item
+	height: 100%
+	+pos(rel,null)
+	+media-breakpoint-down(lg)
+		height: 100%
+	.btn_compare
+		// display: none
+		+pos(abs,0 null 0 0)
+		right: 0
+		+fs(0)
+		visibility: hidden
+		opacity: 0
+		z-index: 10
+		&:before
+			content: '\f00c'
+			display: block
+			width: 30px
+			height: 30px
+			line-height: 30px
+			text-align: center
+			border: 1px solid darken($white,10%)
+			+bor-rad(50px)
+			+fs(16rem)
+			margin-top: 10px
+			margin-left: 10px
+			color: darken($white,20%)
+		&.active
+			&:before
+				// border-color: color-rgba($white,0)
+				background: linear-gradient(to right, $lpurple, $dpurple)
+				color: $white
+	// .product-col
+	// 	figure
+	// 		figcaption
+	// 			.popup-info
+	// 				display: none
+.compare-active
+	.btn_compare
+		visibility: visible
+		opacity: 1
+.product-col
+	display: block
+	height: 100%
+	box-shadow: 0px 10px 20px -10px color-rgba($black,0.1)
+	figure
+		+pos(rel,null)
+		.product-img
+			display: block
+			+flexbox
+			height: 200px
+			justify-content: center
+			align-items: center
+			align-content: center
+			overflow: hidden
+			picture
+				width: 100%
+				height: 100%
+				+flexbox
+				justify-content: center
+				align-items: center
+				align-content: center
+			img
+				max-width: 90%
+				max-height: 90%
+		figcaption
+			padding: 10px
+			.product-name
+				+fs(13rem)
+				line-height: 1.3
+				white-space: normal
+				font-weight: 500
+				margin-bottom: 5px
+				color: $black
+				display: -webkit-box
+				height: 0.8125rem*1.3*2
+				-webkit-line-clamp: 2
+				-webkit-box-orient: vertical
+				overflow: hidden
+				text-overflow: ellipsis
+				+media-breakpoint-down(lg)
+					// +fs(12rem)
+					// height: 0.75rem*1.3*2
+				a
+					color: $black
+			.product-price
+				margin-bottom: 5px
+				+pos(rel,null)
+				.promotion
+					+pos(abs, 2px 0 null null)
+					+fs(11rem)
+					font-weight: 600
+					color: $white
+					padding: 0px 5px
+					+bor-rad(3px)
+					&.off
+						background: linear-gradient(to right, $orange, $deeporange)
+				.old
+					+fs(10rem)
+					line-height: 1.5
+					color: darken($white,40%)
+					text-decoration: line-through
+				.new
+					+fs(13rem)
+					line-height: 1.5
+					font-weight: 600
+					color: $red
+					+media-breakpoint-down(lg)
+						+fs(12rem)
+			.product-des
+				+fs(12rem)
+				line-height: 1.3
+				white-space: normal
+				margin-bottom: 5px
+				color: darken($white,40%)
+				// display: -webkit-box
+				// height: 0.75rem*1.3*3
+				// -webkit-line-clamp: 3
+				// -webkit-box-orient: vertical
+				// overflow: hidden
+				// text-overflow: ellipsis
+			.btn-compare, .compare-button
+				+mainbutton($lpurple,$dpurple)
+				+fs(13rem)
+				line-height: 30px
+				height: 30px
+				padding: 0px 10px
+				margin-top: 5px
+				display: block
+				text-align: center
+				width: 100%
+				+media-breakpoint-up(xl)
+					display: inline-block
+					width: auto
+					padding: 0px 20px
+			ul
+				li
+					padding-left: 10px
+					white-space: nowrap
+					text-overflow: ellipsis
+					overflow: hidden
+					+pos(rel,null)
+					// margin-bottom: 5px
+					// &:last-child
+					// 	margin-bottom: 0
+					&:before 
+						content: ''
+						display: block
+						width: 4px
+						height: 4px
+						+bor-rad(50px)
+						background: darken($white,60%)
+						+pos(abs, 7px null null 0)
+			.popup-info
+				+media-breakpoint-up(xl)
+					+pos(abs, 0 null 0 0)
+					right: 0
+					padding: 15px
+					background: $white
+					z-index: 10
+					opacity: 0
+					visibility: hidden
+					+transition(all,0.3s)
+				.name
+					+fs(13rem)
+					font-weight: 500
+					color: $dblue
+					margin-bottom: 10px
+					+media-breakpoint-down(lg)
+						display: none
+				.des
+					+fs(11rem)
+					color: darken($white,60%)
+					ul
+						li
+							margin-bottom: 5px
+		&:hover
+			figcaption
+				.popup-info
+					opacity: 1
+					visibility: visible
+.mobile-product, .product-list, .productlist
+	article
+		+media-breakpoint-down(sm)
+			&.change
+				flex: 0 0 100%
+				max-width: 100%
+				.product-col
+					figure
+						+flexbox
+						+pos(rel,null)
+						.product-img
+							width: 120px
+							height: 120px
+							max-height: 120px
+						figcaption
+							width: calc(100% - 120px)
+							// +pos(rel,null)
+							display: block
+							.product-name
+								height: unset
+								min-height: unset
+							.product-price
+								width: 100%
+								+flexbox
+								align-items: center
+								margin-bottom: 5px
+								+pos(static,unset)
+								.promotion
+									top: 15px
+									right: inherit
+									left: 0
+								.new
+									order: 1
+									margin-right: 10px
+								.old
+									order: 2
+							.product-des
+								display: block
+								// +media-breakpoint-down(md)
+								// 	display: none
+							.btn-buy
+								+pos(abs, null 0px 0px null)
+.productpager
+	display: none
+.product-page
+	margin-bottom: 30px
+	.product-list
+		+media-breakpoint-up(lg)
+			+bor-rad(5px)
+			// overflow: hidden
+			// border: 1px solid darken($white,5%)
+		.row
+			+media-breakpoint-up(lg)
+				margin-right: -2px
+				margin-bottom: -1px
+		article
+			+media-breakpoint-up(lg)
+				border-right: 1px solid darken($white,5%)
+				border-bottom: 1px solid darken($white,5%)
+	.btn-wrap
+		padding: 15px 0
+		+flexbox
+		justify-content: center
+		align-items: center
+		.btn-loadmore
+			display: block
+			line-height: 32px
+			text-align: center
+			padding: 0px 20px
+			+bor-rad(50px)
+			color: darken($white,60%)
+			+fs(13rem)
+			border: 1px solid darken($white,10%)
+			+transition(all,0.3s)
+			&:after
+				content: '\f107'
+				margin-left: 10px
+			&:hover
+				background: linear-gradient(to right, $lblue, $dblue)
+				border-color: transparent
+				color: $white
+	.product-name-wrap
+		width: 100%
+		// display: none
+		// +media-breakpoint-down(md)
+		// 	display: block
+		+media-breakpoint-down(sm)
+			margin-bottom: 10px
+		.product-name
+			+fs(18rem)
+			font-weight: 700
+			line-height: 1.5
+			margin-bottom: 0px
+			color: $black
+			width: 100%
+		.product-status
+			+fs(13rem)
+			margin-left: 5px
+			&.on
+				color: $lred
+	.product-slide-wrap
+		margin-bottom: 15px
+		+pos(rel,null)
+		+media-breakpoint-up(md)
+			+flexbox
+			flex-wrap: wrap
+			margin-bottom: 30px
+		.promotion
+			+pos(abs, 5px null null 80px)
+			+fs(14rem)
+			font-weight: 600
+			color: $white
+			padding: 3px 15px
+			+bor-rad(5px)
+			z-index: 5
+			+media-breakpoint-down(sm)
+				left: 0
+				// top: 35px
+				+fs(12rem)
+				padding: 2px 10px
+			+media-breakpoint-down(xs)
+				+fs(11rem)
+				padding: 3px 10px
+			&.off
+				background: linear-gradient(to right, $orange, $deeporange)
+				box-shadow: 0px 5px 20px -5px $deeporange
+	.product-nav
+		display: none
+		width: 50px
+		+media-breakpoint-up(md)
+			display: block
+			height: 100%
+			padding: 60px 0
+		+media-breakpoint-down(md)
+			width: 40px
+		.slick-prev, .slick-next
+			display: block
+			height: 35px
+			text-align: center
+			+fs(0)
+			color: $main
+			opacity: 0.5
+			width: 35px
+			+opacity(1)
+			line-height: 45px
+			+transform(translate(0,0))
+			&:before
+				content: ''
+				+fs(18rem)
+				font-family: 'fontawesome'
+			&:hover
+				opacity: 1
+		.slick-prev
+			top: 0
+			left: 10px
+			&:before
+				content: '\f106'
+		.slick-next
+			bottom: 0
+			top: inherit
+			left: 10px
+			right: inherit
+			&:before
+				content: '\f107'
+		.item
+			padding: 5px 0
+			cursor: pointer
+			.img
+				cursor: pointer
+				border: 2px solid transparent
+				overflow: hidden
+				height: 50px
+				img
+			&.slick-current
+				.img
+					border-color: darken($white,20%)
+	.product-slide
+		margin-bottom: 15px
+		width: 100%
+		+media-breakpoint-up(md)
+			width: calc(100% - 40px)
+		+media-breakpoint-up(lg)
+			width: calc(100% - 50px)
+		.slick-dots
+			text-align: center
+			li
+				display: inline-block
+				width: 6px
+				height: 6px
+				+bor-rad(50px)
+				background: darken($white,40%)
+				+ li
+					margin-left: 3px
+				button
+					display: none
+				&.slick-active
+					background: $black
+		.item
+			padding: 15px 0
+			+media-breakpoint-up(xl)
+				padding: 0px
+			a, .img 
+				+flexbox
+				align-items: center
+				justify-content: center
+				height: 200px
+				+media-breakpoint-up(md)
+					height: 300px
+				+media-breakpoint-up(lg)
+					height: 450px
+					width: 100%
+				img 
+					max-height: 100%
+					max-width: 100%
+					+media-breakpoint-up(lg)
+						max-width: 80%
+						max-height: 80%
+			&.slick-current
+	.slide-des
+		+fs(13rem)
+		width: 100%
+		text-align: center
+		color: darken($white,40%)
+		font-style: italic
+		+media-breakpoint-up(md)
+			margin-left: 40px
+		+media-breakpoint-up(lg)
+			margin-left: 50px
+		.material-icons
+			+fs(20rem)
+	.product-info
+		+flexbox
+		flex-wrap: wrap
+		box-shadow: 0 10px 20px -10px color-rgba($black,0.1)
+		margin-bottom: 10px
+		+media-breakpoint-up(xl)
+			// box-shadow: none
+			margin-bottom: 30px
+		.product-name-wrap
+		.product-name
+			+fs(18rem)
+			font-weight: 700
+			line-height: 1.5
+			margin-bottom: 5px
+			color: $black
+			width: 100%
+		.product-status
+			+fs(13rem)
+			margin-left: 5px
+			&.on
+				color: $lred
+		.manufacturer-codeWrap
+			display: block
+			width: 100%
+			border-bottom: 1px dashed darken($white,10%)
+			margin: 0 0 10px
+		.product-brand, .product-id
+			display: inline-block
+			color: darken($white, 60%)
+			margin-right: 30px
+			padding: 0 0 10px
+			+fs(13rem)
+			+media-breakpoint-down(md)
+				+fs(12rem)
+				margin-right: 20px
+			strong
+				color: $main
+			a 
+				color: $blue
+				&:hover
+					text-decoration: underline
+		// .product-brand
+		// 	+fs(12rem)
+		// 	color: darken($white,40%)
+		// 	line-height: 1
+		// 	border-bottom: 1px dashed darken($white,10%)
+		// 	margin-bottom: 10px
+		// 	padding-bottom: 10px
+		// 	width: 100%
+		// 	// width: 40%
+		// 	a
+		// 		margin-left: 5px
+		// 		font-weight: 500
+		// 		color: $main
+		// .product-id
+		// 	+fs(12rem)
+		// 	color: darken($white,40%)
+		// 	margin-bottom: 5px
+		// 	line-height: 1
+		// 	// width: 60%
+		// 	a
+		// 		margin-left: 5px
+		// 		font-weight: 500
+		// 		color: $main
+		.product-options
+			margin-bottom: 5px
+			width: 100%
+			.label
+				+fs(14rem)
+				color: $black
+				// text-transform: uppercase
+				font-weight: 600
+				margin-bottom: 5px
+			.product-color
+				a,.color-img
+					width: 36px
+					height: 36px
+					display: inline-block
+					border: 2px solid darken($white,20%)
+					+bor-rad(5px)
+					cursor: pointer
+					overflow: hidden
+					+ a
+						margin-left: 5px
+					&.active
+						border-color: $dblue
+					&.disable
+						filter: grayscale(100%)
+						opacity: 0.3
+					img
+						max-width: 100%
+						max-height: 100%
+			.product-size
+				a
+					display: inline-block
+					border: 2px solid darken($white,20%)
+					padding: 0px 10px
+					+bor-rad(5px)
+					+fs(12rem)
+					font-weight: 500
+					// text-transform: uppercase
+					color: darken($white,40%)
+					+ a
+						margin-left: 5px
+					&.active
+						border-color: $dblue
+					&.disable
+						filter: grayscale(100%)
+						opacity: 0.3
+		.product-price
+			width: 100%
+			border-bottom: 1px dashed darken($white,10%)
+			margin-bottom: 10px
+			padding-bottom: 10px
+			.new
+				display: inline-block
+				+fs(20rem)
+				font-weight: 700
+				color: $lred
+				margin-right: 10px
+				line-height: 1
+				+media-breakpoint-up(md)
+					// +fs(24rem)
+					font-weight: 600
+			.old
+				display: inline-block
+				+fs(14rem)
+				color: darken($white,40%)
+				text-decoration: line-through
+				line-height: 1
+				+media-breakpoint-up(md)
+					// +fs(16rem)
+					// font-weight: 500
+					// color: darken($white,20%)
+			.payment-vat
+				+fs(11rem)
+				font-weight: 400
+				font-style: italic
+				line-height: 1.4
+				// margin-bottom: 10px
+				display: inline-block
+				vertical-align: middle
+				margin-left: 10px
+		.warranty-time
+			+fs(13rem)
+			font-weight: 400
+			line-height: 1.4
+			.warranty-desc, .warranty-date
+				padding: 10px 0 0
+				margin: 10px 0 0
+				border-top: 1px dashed darken($white, 10%)
+		.product-overview
+			width: 100%
+			margin-bottom: 10px
+			+fs(13rem)
+			font-weight: 400
+			line-height: 1.4
+			color: darken($white, 60%)
+			ul
+				li
+					margin-bottom: 5px
+		.share
+			margin-bottom: 15px
+			text-align: center
+		.btn-wrap
+			+pos(fix, null 0 0 0)
+			background: $white
+			padding: 10px 15px
+			z-index: 1501
+			+flexbox
+			+media-breakpoint-up(lg)
+				+pos(static,unset)
+				padding: 10px 0
+				width: 100%
+				justify-content: flex-start
+				z-index: 1
+			&:before 
+				content: ''
+				+pos(abs, -20px 0 null 0)
+				height: 20px
+				background: linear-gradient(color-rgba($white,0),color-rgba($white,1))
+			.btn-like
+				width: 40px
+				height: 40px
+				line-height: 42px
+				text-align: center
+				color: $white
+				+bor-rad(50px)
+				background: linear-gradient($lred,$dred)
+				+fs(22rem)
+				+transition(all,0.3s)
+				box-shadow: 0px 10px 20px -10px $lred
+				+media-breakpoint-up(lg)
+					line-height: 38px
+					width: 36px
+					height: 36px
+					+fs(18rem)
+				&:before
+					content: '\f08a'
+					+transition(all,0.3s)
+				&.active
+					&:before
+						content: '\f004'
+			.btn-addtocart
+				display: block
+				width: calc(100% - 50px)
+				margin-left: 10px
+				text-transform: uppercase
+				+mainbutton($lblue,$dblue)
+				+media-breakpoint-up(lg)
+					line-height: 36px
+					padding: 0px 30px
+					+fs(13rem)
+					width: auto
+				.material-icons
+					+fs(22rem)
+	.product-tragop
+		border-top: 1px dashed darken($white,10%)
+		// background: linear-gradient(to right,$lpink,$dpink)
+		display: block
+		clear: both
+		margin: 10px 0
+		// margin: 0px -15px
+		// width: calc(100% + 30px)
+		width: 100%
+		+bor-rad(5px)
+		padding: 15px 0
+		.row
+			margin: 0px -5px
+		.col-12
+			padding: 0px 5px
+			+media-breakpoint-down(sm)
+				margin-bottom: 10px
+		.module-title
+			width: calc(100% - 127px)
+			+fs(12rem)
+			font-weight: 700
+			// margin-bottom: 5px
+			line-height: 1.5
+			float: left
+		.tragop-des
+			line-height: 1.4
+			+fs(12rem)
+			padding-right: 0px
+			color: darken($white,40%)
+			text-align: center
+			a
+				color: $black
+				font-weight: 500
+		.btn-tragop
+			display: block
+			text-align: center
+			padding: 10px 0
+			+bor-rad(60px)
+			+fs(13rem)
+			color: $main
+			border: 1px solid $lred
+			margin-bottom: 10px
+			+transition(all,0.3s)
+			&:hover
+				background: linear-gradient(to right,$lred,$dred)
+				box-shadow: 0 10px 20px -10px $lred
+				color: $white
+				.btn-des
+					color: $white
+			// +mainbutton($white,$white)
+			// color: $lred
+			// font-weight: 500
+			// display: block
+			// padding: 10px 10px
+			// +fs(11rem)
+			// line-height: 1.4
+			// box-shadow: none
+			// text-transform: uppercase
+			// margin-bottom: 10px
+			.btn-des
+				+fs(10rem)
+				line-height: 1
+				text-transform: none
+				font-weight: normal
+				color: darken($white,40%)
+				+transition(all 0.3s)
+	.product-content
+		padding: 10px 0
+		margin-bottom: 10px
+		box-shadow: 0 10px 20px -10px color-rgba($black,0.1)
+		+media-breakpoint-up(lg)
+			+fs(13rem)
+		+media-breakpoint-up(xl)
+			// box-shadow: none
+			// padding: 0px
+			margin-bottom: 15px
+		&.product-box
+			+media-breakpoint-only(lg)
+				margin-left: 20px
+				width: 230px
+			.title
+				color: $lblue
+			.content
+				+fs(12rem)
+				+media-breakpoint-up(xl)
+					+fs(13rem)
+		&.product-gift
+			+media-breakpoint-only(lg)
+				margin-left: 20px
+				width: 230px
+				margin-bottom: 30px
+			.title
+				color: $lred
+			.content
+				+fs(12rem)
+				+media-breakpoint-up(xl)
+					+fs(13rem)
+		&.product-showcompare
+			// box-shadow: none
+			// padding: 0
+			// margin-bottom: 0
+		&.product-support
+			+bor-rad(5px)
+			border: 2px dashed darken($white,10%)
+			padding: 10px 15px
+			// margin-bottom: 50px
+			+media-breakpoint-up(xl)
+				padding: 10px
+				.content
+					+fs(12rem)
+					ul
+						li
+							&:before
+								top: 5px
+								left: -10px
+			.title
+				color: $lpink
+				text-align: center
+				text-transform: none
+				+media-breakpoint-up(xl)
+					+fs(13rem)
+				a
+					margin-left: 5px
+					color: $lred
+		&.product-footer
+			margin-bottom: 40px
+			+bor-rad(5px)
+			border: 2px dashed $blue
+			background: lighten($blue,60%)
+			box-shadow: 0 10px 20px -10px $lblue
+			padding: 10px 15px
+			+media-breakpoint-up(xl)
+				display: none
+			.title
+				.material-icons
+					color: $lred
+		.title
+			+fs(14rem)
+			font-weight: 600
+			text-transform: uppercase
+			margin-bottom: 10px
+			.material-icons
+				+fs(18rem)
+			.fa
+				margin-right: 5px
+		.search-product
+			.searchbox
+				+flexbox
+				+bor-rad(5px)
+				border: 1px solid darken($white,10%)
+				&:hover, &:active, &:focus
+					border-color: darken($white,40%)
+					.searchbutton
+						color: $dpurple
+				input
+					border: none
+					background: none
+					+fs(13rem)
+					color: $main
+					width: calc(100% - 36px)
+					line-height: 36px
+					padding: 0px 15px
+				.searchbutton
+					width: 36px
+					height: 36px
+					line-height: 36px
+					text-align: center
+		.content
+			+media-breakpoint-up(xl)
+				+fs(13rem)
+		.product-other-slide, .product-lastview-slide
+			+media-breakpoint-down(lg)
+				white-space: nowrap
+				overflow: auto
+				+disablescroll
+				margin: 0px -15px
+				padding: 0px 15px
+			.slick-track
+				margin: 0
+			.item
+				+media-breakpoint-down(lg)
+					display: inline-block
+					vertical-align: top
+					width: 150px
+					+ .item
+						margin-left: 10px
+	.product-lastview
+		.product-list
+			padding: 0
+			margin: 0
+			border: none
+		.product-col
+			figure
+				figcaption
+					.product-name
+						+fs(13rem)
+						font-weight: 500
+						+media-breakpoint-down(lg)
+							+fs(12rem)
+	.product-showcompare
+		.product-list
+			margin: 0 -15px
+			padding: 0 15px
+			border: none
+			+media-breakpoint-up(xl)
+				margin: 0
+				padding: 0
+			.product-col
+				margin: 0
+				padding: 0
+				border: none
+				figure
+					figcaption
+						.product-name
+							display: block
+							display: -webkit-box
+							height: 0.8125rem*1.3*2
+							font-size: 0.8125rem
+							line-height: 1.3
+							-webkit-line-clamp: 2
+							-webkit-box-orient: vertical
+							overflow: hidden
+							text-overflow: ellipsis
+						.product-price
+							+media-breakpoint-down(lg)
+								min-height: 33px
+					+media-breakpoint-up(xl)
+						+flexbox
+						padding: 10px 0
+						.product-img
+							width: 100px
+							height: 100px
+						figcaption
+							width: calc(100% - 100px)
+							.product-name
+								+fs(12rem)
+								height: unset
+								margin-bottom: 0
+								white-space: nowrap
+								overflow: hidden
+								text-overflow: ellipsis
+							.product-price
+								margin-bottom: 0
+								.new
+									+fs(12rem)
+								.old
+									+fs(10rem)
+
+	.product-description
+		margin-bottom: 15px
+		padding: 15px 0
+		box-shadow: 0 10px 20px -10px color-rgba($black,0.1)
+		+media-breakpoint-up(xl)
+			// box-shadow: none
+			padding-top: 0
+			margin-bottom: 30px
+		.nav-tabs
+			margin: 0 0 15px
+			padding: 0
+			border: none
+			display: block
+			white-space: nowrap
+			overflow: auto
+			+disablescroll
+			.nav-item
+				display: inline-block
+				margin: 0
+				padding: 0
+				border: none
+				+fs(14rem)
+				text-transform: uppercase
+				font-weight: 500
+				color: darken($white,40%)
+				+ .nav-item
+					margin-left: 20px
+				&.active
+					color: $black
+					font-weight: 600
+		.content
+			max-height: 200px
+			overflow: hidden
+			margin-bottom: 15px
+			+pos(rel,null)
+			+media-breakpoint-up(md)
+				max-height: 350px
+			+media-breakpoint-up(xl)
+				max-height: 500px
+			.table
+				border-collapse: collapse
+				.title
+					background: darken($white, 5%)!important
+					a
+						+fs(17rem)
+						font-weight: 600
+						line-height: 1.4
+						color: $main
+						.fa
+							+fs(15rem)
+							color: $main
+				tr
+					td
+						&:nth-child(1)
+							font-weight: 600
+						.fa
+							color: darken($lightgreen, 10%)
+					&:nth-of-type(odd)
+						background: none
+		.popup-panel
+			.content
+				+media-breakpoint-up(xl)
+					max-height: unset
+	.btn-viewdetail
+		+mainbutton($white,$white)
+		display: block
+		width: 100%
+		border: 1px dashed $lgreen
+		color: $lgreen
+		line-height: 34px
+		+fs(13rem)
+		cursor: pointer
+		+pos(rel,null)
+		font-weight: 500
+		// margin-bottom: 15px
+		text-transform: uppercase
+		&:before
+			content: '\f055'
+			font-family: 'fontawesome'
+			margin-right: 10px
+		&:after
+			content: ''
+			display: block
+			+pos(abs, null 0 calc(100% + 1px) 0)
+			z-index: 10
+			height: 50px
+			background: linear-gradient(color-rgba($white,0), $white)
+	.product-video
+		// box-shadow: none
+		padding: 15px 0 0
+		margin-bottom: 15px
+		.video-list
+			white-space: nowrap
+			overflow: auto
+			// padding-bottom: 10px
+			+disablescroll
+			// margin-bottom: -20px
+			margin: 0px -15px
+			padding: 0 0 15px
+			+media-breakpoint-down(lg)
+				+flexbox
+			+media-breakpoint-up(xl)
+				margin: 0px -10px
+				//padding: 0
+			+media-breakpoint-down(lg)
+				-webkit-overflow-scrolling: touch
+			.item
+				float: left
+				vertical-align: top
+				//width: 50%
+				padding: 0 10px
+				+media-breakpoint-down(lg)
+					width: 250px
+					min-width: 250px
+				// +media-breakpoint-up(sm)
+				// 	width: 33.33%
+				// +media-breakpoint-up(lg)
+				// 	// box-shadow: 0 10px 20px -10px color-rgba($black,0.1)
+				// 	width: 25%
+				+media-breakpoint-up(xl)
+					box-shadow: none
+					display: block
+					//width: unset
+					//width: 20%
+					//padding: 0px 10px
+				+ .item
+					//margin-left: 10px
+					+media-breakpoint-up(xl)
+						margin-left: 0
+				.video-col
+					figure
+						.video-img
+							display: block
+							+pos(rel,null)
+							&:before
+								content: '\f04b'
+								+pos(abs, 0 null 0 0)
+								right: 0
+								+flexbox
+								justify-content: center
+								align-items: center
+								+fs(28rem)
+								color: $white
+								background: color-rgba($black,0.5)
+						figcaption
+							padding: 10px 0
+							white-space: nowmal
+							+fs(13rem)
+							font-weight: 500
+							a
+								color: $black
+	.product-news
+		+media-breakpoint-up(xl)
+			// box-shadow: none
+		.post-list
+			// border-top: 1px dashed darken($white,20%)
+			white-space: nowrap
+			overflow: auto
+			+disablescroll
+		.post
+			display: inline-block
+			width: 150px
+			// box-shadow: 0px 10px 20px -10px color-rgba($black,0.1)
+			// border-bottom: 1px dashed darken($white,20%)
+			+media-breakpoint-up(xl)
+				display: block
+				width: unset
+				box-shadow: none
+				padding: 10px 0
+				border-bottom: 1px dashed darken($white,10%)
+			+ .post
+				margin-left: 10px
+				+media-breakpoint-up(xl)
+					margin-left: 0
+			figure
+				// +flexbox
+				+media-breakpoint-up(xl)
+					+flexbox
+				.post-img
+					display: block
+					width: 100%
+					box-shadow: 0px 3px 20px color-rgba($black,0.2)
+					+bor-rad(7px)
+					+media-breakpoint-up(xl)
+						width: 80px
+					picture
+						+flexbox
+						max-height: 100px
+						+bor-rad(7px)
+						+media-breakpoint-up(xl)
+							max-height: 50px
+							align-items: center
+							justify-content: center
+					img 
+						width: 100%
+						min-height: 100px
+						max-height: 100px
+						object-fit: cover
+						+bor-rad(7px)
+						+media-breakpoint-up(xl)
+							max-height: 50px
+							min-height: 50px
+					// width: 80px
+				figcaption
+					width: 100%
+					// width: calc(100% - 80px)
+					padding: 10px 0
+					+media-breakpoint-up(xl)
+						width: calc(100% - 80px)
+						padding: 0
+						padding-left: 10px
+					.post-name
+						display: block
+						a
+							display: block
+							color: $main
+							// font-weight: 500
+							white-space: normal
+							height: 0.8125rem*1.3*2
+							+fs(13rem)
+							line-height: 1.3
+							-webkit-line-clamp: 2
+							-webkit-box-orient: vertical
+							overflow: hidden
+							text-overflow: ellipsis
+							&:hover
+								color: $dblue
+	.description-wrap
+		+media-breakpoint-up(lg)
+			// +flexbox
+			display: table
+			width: 100%
+			.product-description
+				display: table-cell
+				// width: calc(100% - 200px)
+				// width: 100%
+			.rightcol-wrap
+				display: table-cell
+	.product-suggest
+		+media-breakpoint-up(lg)
+			display: block
+			box-shadow: none
+			width: 230px
+			margin-left: 20px
+			padding-top: 0
+			// display: none
+		.title
+			// color: $dpurple
+		.suggest-group
+			// +bor-rad(5px)
+			// border: 1px soWlid darken($white,10%)
+			margin-bottom: 5px
+			overflow: hidden
+			&.open
+				border-color: $dblue
+			.suggest-title
+				color: $main
+				font-weight: 600
+				+pos(rel,null)
+				padding: 5px 0px
+				cursor: pointer
+				&:before
+					content: '\f196'
+					font-weight: normal
+					margin-right: 10px
+					display: inline-block
+					vertical-align: middle
+					// +pos(abs, 5px 10px null null)
+				&.active
+					color: $dblue
+					&:before
+						content: '\f147'
+			.suggest-list
+				// max-height: 300px
+				// overflow: auto
+				display: none
+				+disablescroll
+				+media-breakpoint-up(xl)
+				.product-col
+					display: block
+					vertical-align: top
+					width: 100%
+					box-shadow: none
+					margin: 0
+					border-bottom: 1px dashed darken($white,20%)
+					padding: 5px 0
+					figure
+						+flexbox
+						flex-wrap: wrap
+						// padding: 0
+						.product-img
+							width: 40px
+							padding: 0
+							height: 50px
+						figcaption
+							// +flexbox
+							// align-items: center
+							// align-content: center
+							width: calc(100% - 40px)
+							padding-left: 15px
+							.product-name
+								white-space: normal
+								min-height: unset
+								+fs(12rem)
+								font-weight: 400
+	.product-other
+		white-space: nowrap
+		overflow: auto
+		margin: 0px -15px
+		padding: 0px 15px
+		&::-webkit-scrollbar-track
+		&::-webkit-scrollbar
+			width: 0
+		&::-webkit-scrollbar-thumb
+			border: none
+		.item
+			display: inline-block
+			vertical-align: top
+			width: 150px
+			+media-breakpoint-up(xl)
+				width: unset
+				display: block
+			+ .item
+				margin-left: 10px
+				+media-breakpoint-up(xl)
+					margin-left: 0
+
+.popup-tragop
+	display: none
+	max-width: 700px
+	+media-breakpoint-down(sm)
+		max-width: 90%
+	.bank-list
+		margin-bottom: -10px
+		.row
+			margin: 0px -5px
+		.col-6
+			padding: 0px 5px
+			margin-bottom: 10px
+		.bank
+			border: 1px solid darken($white,10%)
+			+bor-rad(5px)
+			+flexbox
+			justify-content: center
+			align-items: center
+			align-content: center
+			height: 80px
+			overflow: hidden
+			img
+				max-width: 80%
+				max-width: 80%
+				+transition(all,0.5s)
+			&:hover
+				border-color: $dblue
+				img
+					+transform(scale3d(1.1,1.1,1))
+
+.popup-addtocart
+	+pos(fix, null 0 0 0)
+	z-index: 1505
+	+transform(translateY(calc(100% + 15px)))
+	+transition(all 0.4s)
+	border-top: 1px solid lighten($cyan,20%)
+	background: lighten($cyan,53%)
+	padding: 10px 15px
+	+opacity(0)
+	+media-breakpoint-up(md)
+		border-left: 1px solid lighten($cyan,20%)
+		width: 350px
+		+pos(fix, null 0 0 null)
+		left: inherit
+	&.open
+		+transform(translateY(0))
+		+opacity(1)
+	.addtocart-success
+		color: $cyan
+		line-height: 1.5
+		padding-bottom: 7px
+		border-bottom: 1px solid lighten($cyan,40%)
+		+fs(14rem)
+		.material-icons
+			// +fs(20rem)
+			line-height: 1.5
+			margin-right: 10px
+	.btn-hidepopup
+		+pos(abs, 15px 15px null null)
+		+fs(13rem)
+		color: darken($white,60%)
+		+transition(all 0.3s)
+		cursor: pointer
+		+media-breakpoint-down(xs)
+			+pos(abs, 10px 15px null null)
+			+fs(12rem)
+		&:hover
+			color: $lred
+			cursor: pointer
+		.material-icons
+			+fs(16rem)
+	.product
+		padding: 20px 0
+		max-height: 300px
+		height: 300px
+		overflow-y: scroll
+		-webkit-overflow-scrolling: touchs
+		figure
+			margin-bottom: 10px
+			+flexbox
+			.product-img
+				//display: block
+				width: 70px
+				height: 70px
+				background: $white
+				border: 1px solid lighten($cyan,10%)
+				+bor-rad(5px)
+				+flexbox
+				align-items: center
+				justify-content: center
+				object-fit: cover
+				img
+					+bor-rad(5px)
+					max-height: 65px
+			figcaption
+				width: calc(100% - 70px)
+				padding-left: 10px
+				+flexbox
+				flex-wrap: wrap
+				align-items: center
+				align-content: center
+				.product-name, .product-option, .product-amount
+					width: 100%
+					+fs(12rem)
+					color: darken($white,60%)
+				.product-name
+					+fs(13rem)
+					line-height: 1.4
+					a
+						color: $black
+				.product-amount
+					width: 30%
+					+media-breakpoint-up(md)
+						width: 100%
+				.product-price
+					width: 70%
+					text-align: right
+					margin: 0
+					padding: 0
+					+fs(18rem)
+					font-weight: 600
+					color: $red
+					line-height: 1
+					+media-breakpoint-up(md)
+						width: 100%
+						+fs(15rem)
+						font-weight: 500
+						text-align: left
+	.popup-btnwrap
+		// padding: 10px 15px
+		.btn-gotocart
+			+mainbutton($lred, $dred)
+			display: block
+			padding: 0px 20px
+			width: 180px
+			margin: 0 auto
+.input-number
+	+flexbox
+	width: 100px
+	+bor-rad(50px)
+	border: 1px solid darken($white,10%)
+	.btn-spin
+		width: 34px
+		line-height: 34px
+		height: 34px
+		text-align: center
+		+fs(18rem)
+	input
+		width: calc(100% - 34px - 34px)
+		line-height: 34px
+		margin: 0
+		padding: 0
+		border: none
+		background: none
+		text-align: center
+		font-weight: 600
+.popup-panel
+	+pos(fix, 0 null 0 0)
+	right: 0
+	z-index: 1500
+	background: $white	
+	+transform(translateY(100%))
+	+transition(all 0.4s)
+	+opacity(0)
+	+media-breakpoint-down(lg)
+		z-index: 9999
+		height: 100vh
+		padding-top: 50px
+		padding-bottom: 60px
+		overflow: auto
+		-webkit-overflow-scrolling: touch
+		// overflow-y: scroll
+		// visibility: visible
+	&.open
+		+transform(translateY(0%))
+		+opacity(1)
+	.panel-header
+		+pos(fixed, 0 0 null 0)
+		background: $white
+		z-index: 9999
+		+media-breakpoint-up(lg)
+			+pos(rel,null)
+		.btn-closepanel
+			padding: 10px 0
+			line-height: 30px
+			text-align: center
+			color: $black
+			margin-right: 15px
+			float: left
+		.panel-title
+			+flexbox
+			float: left
+			height: 50px
+			justify-content: center
+			align-items: center
+			align-content: center
+			font-weight: 500
+		.nav-tabs
+			margin: 0
+			padding: 0
+			float: left
+			width: calc(100% - 40px)
+			.nav-link
+				+flexbox
+				// justify-content: center
+				align-items: center
+				align-content: center
+				height: 50px
+				float: left
+				width: calc(100% - 24px)
+				+ .nav-link
+					margin-left: 0
+				&:nth-child(2)
+					width: 24px
+	.panel-content
+		max-height: calc(100vh - 50px)
+		//padding: 15px 0
+		+media-breakpoint-up(xl)
+			overflow: auto
+			-webkit-overflow-scrolling: touch
+		+media-breakpoint-down(lg)
+			visibility: visible
+			overflow: auto
+			-webkit-overflow-scrolling: touch
+			max-height: calc(100vh - 60px)
+			height: calc(100vh - 60px)
+		.content
+			+media-breakpoint-down(lg)
+				max-height: calc(100vh - 60px)
+				height: calc(100vh -60px)
+				overflow-y: scroll				
+				-webkit-overflow-scrolling: touch
+.option-popup
+	+pos(fix, unset 0 0 0)
+	.panel-content
+		padding-bottom: 100px
+		.product
+			margin-bottom: 20px
+			figure
+				+flexbox
+				.product-img
+					width: 70px
+				figcaption
+					width: calc(100% - 70px)
+					+flexbox
+					flex-wrap: wrap
+					align-items: center
+					align-content: center
+					padding-left: 10px
+					.product-name
+						width: 100%
+						+fs(16rem)
+					.product-price
+						width: 100%
+						.new
+							display: inline-block
+							+fs(14rem)
+							margin-right: 5px
+						.old
+							display: inline-block
+							+fs(12rem)
+.description-popup
+	.content
+		padding: 0px 15px

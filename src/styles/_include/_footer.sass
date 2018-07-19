@@ -1,0 +1,163 @@
+footer
+	background: darken($white,3%)
+	+media-breakpoint-down(lg)
+		display: none
+	.footertop
+		padding: 40px 0 20px
+	.footercol
+		margin-bottom: 20px
+		.title
+			font-weight: 500
+			margin-bottom: 15px
+			text-transform: uppercase
+	.sitelogo
+		margin-bottom: 15px
+		filter: brightness(0)
+		img
+			height: 30px
+	.about
+		.company-name
+			font-weight: 500
+			margin-bottom: 15px
+			+fs(14rem)
+		.addr
+			+fs(13rem)
+			line-height: 1.3
+			a
+				color: $black
+	.contactinfo
+		+fs(13rem)
+		line-height: 1.3
+		a
+			color: $black
+	.footerlink
+		a
+			+fs(13rem)
+			color: $black
+	a
+		&:hover
+			color: $lred
+	.hotline
+		+pos(rel,null)
+		padding-left: 50px
+		color: $black
+		+fs(13rem)
+		a
+			display: block
+			font-weight: 500
+			+fs(18rem)
+			color: $black
+			&:hover
+				color: $lred
+		.material-icons
+			+pos(abs, 5px null null 0)
+			+fs(42rem)
+	.footerbottom
+		border-top: 1px solid darken($white,10%)
+		.copyright
+			+fs(13rem)
+			color: darken($white,60%)
+			padding: 10px 0
+			float: left
+			a
+				color: $black
+				&:hover
+					color: $lred
+		.colright
+			float: right
+			+flexbox
+			align-items: center
+			align-content: center
+			padding: 5px 0
+			.payment
+				float: left
+				+fs(13rem)
+				+flexbox
+				align-items: center
+				align-content: center
+			.social
+				float: left
+				+fs(13rem)
+				margin-left: 30px
+				+flexbox
+				align-items: center
+				align-content: center
+				a
+					+fs(18rem)
+					margin-left: 15px
+					color: $black
+					&:hover
+						color: $lred
+.up
+	+pos(fix, null 15px 40px null)
+	width: 40px
+	height: 40px
+	line-height: 40px
+	text-align: center
+	+bor-rad(50px)
+	background: $white
+	box-shadow: 0px 10px 20px color-rgba($black,0.1)
+	visibility: hidden
+	opacity: 0
+	cursor: pointer
+	+transition(all,0.3s)
+	display: none
+	&.active
+		visibility: visible
+		opacity: 1
+
+// MOBILE
+.mobile-footer
+	background: darken($white,5%)
+	+media-breakpoint-down(lg)		
+		margin-top: 30px
+	.sitelogo
+		text-align: center
+		padding: 20px 0
+		a
+			display: block
+		img
+			filter: grayscale(100%) brightness(0)
+			height: 30px
+			opacity: 0.8
+	.site-feature
+		+flexbox
+		+bor-rad(5px)
+		border: 1px solid darken($white,15%)
+		background: $white
+		color: darken($white,60%)
+		margin-bottom: 20px
+		.feature
+			width: 33.33%
+			flex: 0 0 33.33%
+			+ .feature
+				border-left: 1px solid darken($white,15%)
+			figure
+				padding: 10px 10px
+				.feature-img
+					text-align: center
+					.material-icons
+						+fs(28rem)
+				figcaption
+					padding: 5px 0 0
+					+fs(11rem)
+					line-height: 1.2
+					text-align: center
+	.contact
+		ul
+			li
+				text-align: center
+				+fs(13rem)
+				margin-bottom: 5px
+				color: darken($white,60%)
+				.material-icons
+					+fs(14rem)
+				a
+					color: darken($white,60%)
+	.copyright
+		margin-top: 20px
+		text-align: center
+		+fs(13rem)
+		color: darken($white,60%)
+		border-top: 1px solid darken($white,15%)
+		padding: 10px 0

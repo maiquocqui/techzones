@@ -1,0 +1,64 @@
+body
+	+media-breakpoint-down(md)
+		background: darken($white,3%)
+		padding-top: 65px
+.homepage
+	main 
+		background: none
+.mobile-header
+	+pos(fix, 0 0 null 0)
+	z-index: 1000
+	// background: linear-gradient(to right,$lblue,$blue)
+	// box-shadow: 0px 10px 50px -15px color-rgba($blue,1)
+	background: $white
+	border-bottom: 1px solid darken($white,10%)
+	.btn-showmenu
+		// width: 36px
+		// height: 36px
+		padding: 10px 0
+		line-height: 30px
+		text-align: center
+		color: $black
+		+fs(18rem)
+		margin-right: 15px
+		float: left
+		// +bor-rad(50px)
+		// border: 1px solid $white
+	.sitelogo
+		padding: 10px 0
+		float: left
+		a
+			display: block
+		img
+			height: 30px
+			filter: invert(100%)
+	.colright
+		float: right
+	.hotline,.searchtoggle, .cart
+		margin: 10px 0
+		float: left
+		line-height: 30px
+		color: $black
+	.hotline
+		a
+			color: $white
+	.searchtoggle
+		margin-left: 15px
+	.search
+		display: none
+		clear: both
+	.cart
+		margin-left: 15px
+		.carttoggle
+			+pos(rel,null)
+			line-height: 30px
+			.cartamount
+				background: linear-gradient(to right, $orange, $red)
+				+bor-rad(50px)
+				line-height: 1
+				padding: 2px 5px
+				+fs(10rem)
+				+pos(abs, 0 0 null null)
+				color: $white
+	.mobile-home-tab
+		clear: both

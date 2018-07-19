@@ -1,0 +1,119 @@
+.brand-page
+	padding: 40px 0
+	.brand-header
+		+flexbox
+		justify-content: space-between
+		margin-bottom: 20px
+		.brand-logo
+			a
+				display: block
+				padding: 10px 0
+			img
+				height: 30px
+		.brand-menu
+			ul
+				+flexbox
+				height: 50px
+				align-items: center
+				align-content: center
+				li
+					+ li
+						margin-left: 30px
+					a
+						display: block
+						color: darken($white,40%)
+						font-weight: 500
+						&:hover
+							color: $black
+	.brand-banner
+		margin-bottom: 40px
+		.banner-img
+			display: block
+			img
+				width: 100%
+	
+	.brand-category
+		ul
+			+flexbox
+			justify-content: center
+			margin-bottom: 40px
+			+media-breakpoint-down(sm)
+				overflow: auto
+				-webkit-overflow-scrolling: touch
+				width: 100%
+			li
+				width: 16.66%
+				+media-breakpoint-down(sm)
+					width: 130px
+					max-width: 130px
+					min-width: 130px
+				.category
+					display: block
+					text-align: center
+					.img
+						width: 100px
+						height: 100px
+						margin: 0px auto
+						+flexbox
+						justify-content: center
+						align-items: center
+						+bor-rad(100px)
+						margin-bottom: 10px
+						img
+							max-width: 60%
+							max-height: 60%
+					.name
+						color: $black
+						+fs(14rem)
+						font-weight: 600
+				&.active
+					.category
+						.img
+							background: linear-gradient(to right, $lblue, $dblue)
+							color: $white
+							box-shadow: 0px 10px 20px -10px $dblue
+							img
+								filter: invert(100%)
+
+
+.mobile-brand
+	.brand-logo
+		a
+			border: 1px solid darken($white,10%)
+			+bor-rad(5px)
+			overflow: hidden
+			margin-bottom: 10px
+			+flexbox
+			justify-content: center
+			align-items: center
+			height: 100px
+			// +media-breakpoint-up()
+		img
+			max-width: 90%
+			max-height: 90%
+.brand-intro
+	box-shadow: 0px 10px 20px -10px color-rgba($black,0.1)
+	padding-bottom: 15px
+	margin-bottom: 15px
+	.brand-logo
+		+flexbox
+		justify-content: center
+		align-items: center
+		img
+			max-width: 70%
+			max-height: 70%
+	.static-content
+		max-height: 100px
+		overflow: hidden
+		// box-shadow: 0 10px 20px -10px color-rgba($black,0.1)
+
+.brand-product
+	.btn-viewmore
+		display: block
+		+mainbutton($lblue,$dblue)
+		margin-bottom: 15px
+		line-height: 36px
+		&:before
+			content: '\f055'
+			font-family: 'fontawesome'
+			margin-right: 10px

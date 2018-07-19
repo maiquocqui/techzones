@@ -1,0 +1,180 @@
+.loginpage
+	.login-page
+		.login-header
+			.btn-backpage
+				display: none
+.login-page
+	.login-header
+		+media-breakpoint-up(xl)
+			display: none
+		.btn-backpage
+			display: block
+			padding: 10px 0
+			line-height: 30px
+			text-align: center
+			color: $black
+			margin-right: 15px
+			float: left
+	.login-panel
+		// padding-top: 20px
+		+media-breakpoint-up(lg)
+			max-width: 400px
+			margin: 40px auto
+			+bor-rad(10px)
+			padding: 30px 20px
+			border: 1px solid darken($white,5%)
+			box-shadow: 0 10px 20px color-rgba($black,0.1)
+		.login-title
+			+fs(28rem)
+			font-weight: 700
+			clear: both
+			line-height: 1.5
+			margin-bottom: 30px
+		.login-banner
+			+media-breakpoint-up(lg)
+				display: none
+			img
+				width: 40%
+		.login-nav
+			padding: 0px 30px
+			text-align: center
+			margin-bottom: 30px
+			display: none
+			ul
+				border-bottom: 1px solid darken($white,10%)
+				+flexbox
+				li
+					width: 50%
+					a
+						display: block
+						line-height: 40px
+						text-transform: uppercase
+						color: $main
+						font-weight: 500
+						+pos(rel,null)
+						&:after
+							content: ''
+							+pos(abs, null 0 -2px 0)
+							height: 3px
+							background: linear-gradient(to right, $lblue, $dblue)
+							opacity: 0
+							+transition(all,0.3s)
+					&.active
+						a
+							color: $dblue
+							&:after
+								opacity: 1
+		.loginfrm-wrap
+			padding: 0px 15px
+			.form-group
+				+pos(rel,null)
+				margin-bottom: 10px
+				label
+					+pos(abs, 7px null null 0)
+					// margin-bottom: 5px
+					color: darken($white,20%)
+					// font-weight: 500
+				input, select
+					width: 100%
+					height: 40px
+					line-height: 40px
+					border: none
+					//padding-left: 36px
+					// +bor-rad(50px)
+					border-bottom: 2px solid darken($white,10%)
+					&::-webkit-input-placeholder
+						color: $main
+						opacity: 0.3
+					&:focus, &:active, &:checked
+						background: $white
+						+pos(rel,null)
+						z-index: 1
+			.remember-pw
+				margin-bottom: 10px
+			.frm-btn
+				padding: 10px 0
+			input[type="reset"]
+				display: none
+			input[type="submit"]
+				border: none
+				display: block
+				width: 100%
+				// text-transform: uppercase
+				+mainbutton($lblue,$dblue)
+				line-height: 40px
+				height: 40px
+				padding: 0
+				+fs(16rem)
+				font-weight: 500
+			.forget-pw
+				text-align: center
+				padding: 10px 0
+				a
+					color: $blue
+					+fs(14rem)
+					&:hover
+						color: $lred
+		.social-login
+			padding: 0
+			text-align: center
+			.module-title
+				background: $white
+				+fs(14rem)
+				color: darken($white,60%)
+				display: inline-block
+				margin-bottom: 10px
+			.social-list
+				+flexbox
+				flex-wrap: wrap
+				a
+					display: block
+					width: 100%
+					+ a
+						margin-top: 15px
+				.google
+					+mainbutton(lighten($googleplus,20%),$googleplus)
+					background: none
+					border: 1px solid $googleplus
+					color: $googleplus
+					font-weight: 500
+					line-height: 38px
+					+pos(rel,null)
+					box-shadow: none
+					&:hover
+						color: $white
+						background: linear-gradient(to right,lighten($googleplus,20%),$googleplus)
+					.fa
+						display: block
+						width: 32px
+						height: 32px
+						line-height: 32px
+						+fs(20rem)
+						text-align: center
+						+bor-rad(50px)
+						color: $googleplus
+						background: $white
+						+pos(abs, 4px null null 4px)
+				.facebook
+					+mainbutton(lighten($facebook,20%),$facebook)
+					+pos(rel,null)
+					background: none
+					font-weight: 500
+					line-height: 38px
+					border: 1px solid $facebook
+					color: $facebook
+					box-shadow: none
+					&:hover
+						color: $white
+						background: linear-gradient(to right,lighten($facebook,20%),$facebook)
+					.fa
+						display: block
+						width: 32px
+						height: 32px
+						line-height: 32px
+						+fs(20rem)
+						text-align: center
+						+bor-rad(50px)
+						color: $facebook
+						background: $white
+						+pos(abs, 4px null null 4px)
+

@@ -1,0 +1,84 @@
+// CART HEADER
+
+.cartheader
+	background: $white
+	+pos(rel,null)
+	// +media-breakpoint-down(lg)
+	// 	display: none
+	&:before
+		content: ''
+		+pos(abs, null 0 0 0)
+		height: 3px
+		background: linear-gradient(to right, $lblue, $dblue)
+	// border-bottom: 2px solid $gray
+	.sitelogo
+		float: left
+		padding: 11px 0
+		+media-breakpoint-up(md)
+			padding: 15px 0
+			margin: 0
+		a 
+			+flexbox
+			height: 60px
+			align-items: center
+			align-content: center
+			+media-breakpoint-down(sm)
+				height: 35px
+				max-height: 35px
+			img 
+				height: 31px
+				//filter: invert(100%) grayscale(100%) brightness(400%)
+				+media-breakpoint-down(sm)
+					max-height: 30px
+	.hotline
+		float: right
+		padding: 10px 0		
+		margin: 0
+		+media-breakpoint-up(xl)
+			padding: 25px 0
+		.fa
+			display: block
+			width: 40px
+			height: 40px
+			line-height: 40px
+			text-align: center
+			+fs(32rem)
+			+bor-rad(50px)
+			float: left
+			// background: $white
+			color: $dblue
+			margin-right: 5px
+		a 
+			+flexbox
+		.phone
+			display: block
+			white-space: nowrap
+			float: left
+			line-height: 1
+			color: darken($dblue, 10%)
+			padding-right: 20px
+			.label
+				+fs(12rem)
+				display: block
+				margin: 3px 0
+			.number
+				+fs(16rem)
+				font-weight: 700
+				display: block
+
+	.cartdes
+		float: right
+		clear: right
+		+fs(14rem)
+		color: darken($white,40%)
+		+media-breakpoint-down(xs)
+			display: none
+		a 
+			color: $white
+			&:hover
+				color: $red
+
+.cartfinish
+	.cartheader
+		.btn-headback
+			display: none

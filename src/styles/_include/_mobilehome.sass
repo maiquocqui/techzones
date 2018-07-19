@@ -1,0 +1,130 @@
+.mobile-banner
+	+bor-rad(5px)
+	overflow: hidden
+	margin-bottom: 15px
+	.slick-prev, .slick-next
+		+pos(abs, 50% null null null)
+		+transform(translateY(-50%))
+		z-index: 5
+		+fs(0)
+		width: 30px
+		height: 30px
+		+bor-rad(50px)
+		line-height: 28px
+		color: darken($white,40%)
+		background: $white
+		box-shadow: 0 1px 3px color-rgba($black,0.1)
+		opacity: 0
+		&:before
+			content: ''
+			+fs(20rem)
+	.slick-prev
+		left: 5px
+		&:before
+			content: '\f104'
+	.slick-next
+		right: 5px
+		&:before
+			content: '\f105'
+	&:hover
+		.slick-prev, .slick-next
+			opacity: 1
+	.slick-dots
+		+pos(abs, null 10px 10px null)
+		li
+			width: 8px
+			height: 8px
+			+bor-rad(50px)
+			float: left
+			background: color-rgba($white,0.8)
+			+ li 
+				margin-left: 5px
+			&.slick-active
+				background: $blue
+			button
+				display: none
+.mobile-title
+	+pos(rel,null)
+	margin-bottom: 10px
+	.title
+		font-weight: 500
+		text-transform: uppercase
+		+fs(14rem)
+		color: $main
+	.btn-viewmore
+		+fs(13rem)
+		color: $blue
+		// font-weight: 300
+		+pos(abs, 0 0 null null)
+		&:after
+			content: '\f107'
+			margin-left: 5px
+.mobile-category
+	=mobile-cate-color($color1,$color2)
+		background: linear-gradient(to right, $color1, $color2)
+		box-shadow: 0px 10px 20px -10px color-rgba($color2,1)
+	.mobile-cate-list
+		white-space: nowrap
+		ul
+			white-space: nowrap
+			overflow: auto
+			padding: 0px 15px 20px
+			&::-webkit-scrollbar-track
+			&::-webkit-scrollbar
+				width: 0
+			&::-webkit-scrollbar-thumb
+				border: none
+			li 
+				display: inline-block
+				vertical-align: middle
+				+ li 
+					margin-left: 5px
+				&:nth-child(2)
+					.mobile-cate
+						+mobile-cate-color($lred,$dred)
+				&:nth-child(3)
+					.mobile-cate
+						+mobile-cate-color($lgreen,$dgreen)
+				&:nth-child(4)
+					.mobile-cate
+						+mobile-cate-color($lpurple,$dpurple)
+				&:nth-child(5)
+					.mobile-cate
+						+mobile-cate-color($lpink,$dpink)
+				&:nth-child(6)
+					.mobile-cate
+						+mobile-cate-color($lblue,$dblue)
+				&:nth-child(7)
+					.mobile-cate
+						+mobile-cate-color($lred,$dred)
+				&:nth-child(8)
+					.mobile-cate
+						+mobile-cate-color($lgreen,$dgreen)
+				.mobile-cate
+					width: 150px
+					+flexbox
+					+bor-rad(5px)
+					overflow: hidden
+					+mobile-cate-color($lblue,$dblue)
+					.icon
+						width: 60px
+						height: 60px
+						+flexbox
+						justify-content: center
+						align-items: center
+						filter: invert(100%)
+						img 
+							max-width: 60%
+							max-height: 60%
+					.name
+						width: calc(100% - 60px)
+						+flexbox
+						white-space: normal
+						align-items: center
+						align-content: center
+						color: $white
+						+fs(13rem)
+						padding-right: 10px
+						text-transform: capitalize
+						// font-weight: 500
+

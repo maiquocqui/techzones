@@ -1,0 +1,341 @@
+.userpanel-wrap
+	padding: 50px 0
+.userpanel-title
+	+fs(28rem)
+	line-height: 1.5
+	font-weight: 600
+	margin-bottom: 20px
+	+media-breakpoint-down(xs)
+		+fs(18rem)
+	a
+		color: $black
+		&:hover
+			color: $dblue
+.userpanel-account
+	margin-bottom: 30px
+	.user-avatar
+		background: darken($white,10%)
+		overflow: hidden
+		box-shadow: 0px 5px 40px color-rgba($black,0.1)
+		+flexbox
+		justify-content: center
+		align-items: center
+		align-content: center
+		height: 100%
+		+bor-rad(10px)
+		+pos(rel,null)
+		+media-breakpoint-down(xs)
+			height: auto
+			padding: 30px
+			margin-bottom: 30px
+			img
+				width: 100%
+		.userpanel-btn
+			+pos(abs, null 25px 25px null)
+			+mainbutton($lred,$dred)
+			line-height: 34px
+			+fs(14rem)
+			// text-transform: uppercase
+			padding: 0px 20px
+			+flexbox
+			align-items: center
+			align-content: center
+			+media-breakpoint-down(xs)
+				+fs(13rem)
+				padding: 0px 15px
+				line-height: 30px
+				bottom: 15px
+				right: 15px
+			&:after
+				content: 'exit_to_app'
+				font-family: 'material icons'
+				margin-left: 5px
+				+fs(18rem)
+				text-transform: none
+				font-weight: normal
+				line-height: 1
+	#ctl00_mainContent_userProfile_pnlUser
+		+bor-rad(10px)
+		overflow: hidden
+		background: $white
+		box-shadow: 0px 5px 40px color-rgba($black,0.1)
+		padding: 25px
+		+media-breakpoint-down(xs)
+			padding: 15px
+	.userpanel-form
+		.form-group, .settingrow
+			margin-bottom: 10px
+			+flexbox
+			align-items: center
+			align-content: center
+			+media-breakpoint-down(xs)
+				flex-wrap: wrap
+			label
+				+fs(14rem)
+				width: 140px !important
+				padding: 0 !important
+				-webkit-box-flex: unset
+				-webkit-flex: unset
+				-ms-flex: unset
+				flex: unset
+				max-width: inherit
+				+media-breakpoint-down(xs)
+					width: 100% !important
+			.settingcontrol, .col-sm-9
+				width: calc(100% - 140px) !important
+				padding: 0!important
+				-webkit-box-flex: unset
+				-webkit-flex: unset
+				-ms-flex: unset
+				flex: unset
+				max-width: inherit
+				+media-breakpoint-down(xs)
+					width: 100% !important
+			input, select
+				width: 100%
+				+bor-rad(50px)
+				padding: 10px 20px
+				border: 1px solid darken($white,10%)
+				+fs(14rem)
+				background: $white
+				&:disabled
+					background: darken($white,5%)
+			select
+				padding: 9px 20px
+		.button-wrap
+			+flexbox
+			padding: 10px 0 0
+			justify-content: flex-end
+			+media-breakpoint-down(xs)
+				justify-content: flex-start
+			input[type="submit"]
+				+mainbutton($lblue,$dblue)
+				+fs(14rem)
+				line-height: 34px
+				padding: 0px 20px
+				border: none
+			a
+				+mainbutton($lpurple,$dpurple)
+				+fs(14rem)
+				line-height: 34px
+				padding: 0px 20px
+				margin-left: 10px
+				border: none
+		
+.userpanel-content
+	+bor-rad(10px)
+	overflow: hidden
+	background: $white
+	box-shadow: 0px 5px 40px color-rgba($black,0.1)
+	padding: 25px
+	+pos(rel,null)
+	height: calc(100% - 30px)
+	margin-bottom: 30px
+	+media-breakpoint-down(xs)
+		padding: 15px
+	.userpanel-insert-btn
+		display: inline-block
+		+mainbutton($lgreen,$dgreen)
+		+fs(14rem)
+		font-weight: normal
+		line-height: 34px
+		padding: 0px 20px
+		border: none
+		+pos(abs, 25px 25px null null)
+		+media-breakpoint-down(xs)
+			top: 15px
+			right: 15px
+			+fs(13rem)
+			padding: 0px 15px
+			line-height: 30px
+		&:hover
+			color: $white
+	.userpanel-viewmore
+		a
+			color: $dblue
+			&:hover
+				color: $dpurple
+			&:before
+				content: '\f00e'
+				margin-right: 5px
+
+	.address-list
+		.address-col
+			padding: 10px 0
+			border-bottom: 1px dashed darken($white,10%)
+			&:last-child
+				border-bottom: none
+			.address
+				+pos(rel,null)
+				padding: 10px
+				+bor-rad(5px)
+				.type
+					+pos(abs, 10px 10px null null)
+					+fs(11rem)
+					line-height: 1
+					font-weight: 600
+					color: $lred
+					text-transform: uppercase
+				.edit.userpanel-btn
+					color: $lred
+					+pos(abs, 30px 10px null null)
+				.name
+					+fs(14rem)
+					line-height: 1
+					font-weight: 600
+					color: $main
+					margin-bottom: 5px
+				.addr-detail
+					ul
+						li
+							+fs(13rem)
+							color: darken($white,60%)
+				&.default
+					border: 2px dashed $lred
+					background: lighten($lred,25%)
+					.name
+						// color: $lred
+		.userpanel-viewmore
+			margin-top: 20px
+	#ctl00_mainContent_wishlist_upWishlist
+		display: none
+	.wishlist-product
+		.product
+			figure
+				+flexbox
+				flex-wrap: wrap
+
+
+.userpanel-order
+	+bor-rad(10px)
+	overflow: hidden
+	background: $white
+	box-shadow: 0px 5px 40px color-rgba($black,0.1)
+	padding: 25px
+	margin-bottom: 30px
+	+media-breakpoint-down(xs)
+		padding: 15px
+	.cart-history
+		margin-bottom: 30px
+		&:last-child
+			margin-bottom: 0
+	.table
+		border: 1px solid darken($white,10%)
+		thead
+			tr
+				th
+					+fs(16rem)
+					font-weight: 600
+					color: $black
+					background: darken($white,5%)
+					border: none
+					// border-bottom: 1px solid darken($white,10%)
+					padding: 10px
+					&:first-child
+						width: 140px
+					&:last-child
+						text-align: right
+		tbody
+			tr
+				td
+					+fs(14rem)
+					border-top: 1px solid darken($white,10%)
+					padding: 10px
+					line-height: 1.5
+					&:first-child
+						color: $main
+						font-weight: 600
+						a
+							color: $lred
+							&:hover
+								color: $dred
+					&:last-child
+						text-align: right
+					&:nth-child(4)
+						font-weight: 700
+					h4
+						line-height: 1.5
+						a
+							line-height: 1.5
+							color: $dblue
+							font-weight: 600
+							&:hover
+								color: $dpurple
+				&:nth-child(even)
+					background: darken($white,2%)
+				&:hover
+					td
+						background: lighten($blue,60%)
+
+.order-info 
+	.date
+		+fs(14rem)
+		font-weight: 500
+		color: darken($white,40%)
+		margin: -20px 0 30px
+	.address-block
+		margin-bottom: 20px
+		h3
+			+fs(16rem)
+			text-transform: uppercase
+			line-height: 1.5
+			font-weight: 600
+			margin-bottom: 5px
+			+media-breakpoint-down(xs)
+				+fs(15rem)
+		.address-col
+			+bor-rad(5px)
+			border: 2px dashed darken($white,10%)
+			height: calc(100% - 32px)
+			padding: 10px
+			+fs(14rem)
+			+media-breakpoint-down(xs)
+				height: auto
+				margin-bottom: 30px
+			.name
+				+fs(15rem)
+				font-weight: 600
+				margin-bottom: 5px
+			.payment-status
+				color: $red
+			a
+				display: inline-block
+				+mainbutton($lpurple,$dpurple)
+				+fs(14rem)
+				line-height: 34px
+				padding: 0px 20px
+				border: none
+				color: $white
+				margin-top: 10px
+				&:hover
+					color: $white
+		.cart-table
+			margin-bottom: 30px
+	.userpanel-cancel-btn
+		display: inline-block
+		+mainbutton($lred,$dred)
+		+fs(14rem)
+		line-height: 34px
+		padding: 0px 20px
+		border: none
+		color: $white
+		&:hover
+			color: $white
+.orderlist
+	.wishlist-product
+		.product
+			color: $main
+			+bor-rad(5px)
+			border: 2px dashed darken($white,10%)
+			padding: 10px
+			a
+				display: block
+				color: inherit
+			.product-name
+				+fs(15rem)
+				font-weight: 600
+				margin-bottom: 5px
+				i
+					display: none
+			.description
+				+fs(14rem)

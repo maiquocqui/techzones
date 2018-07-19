@@ -1,0 +1,543 @@
+.mobile-search
+	+pos(fix, 0 null 0 0)
+	right: 0
+	z-index: 1100
+	background: $white
+	// opacity: 0
+	// visibility: hidden
+	+transform(translateX(100%))
+	+transition(all,0.3s)	
+	&.open
+		// opacity: 1
+		// visibility: visible
+		+transform(translateX(0))
+	.search-header
+		background: linear-gradient(to right, $dblue, $lblue)
+		.search-header-wrap
+			+flexbox
+			flex-wrap: wrap
+			padding: 10px 0
+			// align-items: center
+			.btn-closesearch
+				height: 30px
+				line-height: 30px
+				text-align: center
+				color: $white
+				margin-right: 15px
+			.searchbox
+				width: 100%
+				+bor-rad(5px)
+				// border: 1px solid darken($white,20%)
+				+flexbox
+				+media-breakpoint-down(lg)
+					display: block
+				input
+					height: 40px
+					line-height: 40px
+					padding: 0px 10px
+					border: none
+					background: none
+					+fs(28rem)
+					font-weight: 600
+					color: $white
+					width: calc(100% - 40px)
+					&::-webkit-input-placeholder
+						color: $white
+						opacity: 0.3
+					+media-breakpoint-down(lg)
+						width: 100%
+				.searchbutton
+					width: 40px
+					height: 40px
+					line-height: 40px
+					text-align: center
+					color: $white
+					+media-breakpoint-down(lg)
+						+pos(abs, 0 0 null null)
+					.material-icons
+						+fs(28rem)
+	.moblie-searchresult
+		height: calc(100vh - 90px)
+		overflow: auto
+		padding-top: 15px
+		+media-breakpoint-up(lg)
+			display: none
+		.search-category
+			text-align: center
+			margin-bottom: 20px
+			a
+				display: inline-block
+				// +fs(14rem)
+				font-weight: 500
+				text-transform: uppercase
+				color: darken($white,40%)
+				+ a
+					margin-left: 30px
+				&.active
+					color: $dblue
+		.mobile-product
+			.product-col
+				figure
+					figcaption
+						+pos(rel,null)
+						.btnwrap
+						.btn-buy
+							.material-icons
+						.mini-detail
+							display: none
+							+pos(abs, 100% -10px null -10px)
+							background: darken($white,5%)
+							box-shadow: 0px 10px 20px -10px color-rgba($black,0.1)
+							+fs(13rem)
+							padding: 10px
+							line-height: 1.3
+
+// SEARCH PAGE
+.search-page
+	// padding: 40px 0
+	.page-title
+		margin-bottom: 30px
+		strong
+			color: $dblue
+	.result-product, .result-news
+		margin-bottom: 40px
+	.small-title
+		margin-bottom: 10px
+	.result-amount
+		background: lighten($dblue,40%)
+		padding: 2px 10px
+		+fs(13rem)
+		margin-bottom: 15px
+		strong 
+			color: $red
+			font-weight: 500
+	.btn-wrap
+		text-align: center
+	.btn-loadmore
+		+mainbutton($lblue,$dblue)
+		display: inline-block
+		padding: 0px 30px
+		line-height: 36px
+		+fs(14rem)
+	.post-list
+		.post
+			display: block
+			padding-bottom: 10px
+			margin-bottom: 10px
+			border-bottom: 1px dashed darken($white,10%)
+			color: darken($white,60%)
+			&:hover
+				color: $dblue
+			figure
+				+flexbox
+				.post-img
+					width: 80px
+				figcaption
+					width: calc(100% - 80px)
+					padding-left: 10px
+					.post-name
+						+fs(13rem)
+						height: 0.8125rem*1.3*2
+						line-height: 1.3
+						overflow: hidden
+						text-overflow: ellipsis
+.productsearchresults
+	.search-page
+		margin-bottom: 40px
+		.ajaxsearchviewmore
+			+mainbutton($lblue,$dblue)
+			height: 36px
+			line-height: 36px
+			padding: 0 10px
+			width: 150px
+			display: block
+			margin: 0 auto
+			margin-top: 15px
+			+transition(all 0.5s)
+			&:hover, &:focus
+				color: $white
+				cursor: pointer
+		.resulttitle
+			+fs(28rem)
+			text-transform: uppercase
+			font-weight: 700
+			color: $main
+			margin-bottom: 30px
+			strong 
+				color: $blue
+		.resultlist
+			margin-bottom: 20px
+			.nopadding
+				margin-bottom: 15px
+			.resultitem
+				+fs(13rem)
+				color: $main
+				padding: 5px 10px
+				background: darken($white,5%)
+				strong 
+					color: $red
+			.title
+				background: lighten($blue,60%)
+				font-weight: 700
+				color: $blue
+				text-transform: uppercase
+				+fs(13rem)
+				line-height: 30px
+				padding: 0px 10px
+				// border-bottom: 1px solid darken($white,10%)
+			.nopadding
+				width: 25%
+				+media-breakpoint-down(md)
+					width: 100%
+				+ .nopadding
+					+media-breakpoint-up(lg)
+						border-left: 1px solid darken($white,10%)
+			.itemlist
+				+flexbox
+				flex-wrap: wrap
+			.item
+				padding: 5px
+				border-bottom: 1px dashed darken($white,10%)
+				width: 100%
+				// +media-breakpoint-down(md)
+				// 	width: 33.33%
+				// +media-breakpoint-down(sm)
+				// 	width: 50%
+				// +media-breakpoint-down(xs)
+				// 	width: 100%
+				figure
+					display: flex
+					flex-wrap: wrap
+					.itemimg
+						display: flex
+						justify-content: center
+						align-items: center
+						width: 50px
+						height: 50px
+						// border: 1px solid darken($white,10%)
+						img 
+							max-width: 90%
+							max-height: 90%
+					figcaption
+						width: calc(100% - 50px)
+						display: flex
+						align-items: center
+						padding-left: 5px
+						.itemname
+							+fs(12rem)
+							line-height: 1.4
+							a 
+								color: $main
+								&:hover
+									color: $blue
+							span 
+								display: block
+								font-weight: 700
+								color: $red
+			.ajaxlink.viewmore
+				display: block
+				+fs(15rem)
+				font-weight: 500
+				line-height: 1
+				border: 1px solid darken($white, 60%)
+				color: darken($white, 60%)
+				padding: 8px 10px
+				text-align: center
+				margin-top: 10px
+				margin-left: 10px
+				max-width: 120px
+				+transition(all 0.4s)
+				&:hover, &:focus
+					background-color: darken($white, 60%)
+					color: $white
+			&.news
+				.item
+					width: 25%
+					+media-breakpoint-down(md)
+						width: 33.33%
+					+media-breakpoint-down(sm)
+						width: 50%
+					+media-breakpoint-down(xs)
+						width: 100%
+		.hashtag
+			padding: 10px 0
+			a 
+				display: inline-block
+				line-height: 30px
+				padding: 0px 10px
+				color: $main
+				font-weight: 600
+				border: 1px solid darken($white,10%)
+				+fs(14rem)
+				margin: 0 5px 5px 0
+				&:hover
+					color: $blue
+					border-color: $blue
+					background: lighten($blue,60%)
+				&:before
+					content: '#'
+.productsearchresults
+	.bannerwrap
+		display: none
+	.search-page
+		margin-top: 30px
+
+// SEARCHBOX SASS
+header
+	.searchwrap
+		+pos(rel,null)
+	.suggestsearch
+		+media-breakpoint-down(lg)
+			background: $white
+			margin-left: -15px
+			margin-right: -15px
+		.searchpanel
+			+pos(abs, 110% null null 0px)
+			min-width: 900px
+			z-index: 200
+			box-shadow: 0px 10px 70px -10px color-rgba($black,0.5)
+			border: 1px solid darken($white,10%)
+			background: $white
+			+bor-rad(5px)
+			padding: 15px
+			+media-breakpoint-down(lg)
+				+pos(static,unset)
+				box-shadow: none
+				border: none
+				margin: 15px 0 0
+				min-width: unset
+				display: block
+				clear: both
+				width: 100%
+				right: 0
+			.nav-tabs
+				+flexbox
+				border: none
+				margin: 0 0 15px
+				padding: 0
+				+media-breakpoint-down(lg)
+					justify-content: center
+				.nav-item
+					margin: 0
+					padding: 0
+					+ .nav-item
+						margin-left: 20px
+					.nav-link
+						border: none
+						padding: 0
+						margin: 0
+						+fs(14rem)
+						font-weight: 700
+						color: darken($white,40%)
+						margin-top: 4px
+						+transition(all,0.2s)
+						&.active
+							margin-top: 0
+							color: $black
+							+fs(18rem)
+			.tab-content
+				+media-breakpoint-down(lg)
+					width: 100%
+					//border-top: 3px solid $blue
+					height: calc(100vh - 180px)
+					overflow: auto
+					// padding-left: 15px
+					// padding-right: 15px
+			.tab-pane
+				> .flex
+					margin: 0px -10px
+					+media-breakpoint-down(lg)
+						margin: 0
+			.title
+				margin-bottom: 10px
+				+fs(13rem)
+				font-weight: 600
+				text-transform: uppercase
+				+pos(rel,null)
+				a
+					// display: block
+					color: $black
+					+fs(13rem)
+					font-weight: 600
+					text-transform: uppercase
+					+pos(rel,null)
+				&:after
+					content: '\f105'
+					color: $dred
+					margin-left: 5px
+					// +pos(abs, 0 0 null null)
+				// border-bottom: 1px solid darken($white,10%)
+			.nopadding
+				width: 25%
+				padding: 0px 10px
+				+media-breakpoint-down(lg)
+					width: 100%
+					padding: 0 15px
+					margin-bottom: 15px
+				+media-breakpoint-down(sm)
+					padding: 0
+			.itemlist
+				display: flex
+				flex-wrap: wrap
+				// background: darken($white,2%)
+				// padding: 10px
+				// +bor-rad(3px)
+				// +media-breakpoint-down(lg)
+				// 	margin-left: -15px
+				// 	margin-right: -15px
+			.item
+				// padding: 10px
+				// border-bottom: 1px dashed darken($white,10%)
+				padding-bottom: 5px
+				margin-bottom: 10px
+				box-shadow: 0px 10px 20px -10px color-rgba($black,0.1)
+				+media-breakpoint-down(lg)
+					border-bottom: none
+					width: 50%
+					padding-left: 15px
+					padding-right: 15px
+					box-shadow: 0px 10px 20px -10px color-rgba($black,0.1)
+				// +media-breakpoint-down(md)
+				// 	width: 50%
+				// +media-breakpoint-down(sm)
+				// 	width: 50%
+				// +media-breakpoint-down(xs)
+				// 	width: 50%
+				figure
+					display: flex
+					flex-wrap: wrap
+					.itemimg
+						+flexbox
+						justify-content: center
+						// align-items: center
+						+media-breakpoint-down(lg)
+							height: 200px
+							align-items: center
+							overflow: hidden
+							margin: 0 auto
+						+media-breakpoint-down(md)
+							height: 170px
+						+media-breakpoint-up(xl)
+							width: 50px
+							height: 50px
+						// border: 1px solid darken($white,10%)
+						img
+							max-width: 90%
+							max-height: 90%
+					figcaption
+						display: block
+						+media-breakpoint-down(lg)
+							padding: 10px 0
+						+media-breakpoint-up(xl)
+							width: calc(100% - 50px)
+							display: flex
+							align-items: center
+							padding-left: 5px
+						.itemname
+							+fs(11rem)
+							line-height: 1.4
+							// display: -webkit-box
+							// height: 0.75rem*1.4*2
+							// -webkit-line-clamp: 2
+							// -webkit-box-orient: vertical
+							// overflow: hidden
+							// text-overflow: ellipsis
+							+media-breakpoint-down(lg)
+								+fs(12rem)
+								font-weight: 500
+							a 
+								color: $main
+								+media-breakpoint-down(lg)
+									// min-height: 4.5rem
+									display: block
+								+media-breakpoint-down(sm)
+									// min-height: inherit
+									// font-weight: 600
+									// width: 120px
+									// white-space: nowrap
+									// overflow: hidden
+									// text-overflow: ellipsis
+								&:hover
+									color: $blue
+							span 
+								display: block
+								font-weight: 700
+								color: $red
+			.itemlist.news
+				.item
+					width: 25%
+					+media-breakpoint-down(lg)
+						width: 50%
+						figure
+							+flexbox
+							.itemimg
+								width: 180px
+								height: auto
+								img
+									width: 100%
+							figcaption
+								width: calc(100% - 180px)
+								padding-left: 15px
+								.itemname
+									+fs(12rem)
+									a
+
+					// +media-breakpoint-down(md)
+					// 	width: 100%
+.searchbox.comparesearchbox
+	+pos(rel,null)
+	.suggestsearch
+		+pos(abs, 100% 0 null 0)
+		background: $white
+		z-index: 9
+		.searchpanel
+			.item
+				display: block
+				height: 100%
+				box-shadow: 0px 10px 20px -10px color-rgba($black,0.1)
+				figure
+					+flexbox
+					padding: 10px 0
+					.itemimg
+						width: 100px
+						height: 100px
+					figcaption
+						width: calc(100% - 100px)
+						padding: 10px
+						.itemname
+							display: block
+							display: -webkit-box
+							height: 0.8125rem*1.3*2
+							font-size: 0.8125rem
+							line-height: 1.3
+							-webkit-line-clamp: 2
+							-webkit-box-orient: vertical
+							overflow: hidden
+							text-overflow: ellipsis
+							a
+								color: $black
+								+fs(12rem)
+								height: unset
+								margin-bottom: 0
+								white-space: nowrap
+								overflow: hidden
+								text-overflow: ellipsis
+							span
+								+fs(13rem)
+								line-height: 1.5
+								font-weight: 600
+								color: $red
+								display: block
+								+media-breakpoint-down(lg)
+									+fs(12rem)
+						.compare-button
+							+mainbutton($lpurple,$dpurple)
+							+fs(13rem)
+							line-height: 30px
+							height: 30px
+							margin-top: 5px
+							text-align: center
+							width: 100%
+							display: inline-block
+							width: auto
+							padding: 0px 20px

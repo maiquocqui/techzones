@@ -1,0 +1,90 @@
+.container
+	section.cart-step.clearfix
+		.step.finish
+			.number <i class="material-icons">shopping_cart</i>
+			.name Giỏ hàng
+		.step.active
+			.number <i class="material-icons">person</i>
+			.name Đăng nhập
+		.step
+			.number <i class="material-icons">local_shipping</i>
+			.name Thông tin giao hàng
+		.step
+			.number <i class="material-icons">credit_card</i>
+			.name Hình thức thanh toán
+	.row
+		.col-12.col-lg-8
+			section.cart-login.clearfix
+				.cart-title <i class="material-icons">person</i> Thông tin đăng nhập
+				.loginfrm-wrap.clearfix
+					.form-wrap.clearfix
+						.select-group.radio
+							ul 
+								li
+									input#khmoi(type="radio", name="rd1", checked)
+									label(for="khmoi") Tôi là khác hàng mới
+								li
+									input#khcu(type="radio", name="rd1",)
+									label(for="khcu") Tôi đã có tài khoản
+						.module-title Vui lòng điền Email hoặc Số điện thoại của bạn
+						.form-group
+							label <i class="material-icons">email</i>
+							input(type="text" placeholder="Địa chỉ email")
+						.form-group
+							label <i class="material-icons">lock</i>
+							input(type="text" placeholder="Mật khẩu")
+						.checkbox.remember-pw
+							input#rememberpw(type="checkbox", name="rmbpw")
+							label(for="rememberpw") Lưu mật khẩu
+						.frm-btn
+							input(type="submit", value="Đăng nhập")
+						.forget-pw
+							a(href="#") Quên mật khẩu?
+					.social-login
+						.module-title hoặc đăng nhập bằng
+						.social-list
+							a.facebook(href="#") <i class="fa fa-facebook" aria-hidden="true"></i>facebook
+							a.google(href="#") <i class="fa fa-google-plus" aria-hidden="true"></i>Google
+		.col-12.col-lg-4
+			section.cart-mini.clearfix
+				.cart-title <i class="material-icons">shopping_basket</i> Đơn hàng (<strong>2</strong> sản phẩm)
+				a.btn-edit(href="cart.html") <i class="material-icons">border_color</i>Thay đổi
+				.cart-table.clearfix
+					.group.clearfix
+						.product.clearfix
+							figure
+								a.product-img(href="#")
+									img(src="img/product/1.jpg", alt="")
+								figcaption
+									h3.product-name
+										a(href="#") Fossil Q Explorist
+									.product-option size: <strong>lớn</strong>, màu: <strong>bạc</strong>
+						.amount
+							.price 5.600.000đ
+							.count x1
+							.total 5.600.000đ
+					.group.clearfix
+						.product.clearfix
+							figure
+								a.product-img(href="#")
+									img(src="img/product/1.jpg", alt="")
+								figcaption
+									h3.product-name
+										a(href="#") Fossil Q Explorist
+									.product-option size: <strong>lớn</strong>, màu: <strong>bạc</strong>
+						.amount
+							.price 5.600.000đ
+							.count x1
+							.total 5.600.000đ
+					.group
+						.label Tổng tiền
+						.value 11.200.000đ
+					.group
+						.label Phí vận chuyển
+							a.des(href="#") Xem chính sách giao hàng
+							//- .help(target="_black" href="#") <i class="fa fa-question-circle" aria-hidden="true"></i>
+								a.help-tip(target="_blank" href="#") Xem chính sách giao hàng của Techzones
+						.value MIỄN PHÍ
+					.group
+						.label Số tiền phải thanh toán
+						.value.total 1.000.000đ

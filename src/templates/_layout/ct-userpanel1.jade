@@ -1,0 +1,111 @@
+section.breadcrumb-wrap.clearfix
+	.container
+		ol.breadcrumb(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books')
+					span(itemprop='name') Trang chủ
+				meta(itemprop='position', content='1')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Tài khoản
+				meta(itemprop='position', content='2')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Admin
+				meta(itemprop='position', content='3')
+.container
+	.row.flex.flex-wrap
+		.col-12.col-lg-3
+			section.user-sidebar.clearfix
+				.userinfo.clearfix
+					figure
+						a.user-img(href="#")
+							img(src="img/user.png", alt="")
+						figcaption
+							.title Tài khoản của
+							.user-name Admin
+							.user-rank <i class="fa fa-trophy" aria-hidden="true"></i> Thành viên vàng
+			nav.user-sidelink.clearfix
+				ul 
+					li.hvr-sweep-to-right
+						a(href="userpanel1.html") Chính sách thành viên
+					li.hvr-sweep-to-right
+						a(href="userpanel.html") Thông tin chung
+					li.hvr-sweep-to-right.active
+						a(href="userpanel1.html") Thông tin tài khoản
+					li.hvr-sweep-to-right
+						a(href="userpanel2.html") Số địa chỉ
+					//- li.hvr-sweep-to-right
+					//- 	a(href="#") Thông báo của tôi
+					li.hvr-sweep-to-right
+						a(href="userpanel3.html") Đơn hàng của tôi
+					li.hvr-sweep-to-right
+						a(href="userpanel4.html") Danh sách yêu thích
+					li.hvr-sweep-to-right
+						a(href="userpanel5.html") Quản lý điểm thưởng
+		.col-12.col-lg-9
+			section.user-page.clearfix
+				h1.postname Thông tin tài khoản
+				.row.flex.flex-wrap
+					.col-12
+						section.account-info.clearfix
+							h2.posttitle Thông tin tài khoản
+							.account-form.clearfix
+								.form-group.gender-select.clearfix
+									label(for="") Giới tính
+									ul 
+										li.radio
+											input#nam(type="radio", name="gender" checked)
+											label(for="nam") Nam
+										li.radio
+											input#nu(type="radio", name="gender" )
+											label(for="nu") Nữ
+								.form-group.clearfix
+									label(for="name") Họ tên
+									input#name(type="text" value="Admin")
+								.form-group.birthday.clearfix
+									label(for="") Ngày sinh (không bắt buộc)
+									ul 
+										li
+											select(name="")
+												option(value="") Ngày
+										li
+											select(name="")
+												option(value="") Tháng
+										li
+											select(name="")
+												option(value="") Năm
+								.form-group.clearfix
+									label(for="email") Email
+									input#email(type="text" value="admin@cp.com.vn")
+								.form-group.clearfix
+									label(for="name") Số điện thoại
+									input#name(type="text" value="0981 123 123")
+								.form-group.clearfix
+									label(for="name") Tỉnh/Thành phố
+									select(name="")
+										option(value="") Hồ Chí Minh
+								.form-group.clearfix
+									label(for="name") Quận/Huyện
+									select(name="")
+										option(value="") Quận 1
+								.form-group.clearfix
+									label(for="name") Phường/Xã
+									select(name="")
+										option(value="") P.Đakao
+								.changepassword.clearfix
+									.checkbox
+										input#changepw(type="checkbox", name="changpw")
+										label#btn-changepw(for="changepw") Thay đổi mật khẩu
+									.changepw-form.clearfix
+										.form-group.clearfix
+											label(for="oldpw") Mật khẩu cũ
+											input#oldpw(type="password" placeholder="Nhập mật khẩu cũ")
+										.form-group.clearfix
+											label(for="newpw") Mật khẩu mới
+											input#newpw(type="password" placeholder="Nhập mật khẩu mới")
+										.form-group.clearfix
+											label(for="renewpw") Nhập lại mật khẩu mới
+											input#renewpw(type="password" placeholder="Nhập lại mật khẩu cũ")
+								input(type="submit", value="Cập nhật")
+

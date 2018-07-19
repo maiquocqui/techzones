@@ -1,0 +1,141 @@
+section.breadcrumb-wrap.clearfix
+	.container
+		ol.breadcrumb(itemscope='', itemtype='http://schema.org/BreadcrumbList')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books')
+					span(itemprop='name') Trang chủ
+				meta(itemprop='position', content='1')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Tài khoản
+				meta(itemprop='position', content='2')
+			li(itemprop='itemListElement', itemscope='', itemtype='http://schema.org/ListItem')
+				a(itemscope='', itemtype='http://schema.org/Thing', itemprop='item', href='https://example.com/books/sciencefiction')
+					span(itemprop='name') Admin
+				meta(itemprop='position', content='3')
+.container
+	.row.flex.flex-wrap
+		.col-12.col-lg-3
+			section.user-sidebar.clearfix
+				.userinfo.clearfix
+					figure
+						a.user-img(href="#")
+							img(src="img/user.png", alt="")
+						figcaption
+							.title Tài khoản của
+							.user-name Admin
+							.user-rank <i class="fa fa-trophy" aria-hidden="true"></i> Thành viên vàng
+			nav.user-sidelink.clearfix
+				ul 
+					li.hvr-sweep-to-right
+						a(href="userpanel1.html") Chính sách thành viên
+					li.hvr-sweep-to-right
+						a(href="userpanel.html") Thông tin chung
+					li.hvr-sweep-to-right
+						a(href="userpanel1.html") Thông tin tài khoản
+					li.hvr-sweep-to-right
+						a(href="userpanel2.html") Số địa chỉ
+					//- li.hvr-sweep-to-right
+					//- 	a(href="#") Thông báo của tôi
+					li.hvr-sweep-to-right
+						a(href="userpanel3.html") Đơn hàng của tôi
+					li.hvr-sweep-to-right.active
+						a(href="userpanel4.html") Danh sách yêu thích
+					li.hvr-sweep-to-right
+						a(href="userpanel5.html") Quản lý điểm thưởng
+		.col-12.col-lg-9
+			section.user-page.clearfix
+				h1.postname Danh sách yêu thích
+				section.wishlist.clearfix
+					.product-list.clearfix
+						.row
+							article.col-6.col-sm-4.col-md-3
+								.product-col
+									figure 
+										.promotion.new NEW
+										//-.product-popup
+											a.btn-viewdetail(href="#!") Chi tiết
+											a.btn-buy(href="#!") Mua hàng
+										a.product-img(href="#")
+											img(src="img/product/1.png", alt="")
+										figcaption
+											.product-color
+												.color(style='background: #5f5c5d')
+												.color(style='background: #737fd3')
+												.color(style='background: #6d5f97')
+											.product-brand 
+												a(href="#") American Tourister
+											h3.product-name
+												a(href="#") Bon Air
+											//- .product-kind Spinner 55/ 66
+											.product-price.clearfix
+												.old 6.900.000đ
+												.new 4.830.000đ
+											a.btn-buy(href="#" data-toggle="tooltip" data-placement="right" title="Thêm vào giỏ hàng") <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+							article.col-6.col-sm-4.col-md-3
+								.product-col
+									figure 
+										.promotion.sale -30%
+										//-.product-popup
+											a.btn-viewdetail(href="#!") Chi tiết
+											a.btn-buy(href="#!") Mua hàng
+										a.product-img(href="#")
+											img(src="img/product/2.png", alt="")
+										figcaption
+											.product-color
+												.color(style='background: #5f5c5d')
+												.color(style='background: #737fd3')
+												.color(style='background: #6d5f97')
+											.product-brand 
+												a(href="#") Samsonite Black Label
+											h3.product-name
+												a(href="#") Cubelite
+											//- .product-kind Spinner 59/69/81
+											.product-price.clearfix
+												.old 6.900.000đ
+												.new 4.830.000đ
+											a.btn-buy(href="#" data-toggle="tooltip" data-placement="right" title="Thêm vào giỏ hàng") <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+							article.col-6.col-sm-4.col-md-3
+								.product-col
+									figure 
+										//-.product-popup
+											a.btn-viewdetail(href="#!") Chi tiết
+											a.btn-buy(href="#!") Mua hàng
+										a.product-img(href="#")
+											img(src="img/product/3.png", alt="")
+										figcaption
+											.product-color
+												.color(style='background: #5f5c5d')
+												.color(style='background: #737fd3')
+												.color(style='background: #6d5f97')
+											.product-brand 
+												a(href="#") American Tourister
+											h3.product-name
+												a(href="#") Curio
+											//- .product-kind Spinner 55/80
+											.product-price.clearfix
+												.old 6.900.000đ
+												.new 4.830.000đ
+											a.btn-buy(href="#" data-toggle="tooltip" data-placement="right" title="Thêm vào giỏ hàng") <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+							article.col-6.col-sm-4.col-md-3
+								.product-col
+									figure 
+										//-.product-popup
+											a.btn-viewdetail(href="#!") Chi tiết
+											a.btn-buy(href="#!") Mua hàng
+										a.product-img(href="#")
+											img(src="img/product/4.png", alt="")
+										figcaption
+											.product-color
+												.color(style='background: #5f5c5d')
+												.color(style='background: #737fd3')
+												.color(style='background: #6d5f97')
+											.product-brand 
+												a(href="#") Samsonite
+											h3.product-name
+												a(href="#") Pro-DLX 4
+											//- .product-kind Laptop Backpack L 16" Asia
+											.product-price.clearfix
+												.old 6.900.000đ
+												.new 4.830.000đ
+											a.btn-buy(href="#" data-toggle="tooltip" data-placement="right" title="Thêm vào giỏ hàng") <i class="fa fa-shopping-bag" aria-hidden="true"></i>

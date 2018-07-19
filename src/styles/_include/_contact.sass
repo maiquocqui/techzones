@@ -1,0 +1,84 @@
+#map
+	iframe
+		pointer-events: none
+		&.active
+			pointer-events: all
+.contact-page
+	margin: 0 0 30px
+	.postname
+		+fs(18rem)
+		font-weight: 700
+		line-height: 1.4
+		margin: 0 0 30px
+		text-transform: uppercase
+.contact-form
+	margin-bottom: 40px
+	.form-group
+		+flex
+		margin-bottom: 15px
+		flex-wrap: wrap
+	.frm-captcha
+		width: 100%
+		clear: both
+		padding: 0px 15px
+		label
+			width: 150px
+		input 
+			width: 100%
+	.frm-captcha-input
+		margin-right: 10px
+		width: 150px
+		+media-breakpoint-down(xs)
+			width: 130px
+	.des
+		margin: 0 0 15px
+	label
+		display: none
+	input, select, textarea
+		width: 100%
+		border: 1px solid darken($white,10%)
+		background: darken($white,5%)
+		padding: 10px 15px
+		margin-bottom: -2px
+		+bor-rad(3px)
+	input[type="reset"]
+		display: none
+	.btnwrap, .frm-btnwrap
+		width: 100%
+		text-align: right
+	.frm-btnwrap
+		display: block
+		border: none
+		padding: 0px
+	.frm-btn
+		display: inline-block
+	input[type="submit"]
+		width: auto
+		color: $white
+		background: $red
+		padding: 10px 100px
+		border: none
+		&:hover
+			background: darken($red,10%)
+
+.contact-info
+	margin-bottom: 30px
+	+pos(rel,null)
+	ul 
+		+pos(rel,null)
+		z-index: 2
+		+fs(16rem)
+		line-height: 1.5
+		color: darken($white,60%)
+		li 
+			margin-bottom: 5px
+	.company
+		font-weight: bold
+		color: $blue
+		+fs(18rem)
+		text-transform: uppercase
+		margin-bottom: 10px
+	a
+		color: $blue
+		&:hover
+			color: $red

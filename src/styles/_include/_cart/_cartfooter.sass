@@ -1,0 +1,84 @@
+
+// CART FOOTER
+
+.cartfooter
+	+media-breakpoint-down(lg)
+		//padding-top: 140px
+		*
+			display: none
+	+media-breakpoint-up(xl)
+		margin-top: 40px
+	.footer-top
+		padding: 10px 0
+		background: $white
+		border-top: 1px solid darken($white,10%)
+		border-bottom: 1px solid darken($white,10%)
+		.footer-col
+			+media-breakpoint-down(sm)
+				margin-bottom: 15px
+			.contact
+				+flexbox
+				.fa
+					+fs(18rem)
+					display: block
+					float: left
+					width: 40px
+					height: 40px
+					line-height: 40px
+					text-align: center
+					color: $white
+					background: $dblue
+					+bor-rad(50%)
+					+media-breakpoint-down(sm)
+						display: inline-block
+						vertical-align: middle
+				.contact-info
+					width: calc(100% - 40px)
+					padding-left: 10px
+					padding-top: 0px
+					line-height: 1.2
+					+fs(12rem)
+					+flexbox
+					flex-wrap: wrap
+					align-items: center
+					align-content: center
+					a 
+						display: block
+						width: 100%
+						+fs(16rem)
+						font-weight: 600
+						color: $black
+						cursor: pointer
+						&:hover
+							color: $lred
+	.footer-bottom
+	.copyright
+		padding: 20px 0
+		color: darken($white,40%)
+		text-align: center
+		+fs(13rem)
+		// float: left
+		+media-breakpoint-down(md)
+			width: 100%
+			float: none
+			text-align: center
+	.icon-list
+		float: right
+		padding: 5px 0
+		+media-breakpoint-down(md)
+			width: 100%
+			float: none
+			text-align: center
+			padding: 0
+			margin-top: 15px
+		ul 
+			+media-breakpoint-down(md)
+				text-align: center
+				width: 100%
+			li 
+				display: inline-block
+				margin-right: 5px
+				margin-bottom: 5px
+				max-height: 40px
+				img 
+					max-height: 30px

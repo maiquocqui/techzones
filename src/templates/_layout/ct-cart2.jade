@@ -1,0 +1,176 @@
+.container
+	section.cart-step.clearfix
+		.step.finish
+			.number <i class="material-icons">shopping_cart</i>
+			.name Giỏ hàng
+		.step.finish
+			.number <i class="material-icons">person</i>
+			.name Đăng nhập
+		.step.active
+			.number <i class="material-icons">local_shipping</i>
+			.name Thông tin giao hàng
+		.step
+			.number <i class="material-icons">credit_card</i>
+			.name Hình thức thanh toán
+	.row.flex.flex-wrap
+		.col-12.col-lg-8
+			section.cart-userinfo.clearfix
+				.cart-title <i class="material-icons">account_circle</i> Thông tin khách hàng
+				.cart-form.clearfix
+					.group.clearfix
+						.form-wrap
+							.form-group
+								.label
+									label(for="") Họ tên:
+								.input
+									input(type="text", placeholder="Ví dụ: Nguyễn Văn A")
+							.form-group
+								.label
+									label(for="") Điện thoại:
+								.input.phone
+									input(type="text", placeholder="Ví dụ: 0921308381")
+									.des (Nhân viên giao nhận Cánh Cam sẽ liên hệ với SĐT này.)
+							.form-group
+								.label
+									label(for="") Email:
+								.input
+									input(type="text", placeholder="Ví dụ: Nguyễn Văn A")
+							//- .hr
+							.form-group
+								.label
+									label(for="") Tỉnh/Thành Phố:
+								.input
+									select(name="")
+										option(value="#") -- Chọn Tỉnh/Thành Phố --
+							.form-group
+								.label
+									label(for="") Địa chỉ chi tiết:
+								.input
+									input(type="text", placeholder="Ví dụ: 156 Nguyễn Văn Thủ, P.Đakao, Q.1")
+							.form-group
+								.label
+									label(for="") Lời nhắn:
+								.input
+									textarea(name="", cols="30", rows="2" placeholder="Ví dụ: Chuyển hàng ngoài giờ hành chính")
+					.group.clearfix
+						.checkbox
+							input#ttmh(type="checkbox", name="" checked)
+							label#btn-ttmh(for="ttmh") Thông tin người mua hàng giống như trên
+						#buyerinfo.form-wrap.clearfix
+							.form-group
+								.label
+									label(for="") Họ tên:
+								.input
+									input(type="text", placeholder="Ví dụ: Nguyễn Văn A")
+							.form-group
+								.label
+									label(for="") Điện thoại:
+								.input.phone
+									input(type="text", placeholder="Ví dụ: 0921308381")
+									.des (Nhân viên giao nhận Cánh Cam sẽ liên hệ với SĐT này.)
+							.form-group
+								.label
+									label(for="") Email:
+								.input
+									input(type="text", placeholder="Ví dụ: Nguyễn Văn A")
+							//- .hr
+							.form-group
+								.label
+									label(for="") Tỉnh/Thành Phố:
+								.input
+									select(name="")
+										option(value="#") -- Chọn Tỉnh/Thành Phố --
+							.form-group
+								.label
+									label(for="") Địa chỉ chi tiết:
+								.input
+									input(type="text", placeholder="Ví dụ: 156 Nguyễn Văn Thủ, P.Đakao, Q.1")
+						.checkbox
+							input#cntt(type="checkbox", name="" checked)
+							label(for="cntt") Cập nhật thông tin trên làm địa chỉ hiện tại của tôi
+			section.cart-billexport.clearfix
+				.checkbox.cart-title
+					input#xuathd(type="checkbox", name="")
+					label#btn-xuathd(for="xuathd") Yêu cầu xuất hóa đơn GTGT cho đơn hàng này
+				.cart-form.bill-form.clearfix
+					.form-wrap
+						.module-title Vui lòng điền đầy đủ thông tin công ty để nhận hóa đơn GTGT
+						.form-group
+							.label
+								label(for="") Mã số thuế:
+							.input
+								input(type="text", placeholder="Ví dụ: 324567351095")
+						.form-group
+							.label
+								label(for="") Tên công ty:
+							.input
+								input(type="text", placeholder="Ví dụ: Cánh Cam Group")
+						.form-group
+							.label
+								label(for="") Địa chỉ công ty:
+							.input
+								input(type="text", placeholder="Ví dụ: 156 Nguyễn Văn Thủ, P.Đakao, Q.1")
+						.des Lưu ý: Giá trị hóa đơn không bao gồm giá trị giảm giá
+			
+			section.cart-coupon.clearfix
+				.cart-title <i class="material-icons">card_giftcard</i>Sử dụng mã giảm giá
+				.cart-form.clearfix
+					.form-wrap
+						.form-group.input-coupon.clearfix
+							input(type="text" placeholder="Nhập mã giảm giá")
+							button.btn-submitcoupon Áp dụng
+						.des Sau khi áp dụng, Mã giảm giá có thể không dùng được trong vòng 15 phút.
+					.module-title
+						|Trong quá trình thanh toán, Techzones sẽ tạm khóa mã giảm giá của quý khách để đảm bảo phiên giao dịch được ổn định.
+						br
+						|Mã giảm giá sẽ được mở lại ngay khi phiên giao dịch kết thúc
+			.cart-btnwrap.clearfix
+				.total-amount 
+					.label Thành tiền: 
+					.value 11.200.000đ
+						span.des Giá đã bao gồm VAT
+				a.btn-backstep(href="#!") Quay lại
+				a.btn-nextstep(href="cart1.html") Tiến hành đặt hàng
+		.col-12.col-lg-4
+			section.cart-mini.clearfix
+				.cart-title <i class="material-icons">shopping_basket</i> Đơn hàng (<strong>2</strong> sản phẩm)
+				a.btn-edit(href="cart.html") <i class="material-icons">border_color</i>Thay đổi
+				.cart-table.clearfix
+					.group.clearfix
+						.product.clearfix
+							figure
+								a.product-img(href="#")
+									img(src="img/product/1.jpg", alt="")
+								figcaption
+									h3.product-name
+										a(href="#") Fossil Q Explorist
+									.product-option size: <strong>lớn</strong>, màu: <strong>bạc</strong>
+						.amount
+							.price 5.600.000đ
+							.count x1
+							.total 5.600.000đ
+					.group.clearfix
+						.product.clearfix
+							figure
+								a.product-img(href="#")
+									img(src="img/product/1.jpg", alt="")
+								figcaption
+									h3.product-name
+										a(href="#") Fossil Q Explorist
+									.product-option size: <strong>lớn</strong>, màu: <strong>bạc</strong>
+						.amount
+							.price 5.600.000đ
+							.count x1
+							.total 5.600.000đ
+					.group
+						.label Tổng tiền
+						.value 11.200.000đ
+					.group
+						.label Phí vận chuyển
+							a.des(href="#") Xem chính sách giao hàng
+							//- .help(target="_black" href="#") <i class="fa fa-question-circle" aria-hidden="true"></i>
+								a.help-tip(target="_blank" href="#") Xem chính sách giao hàng của Techzones
+						.value MIỄN PHÍ
+					//- .group
+						.label Số tiền phải thanh toán
+						.value.total 1.000.000đ

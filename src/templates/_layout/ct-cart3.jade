@@ -1,0 +1,186 @@
+.container
+	section.cart-step.clearfix
+		.step.finish
+			.number <i class="material-icons">shopping_cart</i>
+			.name Giỏ hàng
+		.step.finish
+			.number <i class="material-icons">person</i>
+			.name Đăng nhập
+		.step.finish
+			.number <i class="material-icons">local_shipping</i>
+			.name Thông tin giao hàng
+		.step.active
+			.number <i class="material-icons">credit_card</i>
+			.name Hình thức thanh toán
+	.row.flex.flex-wrap
+		.col-12.col-lg-8
+			section.cart-payment.clearfix
+				.cart-title <i class="material-icons">credit_card</i>Phương thức thanh toán
+				.lazada-payment
+					ul.payment-list.nav.nav-tabs(role='tablist')
+						li.nav-item
+							a.nav-link.active(data-toggle='tab', href='#tab1', role='tab', aria-controls='tab1', aria-expanded='true')
+								input#pm1(type="radio", name="payment", checked)
+								label(for="pm1")
+									.icon
+										img(src="img/cart/icon1.png", alt="")
+									.text Thanh toán khi nhận hàng
+						li.nav-item
+							a.nav-link(data-toggle='tab', href='#tab2', role='tab', aria-controls='tab2')
+								input#pm2(type="radio", name="payment")
+								label(for="pm2")
+									.icon
+										img(src="img/cart/icon2.png", alt="")
+									.text Thẻ ATM nội địa
+						li.nav-item
+							a.nav-link(data-toggle='tab', href='#tab3', role='tab', aria-controls='tab3')
+								input#pm3(type="radio", name="payment")
+								label(for="pm3")
+									.icon
+										img(src="img/cart/icon3.png", alt="")
+									.text Thẻ tín dụng / ghi nợ
+						li.nav-item.d-none.d-md-block
+							a.nav-link(data-toggle='tab', href='#tab4', role='tab', aria-controls='tab4')
+								input#pm4(type="radio", name="payment")
+								label(for="pm4") 
+									.icon
+										img(src="img/cart/icon4.png", alt="")
+									.text Thanh toán trả góp
+					#myTabContent.tab-content
+						#tab1.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='')
+							.content 
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nemo adipisci tempora ratione nulla consequuntur voluptatibus enim temporibus animi harum reprehenderit in sed consectetur explicabo velit eveniet? Inventore laboriosam recusandae commodi voluptates, harum numquam doloremque! Perferendis similique, quam cupiditate ad laborum ducimus dicta quibusdam quasi. Cupiditate explicabo, fugit placeat, assumenda labore nobis sequi doloremque distinctio exercitationem vero, omnis a nostrum quod quia reiciendis laudantium rem nam necessitatibus incidunt saepe ipsam! Cumque, id adipisci? Nemo corrupti fugit ratione corporis et delectus quaerat nobis explicabo velit rem aliquid voluptatum, esse minus voluptate ut error repellendus libero? Iste nemo odio voluptatum inventore facilis!
+						#tab2.tab-pane.fade(role='tabpanel', aria-labelledby='')
+							.content 
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nemo adipisci tempora ratione nulla consequuntur voluptatibus enim temporibus animi harum reprehenderit in sed consectetur explicabo velit eveniet? Inventore laboriosam recusandae commodi voluptates, harum numquam doloremque! Perferendis similique, quam cupiditate ad laborum ducimus dicta quibusdam quasi. Cupiditate explicabo, fugit placeat, assumenda labore nobis sequi doloremque distinctio exercitationem vero, omnis a nostrum quod quia reiciendis laudantium rem nam necessitatibus incidunt saepe ipsam! Cumque, id adipisci? Nemo corrupti fugit ratione corporis et delectus quaerat nobis explicabo velit rem aliquid voluptatum, esse minus voluptate ut error repellendus libero? Iste nemo odio voluptatum inventore facilis!
+						#tab3.tab-pane.fade(role='tabpanel', aria-labelledby='')
+							.content 
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nemo adipisci tempora ratione nulla consequuntur voluptatibus enim temporibus animi harum reprehenderit in sed consectetur explicabo velit eveniet? Inventore laboriosam recusandae commodi voluptates, harum numquam doloremque! Perferendis similique, quam cupiditate ad laborum ducimus dicta quibusdam quasi. Cupiditate explicabo, fugit placeat, assumenda labore nobis sequi doloremque distinctio exercitationem vero, omnis a nostrum quod quia reiciendis laudantium rem nam necessitatibus incidunt saepe ipsam! Cumque, id adipisci? Nemo corrupti fugit ratione corporis et delectus quaerat nobis explicabo velit rem aliquid voluptatum, esse minus voluptate ut error repellendus libero? Iste nemo odio voluptatum inventore facilis!
+						#tab4.tab-pane.fade.d-none.d-md-block(role='tabpanel', aria-labelledby='')
+							.content 
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nemo adipisci tempora ratione nulla consequuntur voluptatibus enim temporibus animi harum reprehenderit in sed consectetur explicabo velit eveniet? Inventore laboriosam recusandae commodi voluptates, harum numquam doloremque! Perferendis similique, quam cupiditate ad laborum ducimus dicta quibusdam quasi. Cupiditate explicabo, fugit placeat, assumenda labore nobis sequi doloremque distinctio exercitationem vero, omnis a nostrum quod quia reiciendis laudantium rem nam necessitatibus incidunt saepe ipsam! Cumque, id adipisci? Nemo corrupti fugit ratione corporis et delectus quaerat nobis explicabo velit rem aliquid voluptatum, esse minus voluptate ut error repellendus libero? Iste nemo odio voluptatum inventore facilis!
+				.lazada-payment.tragop
+					ul.payment-list.nav.nav-tabs(role='tablist')
+						li.nav-item
+							a.nav-link(data-toggle='tab', href='#tab41', role='tab', aria-controls='tab41', aria-expanded='true')
+								input#pm4(type="radio", name="payment")
+								label(for="pm4") 
+									.icon
+										img(src="img/cart/icon4.png", alt="")
+									.text Thanh toán trả góp
+					.tab-content
+						#tab41.tab-pane.fade(role='tabpanel', aria-labelledby='')
+							.content 
+								p Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nemo adipisci tempora ratione nulla consequuntur voluptatibus enim temporibus animi harum reprehenderit in sed consectetur explicabo velit eveniet? Inventore laboriosam recusandae commodi voluptates, harum numquam doloremque! Perferendis similique, quam cupiditate ad laborum ducimus dicta quibusdam quasi. Cupiditate explicabo, fugit placeat, assumenda labore nobis sequi doloremque distinctio exercitationem vero, omnis a nostrum quod quia reiciendis laudantium rem nam necessitatibus incidunt saepe ipsam! Cumque, id adipisci? Nemo corrupti fugit ratione corporis et delectus quaerat nobis explicabo velit rem aliquid voluptatum, esse minus voluptate ut error repellendus libero? Iste nemo odio voluptatum inventore facilis!
+				//- .cart-form.clearfix
+					.payment-method.active
+						.select-group
+							input#ttnh(type="radio", name="rd1" checked)
+							label(for="ttnh")
+								.method-info
+									.method-img
+										img(src="img/cart/icon1.png", alt="")
+									.method-detail
+										.method-name Thanh toán khi nhận hàng
+										.method-des Quý khách sẽ thanh toán bằng tiền mặt hoặc thẻ khi Cánh Cam giao hàng cho quý khách
+						.method-content.content
+							p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus tempore voluptas ex deleniti, voluptate temporibus sunt, assumenda consequuntur eum commodi totam! Voluptas at ratione iusto commodi repudiandae facere rerum et aliquam alias vel! Deserunt possimus rem numquam fugit, fuga recusandae corporis quibusdam facere nam nobis perferendis itaque rerum. Fugit, reiciendis?
+					.payment-method
+						.select-group
+							input#ttatm(type="radio", name="rd1")
+							label(for="ttatm")
+								.method-info
+									.method-img
+										img(src="img/cart/icon2.png", alt="")
+									.method-detail
+										.method-name Thanh toán bằng thẻ ATM
+										.method-des Thẻ ATM của bạn cần đăng ký sử dụng dịch vụ Internet Banking.
+											br
+											|Bạn sẽ được chuyển tới Napas để thanh toán
+						.method-content.content
+							p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus tempore voluptas ex deleniti, voluptate temporibus sunt, assumenda consequuntur eum commodi totam! Voluptas at ratione iusto commodi repudiandae facere rerum et aliquam alias vel! Deserunt possimus rem numquam fugit, fuga recusandae corporis quibusdam facere nam nobis perferendis itaque rerum. Fugit, reiciendis?
+					.payment-method
+						.select-group
+							input#ttqt(type="radio", name="rd1")
+							label(for="ttqt")
+								.method-info
+									.method-img
+										img(src="img/cart/icon3.png", alt="")
+									.method-detail
+										.method-name Thanh toán bằng thẻ thanh toán quốc tế
+										.method-des Hỗ trợ Credit và Debit.
+											br
+											|Bạn sẽ được chuyển tới OnePay để thanh toán.
+						.method-content.content
+							p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus tempore voluptas ex deleniti, voluptate temporibus sunt, assumenda consequuntur eum commodi totam! Voluptas at ratione iusto commodi repudiandae facere rerum et aliquam alias vel! Deserunt possimus rem numquam fugit, fuga recusandae corporis quibusdam facere nam nobis perferendis itaque rerum. Fugit, reiciendis?
+					.payment-method
+						.select-group
+							input#tttg(type="radio", name="rd1")
+							label(for="tttg")
+								.method-info
+									.method-img
+										img(src="img/cart/icon4.png", alt="")
+									.method-detail
+										.method-name Thanh toán trả góp
+										.method-des Hỗ trợ Credit.
+											br
+											|Bạn sẽ được chuyển đến OnePay để thanh toán
+						.method-content.content
+							p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus tempore voluptas ex deleniti, voluptate temporibus sunt, assumenda consequuntur eum commodi totam! Voluptas at ratione iusto commodi repudiandae facere rerum et aliquam alias vel! Deserunt possimus rem numquam fugit, fuga recusandae corporis quibusdam facere nam nobis perferendis itaque rerum. Fugit, reiciendis?
+			.cart-btnwrap.clearfix
+				.total-amount 
+					.label Thành tiền: 
+					.value 11.200.000đ
+						span.des Giá đã bao gồm VAT
+				a.btn-backstep(href="#!") Quay lại
+				a.btn-nextstep(href="cart1.html") Tiến hành đặt hàng
+		.col-12.col-lg-4
+			section.cart-address.clearfix
+				h3.cart-title <i class="material-icons">location_on</i> Địa chỉ nhận hàng
+				a.btn-edit(href="cart.html") <i class="material-icons">border_color</i>Thay đổi
+				.address-info
+					h3.name Nguyễn Văn A
+					a.phone(href="tel:0981540288") 0981540288
+					.address Quy Nhơn - 1036 Trần Hưng Đạo
+			section.cart-mini.clearfix
+				.cart-title <i class="material-icons">shopping_basket</i> Đơn hàng (<strong>2</strong> sản phẩm)
+				a.btn-edit(href="cart.html") <i class="material-icons">border_color</i>Thay đổi
+				.cart-table.clearfix
+					.group.clearfix
+						.product.clearfix
+							figure
+								a.product-img(href="#")
+									img(src="img/product/1.jpg", alt="")
+								figcaption
+									h3.product-name
+										a(href="#") Fossil Q Explorist
+									.product-option size: <strong>lớn</strong>, màu: <strong>bạc</strong>
+						.amount
+							.price 5.600.000đ
+							.count x1
+							.total 5.600.000đ
+					.group.clearfix
+						.product.clearfix
+							figure
+								a.product-img(href="#")
+									img(src="img/product/1.jpg", alt="")
+								figcaption
+									h3.product-name
+										a(href="#") Fossil Q Explorist
+									.product-option size: <strong>lớn</strong>, màu: <strong>bạc</strong>
+						.amount
+							.price 5.600.000đ
+							.count x1
+							.total 5.600.000đ
+					.group
+						.label Tổng tiền
+						.value 11.200.000đ
+					.group
+						.label Phí vận chuyển
+							a.des(href="#") Xem chính sách giao hàng
+							//- .help(target="_black" href="#") <i class="fa fa-question-circle" aria-hidden="true"></i>
+								a.help-tip(target="_blank" href="#") Xem chính sách giao hàng của Techzones
+						.value MIỄN PHÍ
+					//- .group
+						.label Số tiền phải thanh toán
+						.value.total 1.000.000đ

@@ -1,0 +1,62 @@
+// .breadcrumb-wrap
+// 	background: darken($white,3%)
+// 	.breadcrumb
+// 		margin: 0
+// 		padding: 0
+// 		+bor-rad(0)
+// 		background: none
+// 		white-space: nowrap
+// 		overflow: hidden
+// 		text-overflow: ellipsis
+// 		padding: 5px 0
+// 		li
+// 			display: inline-block
+// 			color: darken($white,40%)
+// 			&:after
+// 				content: '\f105'
+// 				margin: 0px 3px 0px 6px
+// 			&:last-child
+// 				&:after
+// 					display: none
+// 			a
+// 				color: darken($white,40%)
+// 				+fs(12rem)
+// 				span
+// 	&.black
+// 		background: $black
+// 		.breadcrumb
+// 			li
+// 				a
+// 					color: $white
+
+.news-breadcrumb, .breadcrumb-wrap
+	padding: 15px 0
+	.breadcrumb
+		margin: 0
+		padding: 0
+		+bor-rad(0)
+		background: none
+		// white-space: nowrap
+		li
+			display: inline-block
+			+pos(rel,null)
+			margin-right: 20px
+			&:after
+				content: ''
+				display: block
+				width: 0
+				padding: 0
+				border: 3px solid transparent
+				border-color: transparent $dblue $dblue transparent
+				+pos(abs, null -10px 6px null)
+			&:nth-child(2)
+				&:after
+					border-color: transparent $red $red transparent
+			&:nth-child(3)
+				&:after
+					border-color: transparent $dpurple $dpurple transparent
+			a
+				color: darken($white,40%)
+				+fs(13rem)
+				&:hover
+					color: $black
