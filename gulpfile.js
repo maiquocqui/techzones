@@ -36,6 +36,7 @@ gulp.task('concat-js', function() {
 });
 gulp.task('concat-css', function() {
     return gulp.src([
+            "bower_components/bootstrap/dist/css/bootstrap.css",
             "bower_components/fancybox/dist/jquery.fancybox.css",
             "bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.css",
             "bower_components/hover/css/hover.css",

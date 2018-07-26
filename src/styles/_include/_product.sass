@@ -21,35 +21,35 @@
 			width: 50%
 		+media-breakpoint-up(lg)
 			width: 33.33%
-		=catecolor($color)
-			figure
-				.cate-img
-					&:before
-						background: linear-gradient(to right, $color 0%,color-rgba($black,0) 75%)
-		&:nth-child(2)
-			+catecolor($lred)
-		&:nth-child(3)
-			+catecolor($lgreen)
-		&:nth-child(4)
-			+catecolor($lpurple)
-		&:nth-child(5)
-			+catecolor($lpink)
-		&:nth-child(6)
-			+catecolor($lblue)
-		&:nth-child(7)
-			+catecolor($lred)
+		// =catecolor($color)
+		// 	figure
+		// 		.cate-img
+		// 			&:before
+		// 				background: linear-gradient(to right, $color 0%,color-rgba($black,0) 75%)
+		// &:nth-child(2)
+		// 	+catecolor($lred)
+		// &:nth-child(3)
+		// 	+catecolor($lgreen)
+		// &:nth-child(4)
+		// 	+catecolor($lpurple)
+		// &:nth-child(5)
+		// 	+catecolor($lpink)
+		// &:nth-child(6)
+		// 	+catecolor($lblue)
+		// &:nth-child(7)
+		// 	+catecolor($lred)
 		figure
 			.cate-img
 				+bor-rad(5px)
 				overflow: hidden
 				+pos(rel,null)
 				display: block
-				&:before
-					content: ''
-					display: block
-					+pos(abs, 0 null 0 0)
-					right: 0
-					background: linear-gradient(to right, $lblue 0%,color-rgba($black,0) 75%)
+				// &:before
+				// 	content: ''
+				// 	display: block
+				// 	+pos(abs, 0 null 0 0)
+				// 	right: 0
+				// 	background: linear-gradient(to right, $lblue 0%,color-rgba($black,0) 75%)
 				img
 					width: 100%
 					+bor-rad(5px)

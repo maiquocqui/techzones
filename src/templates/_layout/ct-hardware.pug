@@ -1,0 +1,212 @@
+.breadcrumb-wrap.clearfix
+	.container
+		.Module.Module-138
+			ol.breadcrumb
+				li(itemscope='', itemtype='http://data-vocabulary.org/Breadcrumb')
+					a.itemcrumb(href='https://techzones.vn', itemprop='url')
+						span(itemprop='title') Trang chủ
+				li(itemscope='', itemtype='http://data-vocabulary.org/Breadcrumb')
+					a.itemcrumb(href='https://techzones.vn/may-tinh', itemprop='url')
+						span(itemprop='title') lựa chọn cấu hình
+				//- li(itemscope='', itemtype='http://data-vocabulary.org/Breadcrumb')
+					a.itemcrumb(href='https://techzones.vn/linh-kien', itemprop='url')
+						span(itemprop='title') Linh ki&#x1EC7;n
+				//- li(itemscope='', itemtype='http://data-vocabulary.org/Breadcrumb')
+					a.itemcrumb.active(href='https://techzones.vn/memory-ram', itemprop='url')
+						span(itemprop='title') Memory, Ram
+
+section.hardware-page
+	.container
+		h1.small-title.text-center Lựa chọn cấu hình
+		.hardware-category
+			.hardware-group
+				.group-title 
+					a(href="#!" data-toggle="modal" data-target="#exampleModal") CPU - Bộ xử lý trong tâm
+					a.btn-choose(href="#!" data-toggle="modal" data-target="#exampleModal") Chọn sản phẩm
+				#exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+					.modal-dialog.modal-hardware(role='document')
+						.modal-content
+							.modal-header
+								h5#exampleModalLabel.modal-title Chọn CPU - Bộ xử lý trong tâm
+								.close(data-dismiss='modal', aria-label='Close')
+									i.material-icons close
+							.modal-body
+								.search-hardware
+									.searchbox
+										input(type="text" placeholder="Tìm kiếm nhanh")
+										button.searchbutton <i class="material-icons">search</i>
+								.hardware-list
+									.hardware
+										figure
+											.img
+												img(src="img/product/1.jpg", alt="")
+											figcaption
+												.name G.Skill DDR4 TRIDENT Z 16GB (2x8GB) 4266Mhz
+												.price
+													.new 5.000.000đ
+													.old 6.000.000đ
+												.btn-wrap
+													a.btn-select(href="#!") Chọn
+									.hardware
+										figure
+											.img
+												img(src="img/product/1.jpg", alt="")
+											figcaption
+												.name G.Skill DDR4 TRIDENT Z 16GB (2x8GB) 4266Mhz
+												.price
+													.new 5.000.000đ
+													.old 6.000.000đ
+												.btn-wrap
+													a.btn-select(href="#!") Chọn
+									.hardware
+										figure
+											.img
+												img(src="img/product/1.jpg", alt="")
+											figcaption
+												.name G.Skill DDR4 TRIDENT Z 16GB (2x8GB) 4266Mhz
+												.price
+													.new 5.000.000đ
+													.old 6.000.000đ
+												.btn-wrap
+													a.btn-select(href="#!") Chọn
+									.hardware
+										figure
+											.img
+												img(src="img/product/1.jpg", alt="")
+											figcaption
+												.name G.Skill DDR4 TRIDENT Z 16GB (2x8GB) 4266Mhz
+												.price
+													.new 5.000.000đ
+													.old 6.000.000đ
+												.btn-wrap
+													a.btn-select(href="#!") Chọn
+									.hardware
+										figure
+											.img
+												img(src="img/product/1.jpg", alt="")
+											figcaption
+												.name G.Skill DDR4 TRIDENT Z 16GB (2x8GB) 4266Mhz
+												.price
+													.new 5.000.000đ
+													.old 6.000.000đ
+												.btn-wrap
+													a.btn-select(href="#!") Chọn
+
+				table.cart-table
+					thead
+						tr
+							th.product Tên
+							th.price Đơn giá
+							th.amount Số lượng
+							th.total Tổng
+					tbody
+						tr
+							td.product
+								figure
+									a.product-img(href='https://techzones.vn/gskill-ddr4-trident-z-16gb-2x8gb-4266mhz-f4-4266c19d-16gtzr')
+										img(src='img/product/1.jpg', alt='G.Skill DDR4 TRIDENT Z 16GB (2x8GB) 4266Mhz F4-4266C19D-16GTZR')
+									figcaption
+										h3.product-name
+											a(href='https://techzones.vn/gskill-ddr4-trident-z-16gb-2x8gb-4266mhz-f4-4266c19d-16gtzr') G.Skill DDR4 TRIDENT Z 16GB (2x8GB) 4266Mhz F4-4266C19D-16GTZR
+										a.removeproduct(href='#', onclick='AjaxCart.removefromcart(this);return false;', data-itemguid='be27392c-8df1-4754-91e7-85e49b84737d')
+											i.material-icons close
+											| Xóa sản phẩm
+							td.price
+								.new 7.699.000 đ
+									.payment-des Đã bao gồm VAT
+							td.amount
+								.input-number
+									.btn-spin.btn-dec -
+									input.qty-input(type='text', maxlength='10', onchange='AjaxCart.updatecart();return false;', name='itemquantitybe27392c-8df1-4754-91e7-85e49b84737d', value='1')
+									.btn-spin.btn-inc +
+							td.total 7.699.000 đ
+						tr
+							td.product
+								figure
+									a.product-img(href='https://techzones.vn/gskill-ddr4-trident-z-16gb-2x8gb-4266mhz-f4-4266c19d-16gtzr')
+										img(src='img/product/1.jpg', alt='G.Skill DDR4 TRIDENT Z 16GB (2x8GB) 4266Mhz F4-4266C19D-16GTZR')
+									figcaption
+										h3.product-name
+											a(href='https://techzones.vn/gskill-ddr4-trident-z-16gb-2x8gb-4266mhz-f4-4266c19d-16gtzr') G.Skill DDR4 TRIDENT Z 16GB (2x8GB) 4266Mhz F4-4266C19D-16GTZR
+										a.removeproduct(href='#', onclick='AjaxCart.removefromcart(this);return false;', data-itemguid='be27392c-8df1-4754-91e7-85e49b84737d')
+											i.material-icons close
+											| Xóa sản phẩm
+							td.price
+								.new 7.699.000 đ
+									.payment-des Đã bao gồm VAT
+							td.amount
+								.input-number
+									.btn-spin.btn-dec -
+									input.qty-input(type='text', maxlength='10', onchange='AjaxCart.updatecart();return false;', name='itemquantitybe27392c-8df1-4754-91e7-85e49b84737d', value='1')
+									.btn-spin.btn-inc +
+							td.total 7.699.000 đ
+			.hardware-group
+				.group-title Mainboard - Bo mạch chủ
+					a.btn-choose(href="#!") Chọn sản phẩm
+			.hardware-group
+				.group-title RAM - Bộ nhớ trong
+					a.btn-choose(href="#!") Chọn sản phẩm
+			.hardware-group
+				.group-title HDD - Ổ cứng
+					a.btn-choose(href="#!") Chọn sản phẩm
+			.hardware-group
+				.group-title SSD - Ổ cứng thể rắn
+					a.btn-choose(href="#!") Chọn sản phẩm
+			.hardware-group
+				.group-title PSU - Nguồn
+					a.btn-choose(href="#!") Chọn sản phẩm
+			.hardware-group
+				.group-title Graphic Card - Card đồ họa
+					a.btn-choose(href="#!") Chọn sản phẩm
+			.hardware-group
+				.group-title Case - Vỏ máy
+					a.btn-choose(href="#!") Chọn sản phẩm
+			.hardware-group
+				.group-title Monitor - Màn hình
+					a.btn-choose(href="#!") Chọn sản phẩm
+			.hardware-group
+				.group-title Mouse - Chuột
+					a.btn-choose(href="#!") Chọn sản phẩm
+			.hardware-group
+				.group-title Bàn ghế Gaming
+					a.btn-choose(href="#!") Chọn sản phẩm
+			.hardware-group
+				.group-title Cooling - Tản nhiệt
+					a.btn-choose(href="#!") Chọn sản phẩm
+			.hardware-group
+				.group-title Keyboard - Bàn phím
+					a.btn-choose(href="#!") Chọn sản phẩm
+			.hardware-group
+				.group-title Headset - Tai nghe
+					a.btn-choose(href="#!") Chọn sản phẩm
+			.hardware-group
+				.group-title Speaker - Loa
+					a.btn-choose(href="#!") Chọn sản phẩm
+			.hardware-group
+				.group-title Mouse pad - Lót chuột
+					a.btn-choose(href="#!") Chọn sản phẩm
+		.total-amount
+			.label Tổng chi phí:
+			.value 7.699.000đ
+		.info-form
+			.module-title Thông tin đặt hàng
+			.form-wrap
+				.form-row
+					.form-group.col-12.col-md-6
+						label(for="") Họ và tên
+						input(type="text")
+					.form-group.col-12.col-md-6
+						label(for="") Số điện thoại
+						input(type="text")
+					.form-group.col-12.col-md-6
+						label(for="") Email
+						input(type="email")
+					.form-group.col-12.col-md-6
+						label(for="") Địa chỉ nhận hàng
+						input(type="text")
+					.form-group.col-12
+						label(for="") Ghi chú
+						textarea(name="", cols="30", rows="4")
+				.frm-btn
+					input.btn-buy(type="submit", value="Đặt hàng")
+					a.btn-reset(href="#!") Chọn lại
