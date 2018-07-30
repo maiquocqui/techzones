@@ -13605,6 +13605,11 @@ footer {
 .description-popup .content {
   padding: 0px 15px; }
 
+.product-order-amount {
+  font-size: 0.875rem;
+  color: #32b8e6;
+  padding: 10px 0; }
+
 .product.tragop {
   margin-bottom: 20px; }
   .product.tragop figure {
@@ -18428,6 +18433,51 @@ body.cartpage {
       transition: all 0.4s; }
       .prd-gifts .item-gifts a:hover {
         color: #00a5bb; }
+
+.product-page-intro {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.5); }
+  .product-page-intro .bg img {
+    width: 100%; }
+  .product-page-intro .caption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 45%;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 60px;
+    color: #fff;
+    overflow: auto; }
+    @media (max-width: 1199px) {
+      .product-page-intro .caption {
+        padding: 40px; } }
+    @media (max-width: 991px) {
+      .product-page-intro .caption {
+        position: static;
+        color: #333;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.05); } }
+    @media (max-width: 767px) {
+      .product-page-intro .caption {
+        padding: 20px; } }
+    .product-page-intro .caption .name {
+      font-size: 2.25rem;
+      line-height: 1.2;
+      font-weight: 700;
+      margin-bottom: 20px; }
+      @media (max-width: 1199px) {
+        .product-page-intro .caption .name {
+          font-size: 2rem; } }
+      @media (max-width: 767px) {
+        .product-page-intro .caption .name {
+          font-size: 1.5rem;
+          margin-bottom: 15px; } }
+    @media (max-width: 1199px) {
+      .product-page-intro .caption .content {
+        font-size: 0.8125rem; } }
 
 .hardware-page {
   padding: 30px 0; }

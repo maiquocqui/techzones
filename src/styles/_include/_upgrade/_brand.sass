@@ -1,0 +1,37 @@
+.product-page-intro
+	+pos(rel,null)
+	+bor-rad(10px)
+	overflow: hidden
+	box-shadow: 0px 10px 20px -10px color-rgba($black,0.5)
+	.bg
+		img
+			width: 100%
+	.caption
+		+pos(abs, 0 null 0 0)
+		width: 45%
+		background: color-rgba($black,0.3)
+		padding: 60px
+		color: $white
+		overflow: auto
+		+media-breakpoint-down(lg)
+			padding: 40px
+		+media-breakpoint-down(md)
+			+pos(static,null)
+			color: $main
+			width: 100%
+			background: color-rgba($black,0.05)
+		+media-breakpoint-down(sm)
+			padding: 20px
+		.name
+			+fs(36rem)
+			line-height: 1.2
+			font-weight: 700
+			margin-bottom: 20px
+			+media-breakpoint-down(lg)
+				+fs(32rem)
+			+media-breakpoint-down(sm)
+				+fs(24rem)
+				margin-bottom: 15px
+		.content
+			+media-breakpoint-down(lg)
+				+fs(13rem)
