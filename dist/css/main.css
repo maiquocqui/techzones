@@ -8146,6 +8146,7 @@ strong span {
 
 .fullpage {
   background: #fff;
+  position: relative;
   z-index: 100;
   min-height: 100vh;
   -webkit-transition: all, 0.2s;
@@ -8197,6 +8198,9 @@ strong span {
   -ms-opacity: 0;
   -o-opacity: 0;
   opacity: 0; }
+  @media (min-width: 1200px) {
+    .mobile-menu {
+      display: none; } }
   .mobile-menu.open {
     filter: alpha(opacity=100);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -18865,6 +18869,8 @@ body.cartpage {
 
 .modal-open {
   padding-right: 0 !important; }
+  .modal-open .fullpage {
+    position: static; }
 
 .modal-hardware .modal-content {
   border: none; }

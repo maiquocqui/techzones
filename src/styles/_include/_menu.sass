@@ -8,7 +8,7 @@
 		padding-bottom: 0
 .fullpage
 	background: $white
-	// +pos(rel,null)
+	+pos(rel,null)
 	z-index: 100
 	min-height: 100vh
 	// padding-bottom: 50px
@@ -32,6 +32,8 @@
 	overflow: auto
 	+transition(all 0.4s)
 	+opacity(0)
+	+media-breakpoint-up(xl)
+		display: none
 	&.open
 		+opacity(1)
 	.mobile-login

@@ -2,103 +2,139 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
 </head>
 
-<body style="margin:0;padding:0;font-family: Arial, Helvetica, sans-serif;color: #333;line-height: 1.5">
-    <div class="container" style="max-width:750px;width:100%;margin: 0 auto;padding:0px 15px">
-        <div class="mail-wrap" style="background: #f7f7f7;border:1px solid #e6e6e6; box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.3);margin: 30px 0">
-            <div class="mailheader" style="background:linear-gradient(to right, #4facfe 0%, #00f2fe 100%);padding: 10px 15px;">
-                <img src="https://techzones.vn/Data/Sites/1/media/logo/logor.png" alt="" height="30px" style="display: block;margin: 0;padding: 0;filter:invert(100%)grayscale(100%)brightness(400%)">
+<body style="margin: 0px; padding: 0px; line-height: 1.5;">
+    <div class="container" style="color: #333333; font-family: Arial, Helvetica, sans-serif; width: 600px; margin: 0px auto; padding: 0px 15px;">
+        <div class="mail-wrap" style="background: #f7f7f7;border:1px solid #e6e6e6; box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.3);margin: 30px 0;">
+            <div class="mailheader" style="display:flex;justify-content: space-between;background:linear-gradient(to right, #4facfe 0%, #00f2fe 100%);padding: 10px 15px;">
+                <img alt="" src="https://techzones.vn/Data/Sites/1/media/logo/logor.png" height="30px" style="display: block;margin: 0;padding: 0;filter:invert(100%)grayscale(100%)brightness(400%);" />
+                <div class="sitefeature" style="display:flex;align-items: center;align-content: center;">
+                    <div class="feature" style="width: 110px;">
+                        <figure style="display: flex;padding: 0;margin: 0;">
+                            <div class="icon" style="display: flex;align-items: center;align-content: center;width: 32px;height: 32px;">
+                                <img alt="" style="max-width: 32px;max-height: 32px;" src="https://techzones.vn/Data/Sites/1/media/icon/menu/tra-gop.svg" />
+                            </div>
+                            <figcaption>
+                                <div class="des" style="font-size: 11px;padding-left: 10px;">Trả góp lãi xuất 0%</div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="feature" style="width: 110px;">
+                        <figure style="display: flex;padding: 0;margin: 0;">
+                            <div class="icon" style="display: flex;align-items: center;align-content: center;width: 32px;height: 32px;">
+                                <img alt="" style="max-width: 32px;max-height: 32px;" src="https://techzones.vn/Data/Sites/1/media/icon/menu/giao-hang.svg" />
+                            </div>
+                            <figcaption>
+                                <div class="des" style="font-size: 11px;padding-left: 10px;">Miễn phí vận chuyển</div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="feature" style="width: 110px;">
+                        <figure style="display: flex;padding: 0;margin: 0;">
+                            <div class="icon" style="display: flex;align-items: center;align-content: center;width: 32px;height: 32px;">
+                                <img alt="" style="max-width: 32px;max-height: 32px;" src="https://techzones.vn/Data/Sites/1/media/icon/menu/15-ngay.svg" />
+                            </div>
+                            <figcaption>
+                                <div class="des" style="font-size: 11px;padding-left: 10px;">Đổi trả trong 15 ngày</div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
             </div>
             <div class="working-progress" style="text-align:center;padding:30px;background: #fff;">
-                <div class="title" style="font-size: 18px;font-weight: bold;text-transform: uppercase;margin-bottom: 15px;text-align: left">Xác nhận đơn hàng</div>
-                <img src="progress.jpg" alt="">
+                <div class="title" style="font-size: 18px;font-weight: bold;text-transform: uppercase;margin-bottom: 15px;text-align: left;">Xác nhận đơn hàng</div>
+                <img alt="" src="https://techzones.vn/Data/SiteImages/email/progress.jpg" />
             </div>
-            <div class="dear-content" style="font-size: 16px;background: #f7f7f7;color: #333;padding: 30px">
-                <p style="margin: 0 0 10px">Quốc Qui Mai thân mến,</p>
-                <p style="margin: 0">Yêu cầu đặt hàng cho đơn hàng
-                    <a href="" style="color:#18a0c6">#204587630514489</a> của bạn đã được tiếp nhận và đang chờ Nhà bán hàng xử lý, thời gian đặt hàng là Chủ nhật, 15 tháng bảy, 2018 11:12:01 với hình thức thanh toán là
-                    <b>Thẻ tín dụng/Thẻ ghi nợ</b>. Chúng tôi sẽ tiếp tục cập nhật với bạn về trạng thái tiếp theo của đơn hàng.</p>
+            <div class="dear-content" style="font-size: 16px;background: #f7f7f7;color: #333;padding: 30px;">
+                <p style="margin: 0 0 10px;">
+                    <span style="font-family: Arial, Helvetica, sans-serif; color: #333333;">{BillingLastName} {BillingFirstName}</span> thân mến,</p>
+                <p style="margin: 0;">Yêu cầu đặt hàng cho đơn hàng #&nbsp;
+                    <strong style="box-sizing: border-box; color: #333333; font-family: Arial, sans-serif; font-size: 14px; text-transform: uppercase; background-color: #ffffff;">
+                        <span style="box-sizing: border-box;">{ORDERCODE}</span>
+                    </strong> của bạn đã được tiếp nhận và đang chờ Nhà bán hàng xử lý, với hình thức thanh toán là
+                    <strong>{PaymentMethod}&nbsp;</strong>. Chúng tôi sẽ tiếp tục cập nhật với bạn về trạng thái tiếp theo của đơn hàng.
+                </p>
             </div>
-            <div class="content-section" style="font-size: 16px;background: #fff;padding: 30px">
+            <div class="content-section" style="font-size: 16px;background: #fff;padding: 30px;">
                 <div class="title" style="display: flex;align-items: center;align-content: center;margin-bottom: 15px;">
                     <div class="icon">
-                        <img src="shipping.png" alt="">
+                        <img alt="" src="https://techzones.vn/Data/SiteImages/email/shipping.png" />
                     </div>
-                    <span style="font-size: 18px;font-weight: bold;margin-left: 10px;">Thông tin người nhận</span>
+                    <span style="font-weight: bold; margin-left: 10px; font-size: 18px;">Thông tin người nhận</span>
                 </div>
                 <div class="receiver">
-                    <strong style="color:#18a0c6;margin-bottom: 0px;">Quốc Qui Mai</strong>
-                    <ul style="padding-left: 20px;margin-top: 5px">
-                        <li>Quận Gò Vấp, Hồ Chí Minh, Phường 16, 535/2 Thống Nhất </li>
-                        <li>Điện thoại: 0981540288</li>
-                        <li>Email: maiquocqui@gmail.com</li>
+                    <strong style="color:#18a0c6;margin-bottom: 0px;">{BillingLastName} {BillingFirstName}</strong>
+                    <ul style="padding-left: 20px;margin-top: 5px;">
+                        <li>Địa chỉ : {BillingAddress}, {BillingDistrictName}, {BillingProvinceName}.&nbsp;</li>
+                        <li>Điện thoại: {BillingPhone}</li>
+                        <li>Email: {BillingEmail}</li>
                     </ul>
                 </div>
                 <div class="title" style="display: flex;align-items: center;align-content: center;margin-bottom: 15px;">
                     <div class="icon">
-                        <img src="box.png" alt="">
+                        <img alt="" src="https://techzones.vn/Data/SiteImages/email/box.png" />
                     </div>
-                    <span style="font-size: 18px;font-weight: bold;margin-left: 10px;">Đơn hàng của bạn</span>
+                    <span style="font-weight: bold; margin-left: 10px; font-size: 18px;">Đơn hàng của bạn</span>
                 </div>
-                <div class="cart-list">
-                    <div class="cart-item" style="margin-bottom: 15px;padding-bottom: 15px;border-bottom: 1px dashed #e6e6e6">
-                        <figure style="display: flex;width: 100%;margin: 0;">
-                            <div class="img" style="width: 120px;height: 120px;border:1px solid #e6e6e6;display: flex;align-items: center;align-content: center;justify-content: center">
-                                <img style="max-width: 90%;max-height: 90%" src="https://techzones.vn/Data/Sites/1/Product/14083/thumbs/320xtechzones-ban-phim-tt-esports-tt-premium-x1-rgb-cherry-mx-blue-1.jpg" alt="">
-                            </div>
-                            <figcaption style="width: 400px;padding-left: 20px;">
-                                <div class="name" style="font-size: 16px;font-weight: bold;">Bàn phím TT Premium X1 RGB Cherry MX Speed Silver</div>
-                                <div class="price" style="font-size: 16px;font-weight: bold;margin-top: 5px;color:red">3.329.000 ₫</div>
-                                <div class="amount" style="font-size: 16px;font-weight: bold;margin-top: 5px;color:slategray">Số lượng:
-                                    <strong>1</strong>
-                                </div>
-                            </figcaption>
-                        </figure>
+                {OrderDetails}
+                <div class="policy" style="padding: 30px 0;">
+                    <ul>
+                        <li>
+                            <a href="#!" style="color:#18a0c6;text-decoration: none;"> Quy định 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" style="color:#18a0c6;text-decoration: none;"> Quy định 2</a>
+                        </li>
+                    </ul>
+                    <p style="caret-color: #000000; font-family: 'Segoe UI', 'Segoe WP', Arial, sans-serif; font-size: 14px; text-size-adjust: auto;">
+                        <strong style="line-height: 20px; text-align: inherit;">Hotline bộ phận tư vấn&nbsp;- gửi hàng - check tình trạng vận chuyển hàng:&nbsp;</strong>
+                        <strong style="line-height: 20px;">
+                            <span style="text-align: inherit;">
+                                <a>1900 9064 - Thời gian làm việc từ 9h - 20h ( các ngày trong tuần )&nbsp;</a>
+                            </span>
+                        </strong>
+                    </p>
+                    <p style="caret-color: #000000; font-family: 'Segoe UI', 'Segoe WP', Arial, sans-serif; font-size: 14px; text-size-adjust: auto;">
+                        <strong>Hotline bộ phận hỗ trợ kĩ thuật : 1900 9064 - Chọn tiếng việt và bấm số 2&nbsp;</strong>
+                    </p>
+                    <p style="caret-color: #000000; font-family: 'Segoe UI', 'Segoe WP', Arial, sans-serif; font-size: 14px; text-size-adjust: auto;">
+                        <strong>&nbsp;</strong>
+                    </p>
+                    <div class="luuy-wrap" style="background-color: #f0f0f0; margin: 0px -30px;padding:30px">
+                        <div class="section-header section-header--notes" style="background-size: 30px; height: 30px; padding: 5px 0px 15px 45px; font-size: 18px; background-image: url('http://static.cdn.responsys.net/i5/responsysimages/lazada/contentlibrary/!images/ic-note.png'); caret-color: #202020; color: #202020; font-family: Helvetica, Arial, sans-serif; text-size-adjust: auto; background-color: #f0f0f0; background-repeat: no-repeat;">Lưu ý</div>
+                        <div class="section-content" style="display: inline-block; width: 100%;caret-color: #202020; color: #202020; font-family: Helvetica, Arial, sans-serif; text-size-adjust: auto; background-color: #f0f0f0;">
+                            <p style="margin-top: 0px;">Bạn vui lòng giữ lại hộp đầy đủ trong suốt quá trình sử dụng sản phẩm để tiện cho việc bảo hành và đổi trả sản phẩm . Để tham khảo
+                                <a href="https://techzones.vn/chinh-sach-bao-hanh" style="text-decoration-line: none; color: #33a2b2 !important;">chính sách bảo hành tại đây&nbsp;</a>. Quý khách vui lòng tham khảo kĩ
+                                <a href="https://techzones.vn/chinh-sach-doi-tra-hang" style="text-decoration-line: none; color: #33a2b2 !important;">chính sách đổi trả</a> trong 15 ngày đầu tại đây để tránh phát sinh các vấn đề không mong muốn.</p>
+                            <p>
+                                <span style="position: static !important; margin: 0px !important; padding: 0px !important; opacity: 1 !important; float: inherit !important; font-size: inherit; font-style: inherit !important; font-variant-caps: inherit !important; font-weight: inherit !important; font-stretch: inherit !important; line-height: inherit !important; font-family: inherit;">Nếu sản phẩm có dấu hiệu hư hỏng/ bể vỡ hoặc không đúng với thông tin trên website, bạn cần liên
+                                hệ với Techzones bằng cách để lại tin nhắn tại trang chủ <a href="https://techzones.vn/">Techzones</a> bằng cách chat hoặc gửi <a href="mailto:support@techzones.vn" style="text-decoration-line: none; color: #33a2b2 !important;">email</a> trong vòng 48 giờ sau khi nhận sản phẩm để được hỗ trợ.
+                            </p>
+                        </div>
                     </div>
-                    <div class="cart-item" style="margin-bottom: 15px;padding-bottom: 15px;border-bottom: 1px dashed #e6e6e6">
-                        <figure style="display: flex;width: 100%;margin: 0;">
-                            <div class="img" style="width: 120px;height: 120px;border:1px solid #e6e6e6;display: flex;align-items: center;align-content: center;justify-content: center">
-                                <img style="max-width: 90%;max-height: 90%" src="https://techzones.vn/Data/Sites/1/Product/14083/thumbs/320xtechzones-ban-phim-tt-esports-tt-premium-x1-rgb-cherry-mx-blue-1.jpg" alt="">
-                            </div>
-                            <figcaption style="width: 400px;padding-left: 20px;">
-                                <div class="name" style="font-size: 16px;font-weight: bold;">Bàn phím TT Premium X1 RGB Cherry MX Speed Silver</div>
-                                <div class="price" style="font-size: 16px;font-weight: bold;margin-top: 5px;color:red">3.329.000 ₫</div>
-                                <div class="amount" style="font-size: 16px;font-weight: bold;margin-top: 5px;color:slategray">Số lượng:
-                                    <strong>1</strong>
-                                </div>
-                            </figcaption>
-                        </figure>
+                    <div>
+                        <strong style="line-height: 20px;">
+                            <span style="text-align: inherit;">
+                                <a>
+                                    <br />
+                                </a>
+                            </span>
+                                </strong>
+                        </div>
+                        (*) Mọi thông tin của quý khách sẽ được Techzones cam kết bảo mật thông tin thông qua
+                        <a href="https://techzones.vn/chinh-sach-bao-mat" style="text-decoration-line: none; color: #33a2b2 !important;">chính sách bảo mật</a> và
+                        <a href="https://techzones.vn/dieu-khoan-su-dung" style="text-decoration-line: none; color: #33a2b2 !important;">điều khoản sử dụng</a>
+                        </ul>
+                        <div class="btn-wrap" style="text-align: center;padding-top: 30px;"><a href="#!" class="btn-manager" style="display: inline-block;font-size: 14px;font-weight: bold;line-height: 20px;padding: 15px 50px;background:linear-gradient(to right, #FF9800 0%, #FF5722 100%);color:#fff;text-decoration: none;text-transform: uppercase;">Quản lý đơn hàng</a></div>
+
                     </div>
                 </div>
-                <div class="total-amount" style="padding-left: 50%;">
-                    <div class="group" style="display: flex;align-items: center;align-content: center;justify-content: space-between;margin-bottom: 10px;">
-                        <div class="label">Thành tiền:</div>
-                        <div class="value"> 6.000.000đ</div>
-                    </div>
-                    <div class="group" style="display: flex;align-items: center;align-content: center;justify-content: space-between;margin-bottom: 10px;">
-                        <div class="label">Giảm giá:</div>
-                        <div class="value"> 0đ</div>
-                    </div>
-                    <div class="group" style="display: flex;align-items: center;align-content: center;justify-content: space-between;margin-bottom: 10px;">
-                        <div class="label">Phí vận chuyển:</div>
-                        <div class="value"> 0đ</div>
-                    </div>
-                    <div class="group" style="display: flex;align-items: center;align-content: center;justify-content: space-between;margin-bottom: 10px;">
-                        <div class="label">Tổng cộng:</div>
-                        <div class="value" style="font-weight:bold;color:red"> 6.000.000đ</div>
-                    </div>
-                </div>
-            </div>
-            <div class="mailfooter" style="background: #f7f7f7;padding:15px 0;text-align: center">
-                <a href="#!" class="btn-manager" style="display: inline-block;font-size: 14px;font-weight: bold;line-height: 20px;padding: 15px 50px;background:linear-gradient(to right, #FF9800 0%, #FF5722 100%);color:#fff;text-decoration: none;text-transform: uppercase">Quản lý đơn hàng</a>
             </div>
         </div>
-    </div>
 </body>
 
 </html>
